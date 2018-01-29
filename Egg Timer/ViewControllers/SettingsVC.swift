@@ -35,10 +35,10 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     var kleinButtonIsHighlited: Bool = false {
         didSet {
             if !kleinButtonIsHighlited {
-                kleinButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: .white), for: .normal)
+                kleinButton.setImage(#imageLiteral(resourceName: "eggfilledsmall"), for: .normal)
                 kleinButtonIsHighlited = false
             } else {
-                kleinButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: selectedColor), for: .normal)
+                kleinButton.setImage(#imageLiteral(resourceName: "eggsmall"), for: .normal)
                 kleinButtonIsHighlited = true
                 grootButtonIsHighlited = false
                 mediumButtonIsHighlited = false
@@ -49,10 +49,10 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     var mediumButtonIsHighlited: Bool = false {
         didSet {
             if !mediumButtonIsHighlited {
-                mediumButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: .white), for: .normal)
+                mediumButton.setImage(#imageLiteral(resourceName: "eggfilledmedium"), for: .normal)
                 mediumButtonIsHighlited = false
             } else {
-                mediumButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: selectedColor), for: .normal)
+                mediumButton.setImage(#imageLiteral(resourceName: "eggmedium"), for: .normal)
                 kleinButtonIsHighlited = false
                 grootButtonIsHighlited = false
                 mediumButtonIsHighlited = true
@@ -63,10 +63,10 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     var grootButtonIsHighlited: Bool = false {
         didSet {
             if !grootButtonIsHighlited {
-                grootButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: .white), for: .normal)
+                grootButton.setImage(#imageLiteral(resourceName: "eggfilledlarge"), for: .normal)
                 grootButtonIsHighlited = false
             } else {
-                grootButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: selectedColor), for: .normal)
+                grootButton.setImage(#imageLiteral(resourceName: "egglarge"), for: .normal)
                 kleinButtonIsHighlited = false
                 grootButtonIsHighlited = true
                 mediumButtonIsHighlited = false
@@ -86,6 +86,7 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         setBackgroundImage()
         setUpLocationManager()
         setShades()
@@ -94,9 +95,9 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
 
     private func setBackgroundImage() {
         self.setBackgroundWith(imageName: "snowboard7")
-        kleinButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: .white), for: .normal)
-        mediumButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: .white), for: .normal)
-        grootButton.setImage(#imageLiteral(resourceName: "egg").tinted(with: .white), for: .normal)
+        kleinButton.setImage(#imageLiteral(resourceName: "eggfilledsmall"), for: .normal)
+        mediumButton.setImage(#imageLiteral(resourceName: "eggfilledmedium"), for: .normal)
+        grootButton.setImage(#imageLiteral(resourceName: "eggfilledlarge"), for: .normal)
     }
 
     private func setTitle() {

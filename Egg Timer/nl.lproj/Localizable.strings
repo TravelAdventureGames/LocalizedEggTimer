@@ -33,6 +33,9 @@
 "model.mh.ei" = "medium tot hard gekookt ei";
 "model.hard.ei" = "hard gekookte ei";
 
+"launch.title.multiegg" = "Multiple\nEgg Timer";
+"launch.lbel.text" = "De enige eiertimer dwaarbij je meerdere eieren tegelijkertijd kunt timen!";
+
 
 
 

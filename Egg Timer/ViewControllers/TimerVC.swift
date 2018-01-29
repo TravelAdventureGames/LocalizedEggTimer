@@ -16,6 +16,7 @@ class TimerVC: UIViewController {
     @IBOutlet var doneStackview: UIStackView!
     @IBOutlet var timerLabelSTackview: UIStackView!
     
+    @IBOutlet var infoLabel: UILabel!
     @IBOutlet var startTimerBtn: UIButton!
 
     @IBOutlet var zachtTimerLbl: UILabel!
@@ -39,12 +40,6 @@ class TimerVC: UIViewController {
     @IBOutlet var alertlabel: UILabelPadding!
     var alertText: [String] = ["","","","",""]
     var isFirstText = true
-
-    let zachtShapeLayer = CAShapeLayer()
-    let zmShapeLayer = CAShapeLayer()
-    let mediumShapeLayer = CAShapeLayer()
-    let mhShapeLayer = CAShapeLayer()
-    let hardShapeLayer = CAShapeLayer()
 
     var timerZacht = Timer()
     var timerzm = Timer()
@@ -115,6 +110,7 @@ class TimerVC: UIViewController {
         startTimerBtn.alpha = 0
         alertlabel.isHidden = true
         alertlabel.roundedCorners(radius: 15, borderColor: projectblue, borderWidth: 2)
+        infoLabel.font = UIFont.italicSystemFont(ofSize: 14 * CGFloat.widthMultiplier())
     }
 
     private func calculateBoilingTimesAndLongestDuration() {

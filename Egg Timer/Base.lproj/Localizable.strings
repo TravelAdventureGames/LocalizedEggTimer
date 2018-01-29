@@ -7,7 +7,7 @@
 */
 
 "setingsvc.title.overeieren" = "OVER JOUW EIEREN";
-"Settingsvc.alituted.labelJebevindt" = "Je bevind je nu op";
+"Settingsvc.alituted.labelJebevindt" = "Je bevindt je nu op";
 "Settingsvc.alituted.labelMeterHoog" = "meter hoog";
 
 "amountvc.title.hoeveleieren" = "HOEVEEL EIEREN";
@@ -32,6 +32,13 @@
 "model.medium.ei" = "medium gekookt ei";
 "model.mh.ei" = "medium tot hard gekookt ei";
 "model.hard.ei" = "hard gekookte ei";
+
+//Launch
+"launch.title.multiegg" = "Multiple\nEgg Timer";
+"launch.lbel.text" = "De enige eiertimer dwaarbij je meerdere eieren tegelijkertijd kunt timen!";
+
+
+
 
 
 
