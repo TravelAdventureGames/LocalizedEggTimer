@@ -11,13 +11,11 @@ import UIKit
 class LaunchVC: UIViewController {
 
 
-    @IBOutlet var titlelabelConstraint: NSLayoutConstraint!
-    @IBOutlet var imageviewConstraint: NSLayoutConstraint!
-
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var eggImageview: UIImageView!
     @IBOutlet var infoLabel: UILabel!
-    
+    @IBOutlet var skipButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundLayer()
@@ -31,10 +29,17 @@ class LaunchVC: UIViewController {
     @IBAction func didTapLaunchScreen(_ sender: Any) {
         performSegue(withIdentifier: "toSettingsVC", sender: self)
     }
+    @IBAction func didTapSkipButton(_ sender: Any) {
+        performSegue(withIdentifier: "toSettingsVC", sender: self)
+    }
 
     private func setBackgroundLayer() {
         self.setBackgroundWith(imageName: "launchbackground")
         setTitleAndInfo()
+        if UserdefaultManager.secondLaunch {
+            infoLabel.isHidden = true
+            skipButton.isHidden = true
+        }
     }
 
     private func setTitleAndInfo() {
@@ -50,30 +55,35 @@ class LaunchVC: UIViewController {
         let text = "launch.lbel.text".localized
         let infoTextAttributes: [NSAttributedStringKey: Any] = [
             .foregroundColor : UIColor.white,
-            .font : UIFont.boldSystemFont(ofSize: 19 * CGFloat.widthMultiplier())
+            .font : UIFont.boldSystemFont(ofSize: 18 * CGFloat.widthMultiplier())
         ]
 
         titleLabel.attributedText = NSMutableAttributedString(string: title, attributes: strokeTextAttributes)
         infoLabel.attributedText = NSMutableAttributedString(string: text, attributes: infoTextAttributes)
+        skipButton.setTitle("lanchvc.button.skip".localized, for: .normal)
     }
 
     private func animation() {
         titleLabel.alpha = 0
         infoLabel.alpha = 0
+        skipButton.alpha = 0
         //eggImageview.alpha = 0
         let y = (self.view.bounds.height / 2) + self.eggImageview.frame.height
         self.eggImageview.transform = CGAffineTransform(translationX: 0, y: -y)
 
-        UIView.animate(withDuration: 1, delay: 0.5, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.4, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.titleLabel.alpha = 1
             self.infoLabel.alpha = 1
+            self.skipButton.alpha = 1
 
         }) { (succes) in
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.eggImageview.transform = .identity
             }, completion: { (finished) in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-                    self.performSegue(withIdentifier: "toSettingsVC", sender: self)
+                    if UserdefaultManager.secondLaunch {
+                        self.performSegue(withIdentifier: "toSettingsVC", sender: self)
+                    }
                 })
             })
         }

@@ -37,11 +37,6 @@ class AmountEggsVC: UIViewController {
     @IBOutlet var mediumStepper: UIStepper!
     @IBOutlet var mhStepper: UIStepper!
     @IBOutlet var hardStepper: UIStepper!
-
-    private(set) var secondLaunch: Bool {
-        get { return UserDefaults.standard.bool(forKey: "secondlaunch") }
-        set { UserDefaults.standard.set(newValue, forKey: "secondlaunch") }
-    }
     
 
     override func viewDidLoad() {
@@ -52,7 +47,6 @@ class AmountEggsVC: UIViewController {
     private func setUpUI() {
         self.setBackgroundWith(imageName: "snowboard2")
         title = "amountvc.title.hoeveleieren".localized
-        print(secondLaunch)
     }
 
     override func viewDidLayoutSubviews() {
@@ -101,7 +95,7 @@ class AmountEggsVC: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     func alertOKPressed(alert: UIAlertAction) {
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier:"toTimerVC", sender: self)
     }
 
     func alertTipsPressed(alert: UIAlertAction) {
@@ -125,11 +119,12 @@ class AmountEggsVC: UIViewController {
     }
 
     @IBAction func didClickSetTimers(_ sender: Any) {
-        if secondLaunch {
+
+        if UserdefaultManager.didSeeTipAlert {
             performSegue(withIdentifier: "toTimerVC", sender: self)
         } else {
             presentAlert()
-            secondLaunch = true
+            UserdefaultManager.didSeeTipAlert = true
         }
     }
     

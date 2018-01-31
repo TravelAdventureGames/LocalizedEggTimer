@@ -21,7 +21,7 @@ class BoilingtimeCalculator {
         case .Medium:
             return pow((14.0 / .pi), 2)
         case .Large:
-            return pow((16.0 / .pi), 2)
+            return pow((14.5 / .pi), 2)
         }
     }
 
@@ -52,7 +52,7 @@ class BoilingtimeCalculator {
         case .MediumHard:
             return 76.2
         case .Hard:
-            return 84.2
+            return 82.2
         }
     }
 

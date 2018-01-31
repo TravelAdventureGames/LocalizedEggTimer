@@ -34,6 +34,7 @@
 		6850A75C201BEB5200BB7538 /* CGFloat+multipliers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850A75B201BEB5200BB7538 /* CGFloat+multipliers.swift */; };
 		689004722018E2B0006B9E3A /* String+getNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689004712018E2B0006B9E3A /* String+getNumber.swift */; };
 		68904BD7201FB122006623EB /* GradientImageview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904BD6201FB122006623EB /* GradientImageview.swift */; };
+		68904BD92021D483006623EB /* UserdefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904BD82021D483006623EB /* UserdefaultsManager.swift */; };
 		68DE58D4201E625200327B29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68DE58D2201E625200327B29 /* Localizable.strings */; };
 		68DE58D7201E63BB00327B29 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DE58D6201E63BB00327B29 /* String+localized.swift */; };
 		68DE58DA201F15BB00327B29 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DE58D9201F15BB00327B29 /* LaunchVC.swift */; };
@@ -70,6 +71,7 @@
 		6850A75B201BEB5200BB7538 /* CGFloat+multipliers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+multipliers.swift"; sourceTree = "<group>"; };
 		689004712018E2B0006B9E3A /* String+getNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+getNumber.swift"; sourceTree = "<group>"; };
 		68904BD6201FB122006623EB /* GradientImageview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientImageview.swift; sourceTree = "<group>"; };
+		68904BD82021D483006623EB /* UserdefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserdefaultsManager.swift; sourceTree = "<group>"; };
 		68DE58CF201CD5ED00327B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		68DE58D0201CD5ED00327B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		68DE58D3201E625200327B29 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "Egg Timer/nl.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
@@ -180,6 +182,7 @@
 			children = (
 				6837392F20153543002953B7 /* Audioplayer.swift */,
 				68904BD6201FB122006623EB /* GradientImageview.swift */,
+				68904BD82021D483006623EB /* UserdefaultsManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				683739182013D6FA002953B7 /* plusMinusButton.swift in Sources */,
 				6837393B20168996002953B7 /* Unused code.swift in Sources */,
+				68904BD92021D483006623EB /* UserdefaultsManager.swift in Sources */,
 				68DE58D7201E63BB00327B29 /* String+localized.swift in Sources */,
 				684372CA2017419A00034DB5 /* View+hakeAnimation.swift in Sources */,
 				6850A758201BDEB400BB7538 /* ExtrainfoViewController.swift in Sources */,

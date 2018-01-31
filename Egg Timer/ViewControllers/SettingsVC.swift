@@ -91,6 +91,7 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         setUpLocationManager()
         setShades()
         setTitle()
+        UserdefaultManager.secondLaunch = true
     }
 
     private func setBackgroundImage() {
