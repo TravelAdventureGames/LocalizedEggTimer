@@ -16,6 +16,7 @@ class TimerVC: UIViewController {
     @IBOutlet var doneStackview: UIStackView!
     @IBOutlet var timerLabelSTackview: UIStackView!
     
+    @IBOutlet var cancelButton: UIBarButtonItem!
     @IBOutlet var infoLabel: UILabel!
     @IBOutlet var startTimerBtn: UIButton!
 
@@ -54,10 +55,16 @@ class TimerVC: UIViewController {
     var mhDuration = 0
     var hardDuration = 0
 
+    var allDurations: [Int] = []
+
     let projectblue = UIColor(red: 0/255, green: 82/255, blue: 159/255, alpha: 1.0)
 
     var upTime = 0
     var longestDuration = 0
+
+    var timestampOnLeavingApp: CFTimeInterval = 0
+    var timestampOnReenteringApp: CFTimeInterval = 0
+    var expiredTimeInBackground: Int = 0
 
     var eggs: [Egg] = []
     
@@ -67,7 +74,7 @@ class TimerVC: UIViewController {
         startTimerBtn.addTarget(self, action: #selector(startTimers), for: .touchUpInside)
         calculateBoilingTimesAndLongestDuration()
         SetBeginUI()
-
+        allDurations = [zachtDuration, zmDuration, mediumDuration, mhDuration, hardDuration]
     }
 
     override func viewDidLayoutSubviews() {
@@ -79,6 +86,56 @@ class TimerVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
         runUpTimer()
+    }
+
+    private func setupNotificationOnEnteringBackground() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
+    }
+    private func setupNotificationOnEnteringForeground() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovesToForeground), name: Notification.Name.UIApplicationWillEnterForeground, object: nil)
+    }
+    // MARK:- functions to handle app moved to background
+    @objc func appMovedToBackground() {
+        timestampOnLeavingApp = NSDate().timeIntervalSince1970
+        invalidateAllTimers()
+        print("did enter background")
+    }
+    @objc func appMovesToForeground() {
+        timestampOnReenteringApp = NSDate().timeIntervalSince1970
+        getExpiredTimeInBackgroundModus()
+        updateTimerDurations()
+        startAvailableTimers()
+        print("did enter foreground")
+    }
+    private func getExpiredTimeInBackgroundModus() {
+        let expiredTime = timestampOnReenteringApp - timestampOnLeavingApp
+        expiredTimeInBackground = Int(expiredTime)
+        print("expired time in background is \(expiredTimeInBackground)")
+    }
+    private func updateTimerDurations() {
+        setNewTimerValue(oldDuration: &zachtDuration)
+        setNewTimerValue(oldDuration: &zmDuration)
+        setNewTimerValue(oldDuration: &mediumDuration)
+        setNewTimerValue(oldDuration: &mhDuration)
+        setNewTimerValue(oldDuration: &hardDuration)
+        print("The newdurations are \(zachtDuration) \(zmDuration) \(mediumDuration) \(mhDuration)")
+    }
+    private func setNewTimerValue(oldDuration: inout Int) {
+        let newDuration = oldDuration - expiredTimeInBackground
+        if newDuration > 0 {
+            oldDuration = newDuration
+        } else {
+            oldDuration = 1
+        }
+    }
+    private func invalidateAllTimers() {
+        timerZacht.invalidate()
+        timerzm.invalidate()
+        timermedium.invalidate()
+        timermh.invalidate()
+        timerHard.invalidate()
     }
 
     private func setBorders(labels: [UILabel]) {
@@ -110,7 +167,8 @@ class TimerVC: UIViewController {
         startTimerBtn.alpha = 0
         alertlabel.isHidden = true
         alertlabel.roundedCorners(radius: 15, borderColor: projectblue, borderWidth: 2)
-        infoLabel.font = UIFont.italicSystemFont(ofSize: 14 * CGFloat.widthMultiplier())
+        infoLabel.font = UIFont.italicSystemFont(ofSize: 15 * CGFloat.widthMultiplier())
+        cancelButton.isEnabled = false
     }
 
     private func calculateBoilingTimesAndLongestDuration() {
@@ -306,9 +364,21 @@ class TimerVC: UIViewController {
     }
 
     @objc func startTimers() {
+        setupNotificationOnEnteringBackground()
+        setupNotificationOnEnteringForeground()
         startAvailableTimers()
         startTimerBtn.alpha = 0
+        self.navigationItem.hidesBackButton = true
+        cancelButton.isEnabled = true
+        infoLabel.isHidden = true
     }
+
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        // MARK:- whole session is canceled after timers did start
+        navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func zachtDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: zachtLbl, timerLbl: zachtTimerLbl, btn: zachtDoneBtn, index: 0)
     }
