@@ -167,20 +167,23 @@ class TimerVC: UIViewController {
         alertlabel.isHidden = false
         let egg = eggs[index]
         let eggAmount = egg.amount
+        let firstPartOfSentence = "timervc.label.haal".localized
+        let secondPartOfSence = "timervc.label.uitdepan".localized
         switch eggAmount {
+
         case 1:
             if isFirstText {
-                alertText[index] = "Haal 1 \(egg.desiredEggType.nameSingle) uit de pan."
+                alertText[index] = "\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameSingle) \(secondPartOfSence)."
                 isFirstText = false
             } else {
-                alertText[index] = "\nHaal 1 \(egg.desiredEggType.nameSingle) uit de pan."
+                alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameSingle) \(secondPartOfSence)."
             }
         default:
             if isFirstText {
-                alertText[index] = "Haal \(eggAmount) \(egg.desiredEggType.nameMultiple) uit de pan."
+                alertText[index] = "\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)."
                 isFirstText = false
             } else {
-                alertText[index] = "\n\nHaal \(eggAmount) \(egg.desiredEggType.nameMultiple) uit de pan."
+                alertText[index] = "\n\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)."
             }
         }
         let sentence = alertText.flatMap({$0}).joined()
@@ -190,6 +193,11 @@ class TimerVC: UIViewController {
     func removeAlertText(index: Int) -> String {
         alertText[index] = ""
         let sentence = alertText.flatMap({$0}).joined()
+        if sentence.count == 0 {
+            alertlabel.isHidden = true
+        } else {
+            alertlabel.isHidden = false
+        }
         return sentence
     }
     // MARK: fast count-up to timervalues at presentation of vc

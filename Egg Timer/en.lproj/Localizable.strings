@@ -19,19 +19,21 @@
 "extrainfovc.label.text" = "You probably can't wait to start cooking. Take some time however to go through the tips stated below!<br><br><ul><li>The egg calculator algorithm assumes you first <u>bring the water to boiling temperature</u> and  <u>after that</u> carefully place the eggs in the pan.</li><li>When one of the timers expires, take the right amount of eggs out of the water and cool them down as soon as possible, f.e. in a bowl of icewater. Your cooling water needs to be really cold, otherwise you will not achieve your desired doneness.</li><li>Take multiple cooling bowls (one for soft boiled, one for hard boiled, ect.) In that way you can tell which egg was which afterwards.</li><li>In order to make the peeling of the egg much easier, add some vinegar to the water.</li></ul>";
 
 "timervc.title.text" = "START TIMERS";
+"timervc.label.haal" = "Take";
+"timervc.label.uitdepan" = "from the pan.";
 
 //model
-"model.druiperige.eieren" = "druiperig gekookte eieren";
-"model.zachte.eieren" = "zacht gekookte eieren";
-"model.medium.eieren" = "medium gekookte eieren";
-"model.mh.eieren" = "medium tot hard gekookte eieren";
-"model.harde.eieren" = "hard gekookte eieren";
+"model.druiperige.eieren" = "runny eggs";
+"model.zachte.eieren" = "soft eggs";
+"model.medium.eieren" = "firm eggs";
+"model.mh.eieren" = "hard eggs";
+"model.harde.eieren" = "solid eggs";
 
-"model.druiperig.ei" = "druiperig gekookt ei";
-"model.zacht.ei" = "zacht gekookt ei";
-"model.medium.ei" = "medium gekookt ei";
-"model.mh.ei" = "medium tot hard gekookt ei";
-"model.hard.ei" = "hard gekookte ei";
+"model.druiperig.ei" = "runny egg";
+"model.zacht.ei" = "soft egg";
+"model.medium.ei" = "firm egg";
+"model.mh.ei" = "hard egg";
+"model.hard.ei" = "solid egg";
 
 "launch.title.multiegg" = "Multiple\nEgg Timer";
 "launch.lbel.text" = "Welcome to the only eggtimer in the world which meassures all the different sorts of doneness your group or family desires!  Based on scientific research from a Nowegian Physics Institute it also takes into account your altitude, eggsize and initial eggtemperature. Works like a charm!";

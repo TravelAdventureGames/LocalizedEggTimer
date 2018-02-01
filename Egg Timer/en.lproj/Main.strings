@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "Medium"; ObjectID = "1H0-Md-Wpu"; */
-"1H0-Md-Wpu.text" = "Medium";
+"1H0-Md-Wpu.text" = "Firm";
 
 /* Class = "UILabel"; text = "Zacht"; ObjectID = "2LD-06-cXV"; */
 "2LD-06-cXV.text" = "Soft";
@@ -9,7 +9,7 @@
 "2MR-AY-Uc2.text" = "No";
 
 /* Class = "UILabel"; text = "Hard"; ObjectID = "485-7P-m3U"; */
-"485-7P-m3U.text" = "Hard";
+"485-7P-m3U.text" = "Solid";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "5Ou-Bl-bU4"; */
 "5Ou-Bl-bU4.text" = "Label";
@@ -24,7 +24,7 @@
 "7JT-vC-M53.normalTitle" = "Next";
 
 /* Class = "UILabel"; text = "Geef aan hoeveel eieren je van iedere garing gekookt wilt hebben."; ObjectID = "7ba-5U-EuF"; */
-"7ba-5U-EuF.text" = "How many- and what kind of eggs do you want?";
+"7ba-5U-EuF.text" = "How many eggs of what kind of softness do you want?";
 
 /* Class = "UILabel"; text = "Druiperig"; ObjectID = "8Vh-gy-Wlj"; */
 "8Vh-gy-Wlj.text" = "Runny";
@@ -39,7 +39,7 @@
 "B5U-TH-bwy.text" = "Medium";
 
 /* Class = "UILabel"; text = "M - H"; ObjectID = "C9O-qV-tzg"; */
-"C9O-qV-tzg.text" = "M - H";
+"C9O-qV-tzg.text" = "Hard";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "D7q-t5-Exa"; */
 "D7q-t5-Exa.text" = "Label";
@@ -69,16 +69,16 @@
 "Q6a-ky-QPW.title" = "\" \"";
 
 /* Class = "UILabel"; text = "Medium"; ObjectID = "SPT-d0-oRH"; */
-"SPT-d0-oRH.text" = "Medium";
+"SPT-d0-oRH.text" = "Firm";
 
 /* Class = "UILabel"; text = "De timers zijn gezet op basis van de grootte van het ei, de temperatuur ervan, de hoogte waarop je je bevindt en natuurlijk jouw voorkeur qua gaarheid. Start de timers op het moment dat het water kookt."; ObjectID = "SRj-Fx-WdB"; */
-"SRj-Fx-WdB.text" = "The timers are set based on the size of the eggs, their initial temperature, the altitude you're cooking at and of course how you like them cooked. Start the timers directly after the water boils and you add all eggs.";
+"SRj-Fx-WdB.text" = "The timers are set based on the size of the eggs, their initial temperature, the altitude you're cooking at and of course the softness you desire. Start the timers directly after the water boils and you add all eggs.";
 
 /* Class = "UILabel"; text = "Zacht"; ObjectID = "VVw-05-mPL"; */
 "VVw-05-mPL.text" = "Soft";
 
 /* Class = "UILabel"; text = "Hard"; ObjectID = "Wp0-tb-QwW"; */
-"Wp0-tb-QwW.text" = "Hard";
+"Wp0-tb-QwW.text" = "Solid";
 
 /* Class = "UILabel"; text = "Druiperig"; ObjectID = "Xr3-Pg-NiK"; */
 "Xr3-Pg-NiK.text" = "Runny";
@@ -93,10 +93,10 @@
 "aso-Kr-fiR.text" = "Did your eggs came right from the fridge?";
 
 /* Class = "UILabel"; text = "Hard"; ObjectID = "cnn-9P-FDL"; */
-"cnn-9P-FDL.text" = "Hard";
+"cnn-9P-FDL.text" = "Solid";
 
 /* Class = "UILabel"; text = "Medium - Hard"; ObjectID = "hNY-h9-ITq"; */
-"hNY-h9-ITq.text" = "Medium - Hard";
+"hNY-h9-ITq.text" = "Hard";
 
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "hWA-ye-MvI"; */
 "hWA-ye-MvI.title" = " ";
@@ -108,7 +108,7 @@
 "kfP-tH-wkc.text" = "At altitude the boling point of water decreases. Therefore the cooking time increases.";
 
 /* Class = "UILabel"; text = "Medium"; ObjectID = "mGM-GV-B4E"; */
-"mGM-GV-B4E.text" = "Medium";
+"mGM-GV-B4E.text" = "Firm";
 
 /* Class = "UIButton"; normalTitle = "Start timers"; ObjectID = "mMt-x1-M51"; */
 "mMt-x1-M51.normalTitle" = "Start timers";
@@ -141,4 +141,4 @@
 "xDi-t8-zcS.text" = "Label";
 
 /* Class = "UILabel"; text = "M - H"; ObjectID = "xne-Fh-BHj"; */
-"xne-Fh-BHj.text" = "M - H";
+"xne-Fh-BHj.text" = "Hard";

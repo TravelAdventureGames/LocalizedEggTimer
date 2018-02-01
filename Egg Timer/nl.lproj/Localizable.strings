@@ -19,6 +19,8 @@
 "extrainfovc.label.text" = "Je staat waarschijnlijk te popelen om te beginnen. Neem toch even de tijd om de onderstaande tips door te nemen!<br><br><ul><li>De eiercalculator in deze app gaat ervan uit dat je het water <u>eerst aan de kook brengt</u> en je <u>daarna</u> pas de eieren (voorzichtig) in de pan legt.</li><li>Als één van de timers afloopt, vis de eieren dan uit de pan en koel ze zo snel mogelijk af, bijvoorbeeld in een kom ijswater. Je ijswater moet echt koud zijn, want anders garen de eieren nog even door!</li><li>Maak verschillende ijswaterkommetjes voor de verschillende eieren (één voor zacht, één voor medium, etc). Zo kun je de eieren na afloop nog uit elkaar houden.</li><li>Om het pellen van de eieren makkelijker te maken kun je een scheutje azijn aan het water toevoegen.</li></ul>";
 
 "timervc.title.text" = "START DE TIMERS";
+"timervc.label.haal" = "Haal";
+"timervc.label.uitdepan" = "uit de pan";
 
 //model
 "model.druiperige.eieren" = "druiperig gekookte eieren";
