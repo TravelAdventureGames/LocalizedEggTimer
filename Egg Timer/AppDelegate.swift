@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = true
         UIBarButtonItem.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight(rawValue: 500))]
+
+        NotificationManager.shared.requestAuthorization { (askedPremission) in
+
+        }
         return true
     }
 

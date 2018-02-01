@@ -74,7 +74,6 @@ class TimerVC: UIViewController {
         startTimerBtn.addTarget(self, action: #selector(startTimers), for: .touchUpInside)
         calculateBoilingTimesAndLongestDuration()
         SetBeginUI()
-        allDurations = [zachtDuration, zmDuration, mediumDuration, mhDuration, hardDuration]
     }
 
     override func viewDidLayoutSubviews() {
@@ -130,6 +129,26 @@ class TimerVC: UIViewController {
             oldDuration = 1
         }
     }
+
+    private func scheduleNotifications() {
+        for egg in eggs {
+            if egg.amount > 0 {
+                switch egg.desiredEggType {
+                case .Soft:
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Zacht, firedate: TimeInterval(zachtDuration))
+                case .SoftMedium:
+                    NotificationManager.shared.scheduleNotification(notificationCase: .ZachtMedium, firedate: TimeInterval(zmDuration))
+                case .Medium:
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Medium, firedate: TimeInterval(mediumDuration))
+                case .MediumHard:
+                    NotificationManager.shared.scheduleNotification(notificationCase: .MediumHard, firedate: TimeInterval(mhDuration))
+                case .Hard:
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Hard, firedate: TimeInterval(hardDuration))
+                }
+            }
+        }
+    }
+
     private func invalidateAllTimers() {
         timerZacht.invalidate()
         timerzm.invalidate()
@@ -367,6 +386,7 @@ class TimerVC: UIViewController {
         setupNotificationOnEnteringBackground()
         setupNotificationOnEnteringForeground()
         startAvailableTimers()
+        scheduleNotifications()
         startTimerBtn.alpha = 0
         self.navigationItem.hidesBackButton = true
         cancelButton.isEnabled = true

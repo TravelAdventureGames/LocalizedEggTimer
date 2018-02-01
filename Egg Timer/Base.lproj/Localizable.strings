@@ -40,6 +40,19 @@
 "launch.lbel.text" = "De enige eiertimer dwaarbij je meerdere eieren tegelijkertijd kunt timen!";
 "lanchvc.button.skip" = "Skip";
 
+//NotificationManager
+"notification.body.zacht" = "Je zacht gekookte eieren zijn klaar!";
+"notification.body.zachtmedium" = "Je zacht / medium gekookte eieren zijn klaar!";
+"notification.body.medium" = "Je medium gekookte eieren zijn klaar!";
+"notification.body.mediumhard" = "Je medium / hard gekookte eieren zijn klaar!";
+"notification.body.hard" = "Je hard gekookte eieren zijn klaar!";
+
+"notification.title.zacht" = "Let op!";
+"notification.title.zachtmedium" = "Let op!";
+"notification.title.medium" = "Let op!";
+"notification.title.mediumhard" = "Let op!";
+"notification.title.hard" = "Let op!";
+
 
 
 
