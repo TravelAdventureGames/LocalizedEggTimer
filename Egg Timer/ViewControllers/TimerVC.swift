@@ -17,7 +17,7 @@ class TimerVC: UIViewController {
     @IBOutlet var timerLabelSTackview: UIStackView!
     
     @IBOutlet var cancelButton: UIBarButtonItem!
-    @IBOutlet var infoLabel: UILabel!
+    @IBOutlet var infoLabel: InfoLabel!
     @IBOutlet var startTimerBtn: UIButton!
 
     @IBOutlet var zachtTimerLbl: UILabel!
@@ -135,15 +135,15 @@ class TimerVC: UIViewController {
             if egg.amount > 0 {
                 switch egg.desiredEggType {
                 case .Soft:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .Zacht, firedate: TimeInterval(zachtDuration))
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Zacht, firedate: TimeInterval(zachtDuration), identifier: "soft_notification")
                 case .SoftMedium:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .ZachtMedium, firedate: TimeInterval(zmDuration))
+                    NotificationManager.shared.scheduleNotification(notificationCase: .ZachtMedium, firedate: TimeInterval(zmDuration), identifier: "softmedium_notification")
                 case .Medium:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .Medium, firedate: TimeInterval(mediumDuration))
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Medium, firedate: TimeInterval(mediumDuration), identifier: "medium_notification")
                 case .MediumHard:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .MediumHard, firedate: TimeInterval(mhDuration))
+                    NotificationManager.shared.scheduleNotification(notificationCase: .MediumHard, firedate: TimeInterval(mhDuration), identifier: "mediumhard_notification")
                 case .Hard:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .Hard, firedate: TimeInterval(hardDuration))
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Hard, firedate: TimeInterval(hardDuration), identifier: "hard_notification")
                 }
             }
         }
@@ -390,12 +390,14 @@ class TimerVC: UIViewController {
         startTimerBtn.alpha = 0
         self.navigationItem.hidesBackButton = true
         cancelButton.isEnabled = true
+        infoLabel.text = ""
         infoLabel.isHidden = true
     }
 
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         // MARK:- whole session is canceled after timers did start
+        NotificationManager.shared.cancelAllPendingNotifications()
         navigationController?.popViewController(animated: true)
     }
     

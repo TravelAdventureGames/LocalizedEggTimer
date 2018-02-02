@@ -17,11 +17,11 @@ class BoilingtimeCalculator {
     private func c2(egg: Egg) -> Double {
         switch egg.size {
         case .Small:
-            return pow((12.5 / .pi), 2)
-        case .Medium:
             return pow((13.5 / .pi), 2)
+        case .Medium:
+            return pow((14.5 / .pi), 2)
         case .Large:
-            return pow((14.5 / .pi), 2) //L: 14.2, XL: 14.5
+            return pow((15.5 / .pi), 2)
         }
     }
 
@@ -48,11 +48,11 @@ class BoilingtimeCalculator {
         case .SoftMedium:
             return 66.4
         case .Medium:
-            return 71.6
+            return 72.0
         case .MediumHard:
             return 76.2
         case .Hard:
-            return 82.2
+            return 84.2
         }
     }
 
@@ -66,7 +66,9 @@ class BoilingtimeCalculator {
 
         let t = 0.15 * c * ln
         let tsec = t*60
-
+        print("The cooking time is \(tsec)")
         return Int(tsec)
+
+
     }
 }

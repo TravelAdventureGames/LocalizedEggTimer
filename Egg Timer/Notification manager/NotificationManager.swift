@@ -61,7 +61,7 @@ final class NotificationManager: NSObject {
         }
     }
 
-    func scheduleNotification(notificationCase: LocalNotification, firedate: TimeInterval) {
+    func scheduleNotification(notificationCase: LocalNotification, firedate: TimeInterval, identifier: String) {
         UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
             switch notificationSettings.authorizationStatus {
 
@@ -69,11 +69,11 @@ final class NotificationManager: NSObject {
                 self.requestAuthorization(completionHandler: { (success) in
                     guard success else { return }
 
-                    self.scheduleLocalNotification(notificationCase: notificationCase, firedate: firedate)
+                    self.scheduleLocalNotification(notificationCase: notificationCase, firedate: firedate, identifier: identifier)
                 })
             case .authorized:
 
-                self.scheduleLocalNotification(notificationCase: notificationCase, firedate: firedate)
+                self.scheduleLocalNotification(notificationCase: notificationCase, firedate: firedate, identifier: identifier)
 
             case .denied:
                 print("Application Not Allowed to Display Notifications")
@@ -81,15 +81,19 @@ final class NotificationManager: NSObject {
         }
     }
 
+    func cancelAllPendingNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+
     // Schedules the next notification with a title, subtitle, body and sound
-    private func scheduleLocalNotification(notificationCase: LocalNotification, firedate: TimeInterval) {
+    private func scheduleLocalNotification(notificationCase: LocalNotification, firedate: TimeInterval, identifier: String) {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = notificationCase.title
         notificationContent.body = notificationCase.body
         notificationContent.sound = UNNotificationSound(named: "eggsready.wav")
 
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: firedate, repeats: false)
-        let notificationRequest = UNNotificationRequest(identifier: "Notification_eggready", content: notificationContent, trigger: notificationTrigger)
+        let notificationRequest = UNNotificationRequest(identifier: identifier, content: notificationContent, trigger: notificationTrigger)
 
         UNUserNotificationCenter.current().add(notificationRequest) { (error) in
             if let error = error {
@@ -97,5 +101,7 @@ final class NotificationManager: NSObject {
             }
         }
     }
+
+
 
 }

@@ -23,13 +23,13 @@
 "timervc.label.uitdepan" = "uit de pan";
 
 //model
-"model.druiperige.eieren" = "druiperig gekookte eieren";
+"model.druiperige.eieren" = "zeer zacht gekookte eieren";
 "model.zachte.eieren" = "zacht gekookte eieren";
 "model.medium.eieren" = "medium gekookte eieren";
 "model.mh.eieren" = "medium tot hard gekookte eieren";
 "model.harde.eieren" = "hard gekookte eieren";
 
-"model.druiperig.ei" = "druiperig gekookt ei";
+"model.druiperig.ei" = "zeer zacht gekookt ei";
 "model.zacht.ei" = "zacht gekookt ei";
 "model.medium.ei" = "medium gekookt ei";
 "model.mh.ei" = "medium tot hard gekookt ei";
@@ -53,7 +53,7 @@
 "notification.title.mediumhard" = "Let op!";
 "notification.title.hard" = "Let op!";
 
-
+"infolabel.label.infotext" = "Kookinstructies<br><br><ul><li>Plaats de eieren pas in de pan (voorzichtig) <u>nadat het water kookt</u>!</li><li>Zorg ervoor dat de eieren <u>ruim onder water</u> staan (2,5 cm extra water boven de eieren in één laag in de pan.</li><li>Gebruik een lepel om de eieren voorzichtig in de pan te laten zakken en ze er weer uit te halen</li><li>Je kunt evt. een gaatje  aan de bovenkant van het ei maken et een punaise of naald om scheuren in de pan te voorkomen</li><li>Voeg een scheutje azijn aan het water toe om ze beter pelbaar te maken.</li><li>Als een timer afloopt, koel de eieren dan direct terug het liefst in ijswater.</li></ul><br>";
 
 
 

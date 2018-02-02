@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68100CE920236CCA00E2B84F /* InfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68100CE820236CC900E2B84F /* InfoLabel.swift */; };
 		683739002013BA5E002953B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683738FF2013BA5E002953B7 /* AppDelegate.swift */; };
 		683739052013BA5E002953B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683739032013BA5E002953B7 /* Main.storyboard */; };
 		683739072013BA5E002953B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683739062013BA5E002953B7 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68100CE820236CC900E2B84F /* InfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabel.swift; sourceTree = "<group>"; };
 		683738FC2013BA5E002953B7 /* Egg Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Egg Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		683738FF2013BA5E002953B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		683739042013BA5E002953B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				683739172013D6FA002953B7 /* plusMinusButton.swift */,
+				68100CE820236CC900E2B84F /* InfoLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				68DE58DE201F1DD900327B29 /* UIColor+projectcolors.swift in Sources */,
 				6850A75C201BEB5200BB7538 /* CGFloat+multipliers.swift in Sources */,
 				6837391E2014917B002953B7 /* UIView+dropshadow.swift in Sources */,
+				68100CE920236CCA00E2B84F /* InfoLabel.swift in Sources */,
 				683739142013BABC002953B7 /* Egg.swift in Sources */,
 				689004722018E2B0006B9E3A /* String+getNumber.swift in Sources */,
 				6899FA1C20232D11006A95C1 /* NotificationManager.swift in Sources */,
