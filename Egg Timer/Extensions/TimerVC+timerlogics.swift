@@ -40,7 +40,8 @@ extension TimerVC {
             zachtTimerLbl.shake()
             playSound(file: "eggsready", ext: "wav", playForever: true)
             setDoneBtnUI(btn: zachtDoneBtn)
-            alertlabel.text = presentAlert(index: 0)
+            presentAlertInStackview(label: zeerZachtAlertLabel, index: 0)
+            //alertlabel.text = presentAlert(index: 0)
         } else {
             zachtDuration -= 1
             zachtTimerLbl.text = timeString(time: TimeInterval(zachtDuration))
@@ -53,7 +54,8 @@ extension TimerVC {
             zmTimerLbl.shake()
             playSound(file: "eggsready", ext: "wav", playForever: true)
             setDoneBtnUI(btn: zmDoneButton)
-            alertlabel.text = presentAlert(index: 1)
+            //alertlabel.text = presentAlert(index: 1)
+            presentAlertInStackview(label: zachtAlertLabel, index: 1)
         } else {
             zmDuration -= 1
             zmTimerLbl.text = timeString(time: TimeInterval(zmDuration))
@@ -66,7 +68,8 @@ extension TimerVC {
             mediumTimerLbl.shake()
             setDoneBtnUI(btn: mediumDoneBtn)
             playSound(file: "eggsready", ext: "wav", playForever: true)
-            alertlabel.text = presentAlert(index: 2)
+            //alertlabel.text = presentAlert(index: 2)
+            presentAlertInStackview(label: mediumAlertLabel, index: 2)
         } else {
             mediumDuration -= 1
             mediumTimerLbl.text = timeString(time: TimeInterval(mediumDuration))
@@ -79,7 +82,8 @@ extension TimerVC {
             mhTimerLbl.shake()
             setDoneBtnUI(btn: mhDoneBtn)
             playSound(file: "eggsready", ext: "wav", playForever: true)
-            alertlabel.text = presentAlert(index: 3)
+            //alertlabel.text = presentAlert(index: 3)
+            presentAlertInStackview(label: mediumHardAlertLabel, index: 3)
         } else {
             mhDuration -= 1
             mhTimerLbl.text = timeString(time: TimeInterval(mhDuration))
@@ -92,7 +96,9 @@ extension TimerVC {
             hardTimerLbl.shake()
             setDoneBtnUI(btn: hardDoneBtn)
             playSound(file: "eggsready", ext: "wav", playForever: true)
-            alertlabel.text = presentAlert(index: 4)
+            //removealert
+            //alertlabel.text = presentAlert(index: 4)
+            presentAlertInStackview(label: hardAlertLabel, index: 4)
         } else {
             hardDuration -= 1
             hardTimerLbl.text = timeString(time: TimeInterval(hardDuration))

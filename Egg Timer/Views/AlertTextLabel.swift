@@ -1,15 +1,14 @@
 //
-//  InfoLabel.swift
+//  AlertTextLabel.swift
 //  Egg Timer
 //
-//  Created by Martijn van Gogh on 01-02-18.
+//  Created by Martijn van Gogh on 03-02-18.
 //  Copyright © 2018 Martijn van Gogh. All rights reserved.
 //
 
 import UIKit
 
-class InfoLabel: UILabel {
-
+class AlertTextLabel: UILabel {
     let padding = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     override func drawText(in rect: CGRect) {
         super.drawText(in: UIEdgeInsetsInsetRect(rect, padding))
@@ -40,8 +39,5 @@ class InfoLabel: UILabel {
         self.backgroundColor = UIColor.projectBlueWith(alpha: 0.8)
         self.layer.masksToBounds = true
 
-        let attributees = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 13 * CGFloat.widthMultiplier())]
-        let string = "infolabel.label.infotext".localized
-        self.attributedText = NSAttributedString(html: string, fontAttributes: attributees)
     }
 }

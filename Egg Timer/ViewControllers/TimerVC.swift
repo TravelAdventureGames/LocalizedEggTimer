@@ -39,9 +39,11 @@ class TimerVC: UIViewController {
     @IBOutlet var mhDoneBtn: UIButton!
     @IBOutlet var hardDoneBtn: UIButton!
 
-    @IBOutlet var alertlabel: UILabelPadding!
-    var alertText: [String] = ["","","","",""]
-    var isFirstText = true
+    @IBOutlet var zeerZachtAlertLabel: AlertTextLabel!
+    @IBOutlet var zachtAlertLabel: AlertTextLabel!
+    @IBOutlet var mediumAlertLabel: AlertTextLabel!
+    @IBOutlet var mediumHardAlertLabel: AlertTextLabel!
+    @IBOutlet var hardAlertLabel: AlertTextLabel!
 
     var timerZacht = Timer()
     var timerzm = Timer()
@@ -88,6 +90,15 @@ class TimerVC: UIViewController {
         runUpTimer()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        // MARK:- whole session is canceled after timers did start
+        NotificationManager.shared.cancelAllPendingNotifications()
+        invalidateAllTimers(timers: [timerZacht, timerzm, timermedium, timermh, timerHard])
+        player?.stop()
+        player = nil
+    }
+
     private func setupNotificationOnEnteringBackground() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
@@ -101,7 +112,6 @@ class TimerVC: UIViewController {
         if sessionIsactive {
             timestampOnLeavingApp = NSDate().timeIntervalSince1970
             invalidateAllTimers()
-            print("did enter background")
         }
     }
     @objc func appMovesToForeground() {
@@ -110,13 +120,11 @@ class TimerVC: UIViewController {
             getExpiredTimeInBackgroundModus()
             updateTimerDurations()
             startAvailableTimers()
-            print("did enter foreground")
         }
     }
     private func getExpiredTimeInBackgroundModus() {
         let expiredTime = timestampOnReenteringApp - timestampOnLeavingApp
         expiredTimeInBackground = Int(expiredTime)
-        print("expired time in background is \(expiredTimeInBackground)")
     }
     private func updateTimerDurations() {
         setNewTimerValue(oldDuration: &zachtDuration)
@@ -189,9 +197,8 @@ class TimerVC: UIViewController {
         mhTimerLbl.font = UIFont.monospacedDigitSystemFont(ofSize: size, weight: fontweight)
         hardTimerLbl.font = UIFont.monospacedDigitSystemFont(ofSize: size, weight: fontweight)
         startTimerBtn.alpha = 0
-        alertlabel.isHidden = true
-        alertlabel.roundedCorners(radius: 15, borderColor: projectblue, borderWidth: 2)
         cancelButton.isEnabled = false
+        infoLabel.alpha = 0.0
     }
 
     private func calculateBoilingTimesAndLongestDuration() {
@@ -244,45 +251,23 @@ class TimerVC: UIViewController {
         }
     }
 
-    func presentAlert(index: Int) -> String {
-        alertlabel.isHidden = false
+    func presentAlertInStackview(label: UILabel, index: Int) {
+        label.isHidden = false
         let egg = eggs[index]
-        let eggAmount = egg.amount
+        let eggamount = egg.amount
         let firstPartOfSentence = "timervc.label.haal".localized
         let secondPartOfSence = "timervc.label.uitdepan".localized
-        switch eggAmount {
-
+        switch eggamount {
         case 1:
-            if isFirstText {
-                alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameSingle) \(secondPartOfSence)."
-                isFirstText = false
-            } else {
-                alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameSingle) \(secondPartOfSence)."
-            }
+            label.text = "\(firstPartOfSentence) \(eggamount) \(egg.desiredEggType.nameSingle) \(secondPartOfSence)"
         default:
-            if isFirstText {
-                alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)."
-                isFirstText = false
-            } else {
-                alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)."
-            }
+            label.text = "\(firstPartOfSentence) \(eggamount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)"
         }
-        let sentence = alertText.flatMap({$0}).joined()
-        print(sentence)
-        print(alertText)
-        return sentence
     }
-    //called on stopbuttonclick
-    func removeAlertText(index: Int) -> String {
-        alertText[index] = ""
-        let sentence = alertText.flatMap({$0}).joined()
-        if sentence.count == 0 {
-            alertlabel.isHidden = true
-        } else {
-            alertlabel.isHidden = false
-        }
-        return sentence
+    func removeAlertInStackview(label: UILabel) {
+        label.isHidden = true
     }
+
     // MARK: fast count-up to timervalues at presentation of vc
     @objc private func presentTimerWithAnimation() {
         for egg in eggs {
@@ -334,6 +319,7 @@ class TimerVC: UIViewController {
                     hardTimerLbl.text = timeString(time: TimeInterval(hardDuration))
                     UIView.animate(withDuration: 1, animations: {
                         self.startTimerBtn.alpha = 0.7
+                        self.infoLabel.alpha = 1.0
                     })
                 }
             }
@@ -372,7 +358,6 @@ class TimerVC: UIViewController {
     private func setViewsOnStoptimer(lbl: UILabel, timerLbl: UILabel, btn: UIButton, index: Int) {
         timerLbl.layer.removeAllAnimations()
         fadeOutLabelsFromStack(lbl: lbl, timerLbl: timerLbl, btn: btn)
-        alertlabel.text = removeAlertText(index: index)
         
         //MARK: Check if last timer has been stopped by user. Then remove alertview
         var notZeroIndices: [Int] = []
@@ -381,11 +366,10 @@ class TimerVC: UIViewController {
                 notZeroIndices.append(egg.desiredEggType.place)
             }
         }
-        print("Notzeros are \(notZeroIndices)")
+
         let highestIndex = notZeroIndices.sorted() { $0 > $1 }[0]
         if highestIndex == index {
             sessionIsactive = false
-            alertlabel.removeFromSuperview()
             player?.stop()
             player = nil
             NotificationManager.shared.cancelAllPendingNotifications()
@@ -417,7 +401,6 @@ class TimerVC: UIViewController {
             player?.stop()
             player = nil
         }
-        player = AVAudioPlayer()
 
         guard let file: URL = Bundle.main.url(forResource: file, withExtension: ext) else {
             print("error")
@@ -428,13 +411,13 @@ class TimerVC: UIViewController {
 
             player = try AVAudioPlayer(contentsOf: file)
 
-            guard let player = player else { return }
+            //guard let player = player else { return }
             if playForever {
-                player.numberOfLoops = -1
+                player?.numberOfLoops = -1
             } else {
-                player.numberOfLoops = 0
+                player?.numberOfLoops = 0
             }
-            player.play()
+            player?.play()
         } catch {
             print("The audio file does not exist")
             return
@@ -443,36 +426,47 @@ class TimerVC: UIViewController {
 
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        // MARK:- whole session is canceled after timers did start
-        NotificationManager.shared.cancelAllPendingNotifications()
-        invalidateAllTimers(timers: [timerZacht, timerzm, timermedium, timermh, timerHard])
+
     }
     
     @IBAction func zachtDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: zachtLbl, timerLbl: zachtTimerLbl, btn: zachtDoneBtn, index: 0)
         timerZacht.invalidate()
         player?.stop()
+        removeAlertInStackview(label: zeerZachtAlertLabel)
     }
     @IBAction func zmDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: zmLbl, timerLbl: zmTimerLbl, btn: zmDoneButton, index: 1)
         timerzm.invalidate()
         player?.stop()
+        removeAlertInStackview(label: zachtAlertLabel)
     }
     @IBAction func mediumDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: mediumLbl, timerLbl: mediumTimerLbl, btn: mediumDoneBtn, index: 2)
         timermedium.invalidate()
         player?.stop()
+        removeAlertInStackview(label: mediumAlertLabel)
     }
     @IBAction func mhDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: mhLbl, timerLbl: mhTimerLbl, btn: mhDoneBtn, index: 3)
         timermh.invalidate()
         player?.stop()
+        removeAlertInStackview(label: mediumHardAlertLabel)
 
     }
     @IBAction func hardDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: hardLbl, timerLbl: hardTimerLbl, btn: hardDoneBtn, index: 4)
         timerHard.invalidate()
         player?.stop()
+        removeAlertInStackview(label: hardAlertLabel)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cancelSegue" {
+            player?.stop()
+            player = nil
+        }
+    }
+    
 
 }
