@@ -80,7 +80,7 @@
                         <outlet property="infoLabel" destination="2H0-Bw-rRz" id="JkM-gR-qyF"/>
                         <outlet property="skipButton" destination="LFe-C9-uw6" id="dCn-ya-3h2"/>
                         <outlet property="titleLabel" destination="3zS-cP-Fwd" id="mfJ-As-R4o"/>
-                        <segue destination="BYZ-38-t0r" kind="push" identifier="toSettingsVC" id="enw-ry-KBh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toSettingsVC" id="enw-ry-KBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wM-dk-yNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,63 +101,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Je bevindt je nu op 500 meter hoogte" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu9-aI-DPg">
-                                <rect key="frame" x="20" y="94" width="335" height="20.5"/>
+                                <rect key="frame" x="20" y="50" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Op hoogte wordt het kookpunt van water lager. Eieren hebben dan wat langer nodig om te garen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfP-tH-wkc">
-                                <rect key="frame" x="20" y="122.5" width="335" height="61"/>
+                                <rect key="frame" x="20" y="78.5" width="335" height="61"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Komen je eieren uit de koelkast?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aso-Kr-fiR">
-                                <rect key="frame" x="20" y="243.5" width="335" height="20.5"/>
+                                <rect key="frame" x="20" y="199.5" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cX6-hV-lLu">
-                                <rect key="frame" x="163" y="272" width="51" height="31"/>
+                                <rect key="frame" x="163" y="228" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.32156863810000003" blue="0.62352943419999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="isFromFridge:" destination="BYZ-38-t0r" eventType="valueChanged" id="ERf-hk-hS1"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ja" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-1b-Wk0">
-                                <rect key="frame" x="30" y="279.5" width="125" height="17"/>
+                                <rect key="frame" x="30" y="235.5" width="125" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MR-AY-Uc2">
-                                <rect key="frame" x="220" y="279.5" width="125" height="17"/>
+                                <rect key="frame" x="220" y="235.5" width="125" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoe groot zijn jouw eieren?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWq-7v-pCQ">
-                                <rect key="frame" x="20" y="363" width="335" height="20.5"/>
+                                <rect key="frame" x="20" y="319" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-6l-BM1">
-                                <rect key="frame" x="66.5" y="398.5" width="243.5" height="88.5"/>
+                                <rect key="frame" x="66.5" y="354.5" width="243.5" height="89"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-1Z-Lsf">
-                                        <rect key="frame" x="0.0" y="0.0" width="243.5" height="70.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="243.5" height="71"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp5-Rb-Ng8">
-                                                <rect key="frame" x="0.0" y="0.0" width="71" height="70.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
                                                 <state key="normal" title="Button" image="eggfilledsmall"/>
                                                 <connections>
                                                     <action selector="smallEggSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyT-je-fbZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p82-il-yxF">
-                                                <rect key="frame" x="86" y="0.0" width="71.5" height="70.5"/>
+                                                <rect key="frame" x="86" y="0.0" width="71.5" height="71"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="p82-il-yxF" secondAttribute="height" multiplier="1:1" id="HiU-Bg-IHp"/>
                                                 </constraints>
@@ -167,7 +167,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-C5-GRo">
-                                                <rect key="frame" x="172.5" y="0.0" width="71" height="70.5"/>
+                                                <rect key="frame" x="172.5" y="0.0" width="71" height="71"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button" image="eggfilledlarge"/>
                                                 <connections>
@@ -181,7 +181,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-SR-YdU">
-                                        <rect key="frame" x="0.0" y="70.5" width="243.5" height="18"/>
+                                        <rect key="frame" x="0.0" y="71" width="243.5" height="18"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="neI-6g-XgD">
                                                 <rect key="frame" x="0.0" y="0.0" width="71" height="18"/>
@@ -217,7 +217,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clickedVerderButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bd-0i-6Un"/>
-                                    <segue destination="U2B-Mm-5vv" kind="push" identifier="to amountVC" id="RSJ-4g-58N"/>
+                                    <segue destination="U2B-Mm-5vv" kind="show" identifier="to amountVC" id="RSJ-4g-58N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -274,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.2" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1190" y="26"/>
         </scene>
         <!--Extrainfo View Controller-->
         <scene sceneID="dmP-ad-0vG">
@@ -285,7 +285,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nS-mx-GXA">
-                                <rect key="frame" x="30" y="74" width="315" height="21"/>
+                                <rect key="frame" x="30" y="30" width="315" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIH-kO-Qlm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549" y="-697"/>
+            <point key="canvasLocation" x="1902" y="-687"/>
         </scene>
         <!--Amount EggsVC-->
         <scene sceneID="Zou-Da-whS">
@@ -317,7 +317,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="L2X-AS-d1h">
-                                <rect key="frame" x="81.5" y="175" width="212.5" height="185"/>
+                                <rect key="frame" x="81.5" y="131" width="212.5" height="185"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C1n-yH-mXp">
                                         <rect key="frame" x="0.0" y="0.0" width="105.5" height="185"/>
@@ -408,7 +408,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geef aan hoeveel eieren je van iedere garing gekookt wilt hebben." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ba-5U-EuF">
-                                <rect key="frame" x="20" y="94" width="335" height="41"/>
+                                <rect key="frame" x="20" y="50" width="335" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -428,7 +428,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vb8-dq-npq">
                                 <rect key="frame" x="187.5" y="578.5" width="0.0" height="0.0"/>
                                 <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeer zacht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hiJ-6i-0o6">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeer zacht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="hiJ-6i-0o6">
                                         <rect key="frame" x="-187.5" y="-578.5" width="64" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
@@ -570,7 +570,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="PkV-0J-kby"/>
                         <barButtonItem key="rightBarButtonItem" title="Tips" id="G8P-Va-0xu">
                             <connections>
-                                <segue destination="kco-J7-LQS" kind="push" identifier="toInfo" id="FTe-By-ISs"/>
+                                <segue destination="kco-J7-LQS" kind="show" identifier="toInfo" id="FTe-By-ISs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -595,7 +595,7 @@
                         <outlet property="zmImg" destination="w8t-Rk-4Ys" id="Zhc-8W-ygW"/>
                         <outlet property="zmLbl" destination="VVw-05-mPL" id="R6Y-UB-LVa"/>
                         <outlet property="zmStepper" destination="KxX-u1-p9D" id="zDz-pM-F52"/>
-                        <segue destination="kbr-MD-FRb" kind="push" identifier="toTimerVC" id="jqh-Ot-piY"/>
+                        <segue destination="kbr-MD-FRb" kind="show" identifier="toTimerVC" id="jqh-Ot-piY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTO-cb-rKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -670,7 +670,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U41-tX-5il">
                                 <rect key="frame" x="188" y="563.5" width="0.0" height="0.0"/>
                                 <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeer zacht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xr3-Pg-NiK">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeer zacht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Xr3-Pg-NiK">
                                         <rect key="frame" x="-188" y="-563.5" width="63.5" height="16"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
@@ -714,7 +714,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRj-Fx-WdB" customClass="InfoLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                <rect key="frame" x="30" y="66" width="315" height="0.0"/>
+                                <rect key="frame" x="30" y="22" width="315" height="0.0"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -764,7 +764,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7q-t5-Exa" customClass="UILabelPadding" customModule="Egg_Timer" customModuleProvider="target">
-                                <rect key="frame" x="20" y="86" width="335" height="17"/>
+                                <rect key="frame" x="20" y="42" width="335" height="17"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.32156863810000003" blue="0.62352943419999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -800,6 +800,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="E4M-4K-4cx">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="kbr-MD-FRb" id="yve-IZ-Yml"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="5n7-xf-CE1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -830,7 +831,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yL-al-c7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2783" y="41"/>
+            <point key="canvasLocation" x="2606" y="34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ekf-2R-FPx">
@@ -848,7 +849,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qs5-5y-DHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="34"/>
+            <point key="canvasLocation" x="-254" y="34"/>
         </scene>
     </scenes>
     <resources>
@@ -862,4 +863,7 @@
         <image name="eggfilledsmall" width="418" height="417"/>
         <image name="egglarge" width="418" height="418"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5n7-xf-CE1"/>
+    </inferredMetricsTieBreakers>
 </document>

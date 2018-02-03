@@ -37,10 +37,10 @@ class InfoLabel: UILabel {
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 15
         self.numberOfLines = 0
-        self.backgroundColor = UIColor.projectBlueWith(alpha: 0.5)
+        self.backgroundColor = UIColor.projectBlueWith(alpha: 0.8)
         self.layer.masksToBounds = true
 
-        let attributees = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 17 * CGFloat.widthMultiplier())]
+        let attributees = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14 * CGFloat.widthMultiplier())]
         let string = "infolabel.label.infotext".localized
         self.attributedText = NSAttributedString(html: string, fontAttributes: attributees)
     }

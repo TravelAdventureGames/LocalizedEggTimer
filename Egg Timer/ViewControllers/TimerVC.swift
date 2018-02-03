@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TimerVC: UIViewController {
 
-    var player: AudioPlayer?
+    var player: AVAudioPlayer?
 
     @IBOutlet var timerStackview: UIStackView!
     @IBOutlet var doneStackview: UIStackView!
@@ -61,6 +62,7 @@ class TimerVC: UIViewController {
 
     var upTime = 0
     var longestDuration = 0
+    var sessionIsactive = false
 
     var timestampOnLeavingApp: CFTimeInterval = 0
     var timestampOnReenteringApp: CFTimeInterval = 0
@@ -70,7 +72,6 @@ class TimerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        player = AudioPlayer()
         startTimerBtn.addTarget(self, action: #selector(startTimers), for: .touchUpInside)
         calculateBoilingTimesAndLongestDuration()
         SetBeginUI()
@@ -97,16 +98,20 @@ class TimerVC: UIViewController {
     }
     // MARK:- functions to handle app moved to background
     @objc func appMovedToBackground() {
-        timestampOnLeavingApp = NSDate().timeIntervalSince1970
-        invalidateAllTimers()
-        print("did enter background")
+        if sessionIsactive {
+            timestampOnLeavingApp = NSDate().timeIntervalSince1970
+            invalidateAllTimers()
+            print("did enter background")
+        }
     }
     @objc func appMovesToForeground() {
-        timestampOnReenteringApp = NSDate().timeIntervalSince1970
-        getExpiredTimeInBackgroundModus()
-        updateTimerDurations()
-        startAvailableTimers()
-        print("did enter foreground")
+        if sessionIsactive {
+            timestampOnReenteringApp = NSDate().timeIntervalSince1970
+            getExpiredTimeInBackgroundModus()
+            updateTimerDurations()
+            startAvailableTimers()
+            print("did enter foreground")
+        }
     }
     private func getExpiredTimeInBackgroundModus() {
         let expiredTime = timestampOnReenteringApp - timestampOnLeavingApp
@@ -186,7 +191,6 @@ class TimerVC: UIViewController {
         startTimerBtn.alpha = 0
         alertlabel.isHidden = true
         alertlabel.roundedCorners(radius: 15, borderColor: projectblue, borderWidth: 2)
-        infoLabel.font = UIFont.italicSystemFont(ofSize: 15 * CGFloat.widthMultiplier())
         cancelButton.isEnabled = false
     }
 
@@ -250,20 +254,22 @@ class TimerVC: UIViewController {
 
         case 1:
             if isFirstText {
-                alertText[index] = "\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameSingle) \(secondPartOfSence)."
+                alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameSingle) \(secondPartOfSence)."
                 isFirstText = false
             } else {
                 alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameSingle) \(secondPartOfSence)."
             }
         default:
             if isFirstText {
-                alertText[index] = "\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)."
+                alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)."
                 isFirstText = false
             } else {
-                alertText[index] = "\n\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)."
+                alertText[index] = "\n\(firstPartOfSentence) \(eggAmount) \(egg.desiredEggType.nameMultiple) \(secondPartOfSence)."
             }
         }
         let sentence = alertText.flatMap({$0}).joined()
+        print(sentence)
+        print(alertText)
         return sentence
     }
     //called on stopbuttonclick
@@ -365,7 +371,6 @@ class TimerVC: UIViewController {
     }
     private func setViewsOnStoptimer(lbl: UILabel, timerLbl: UILabel, btn: UIButton, index: Int) {
         timerLbl.layer.removeAllAnimations()
-        player?.stopPlaying()
         fadeOutLabelsFromStack(lbl: lbl, timerLbl: timerLbl, btn: btn)
         alertlabel.text = removeAlertText(index: index)
         
@@ -376,13 +381,20 @@ class TimerVC: UIViewController {
                 notZeroIndices.append(egg.desiredEggType.place)
             }
         }
+        print("Notzeros are \(notZeroIndices)")
         let highestIndex = notZeroIndices.sorted() { $0 > $1 }[0]
         if highestIndex == index {
+            sessionIsactive = false
             alertlabel.removeFromSuperview()
+            player?.stop()
+            player = nil
+            NotificationManager.shared.cancelAllPendingNotifications()
+            invalidateAllTimers(timers: [timerZacht, timerzm, timermedium, timermh, timerHard])
         }
     }
 
     @objc func startTimers() {
+        sessionIsactive = true
         setupNotificationOnEnteringBackground()
         setupNotificationOnEnteringForeground()
         startAvailableTimers()
@@ -394,27 +406,73 @@ class TimerVC: UIViewController {
         infoLabel.isHidden = true
     }
 
+    private func invalidateAllTimers(timers: [Timer]) {
+        for timer in timers {
+            timer.invalidate()
+        }
+    }
+
+    func playSound(file: String, ext: String, playForever: Bool) {
+        if player != nil {
+            player?.stop()
+            player = nil
+        }
+        player = AVAudioPlayer()
+
+        guard let file: URL = Bundle.main.url(forResource: file, withExtension: ext) else {
+            print("error")
+            return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            player = try AVAudioPlayer(contentsOf: file)
+
+            guard let player = player else { return }
+            if playForever {
+                player.numberOfLoops = -1
+            } else {
+                player.numberOfLoops = 0
+            }
+            player.play()
+        } catch {
+            print("The audio file does not exist")
+            return
+        }
+    }
+
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         // MARK:- whole session is canceled after timers did start
         NotificationManager.shared.cancelAllPendingNotifications()
-        navigationController?.popViewController(animated: true)
+        invalidateAllTimers(timers: [timerZacht, timerzm, timermedium, timermh, timerHard])
     }
     
     @IBAction func zachtDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: zachtLbl, timerLbl: zachtTimerLbl, btn: zachtDoneBtn, index: 0)
+        timerZacht.invalidate()
+        player?.stop()
     }
     @IBAction func zmDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: zmLbl, timerLbl: zmTimerLbl, btn: zmDoneButton, index: 1)
+        timerzm.invalidate()
+        player?.stop()
     }
     @IBAction func mediumDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: mediumLbl, timerLbl: mediumTimerLbl, btn: mediumDoneBtn, index: 2)
+        timermedium.invalidate()
+        player?.stop()
     }
     @IBAction func mhDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: mhLbl, timerLbl: mhTimerLbl, btn: mhDoneBtn, index: 3)
+        timermh.invalidate()
+        player?.stop()
+
     }
     @IBAction func hardDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: hardLbl, timerLbl: hardTimerLbl, btn: hardDoneBtn, index: 4)
+        timerHard.invalidate()
+        player?.stop()
     }
 
 }

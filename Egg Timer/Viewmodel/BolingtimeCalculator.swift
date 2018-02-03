@@ -44,15 +44,15 @@ class BoilingtimeCalculator {
     private func TYolk(egg: Egg) -> Double {
         switch egg.desiredEggType {
         case .Soft:
-            return 60.0
+            return 16//60.0
         case .SoftMedium:
-            return 66.4
+            return 22//66.4
         case .Medium:
-            return 72.0
+            return 28//72.0
         case .MediumHard:
-            return 76.2
+            return 34//76.2
         case .Hard:
-            return 84.2
+            return 38//84.2
         }
     }
 

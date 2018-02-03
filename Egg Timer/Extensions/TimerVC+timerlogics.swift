@@ -38,7 +38,7 @@ extension TimerVC {
         if zachtDuration < 1 {
             timerZacht.invalidate()
             zachtTimerLbl.shake()
-            player?.playSound(file: "eggsready", ext: "wav", playForever: true)
+            playSound(file: "eggsready", ext: "wav", playForever: true)
             setDoneBtnUI(btn: zachtDoneBtn)
             alertlabel.text = presentAlert(index: 0)
         } else {
@@ -51,8 +51,7 @@ extension TimerVC {
         if zmDuration < 1 {
             timerzm.invalidate()
             zmTimerLbl.shake()
-            player?.stopPlaying()
-            player?.playSound(file: "eggsready", ext: "wav", playForever: true)
+            playSound(file: "eggsready", ext: "wav", playForever: true)
             setDoneBtnUI(btn: zmDoneButton)
             alertlabel.text = presentAlert(index: 1)
         } else {
@@ -65,9 +64,8 @@ extension TimerVC {
         if mediumDuration < 1 {
             timermedium.invalidate()
             mediumTimerLbl.shake()
-            player?.stopPlaying()
             setDoneBtnUI(btn: mediumDoneBtn)
-            player?.playSound(file: "eggsready", ext: "wav", playForever: true)
+            playSound(file: "eggsready", ext: "wav", playForever: true)
             alertlabel.text = presentAlert(index: 2)
         } else {
             mediumDuration -= 1
@@ -79,9 +77,8 @@ extension TimerVC {
         if mhDuration < 1 {
             timermh.invalidate()
             mhTimerLbl.shake()
-            player?.stopPlaying()
             setDoneBtnUI(btn: mhDoneBtn)
-            player?.playSound(file: "eggsready", ext: "wav", playForever: true)
+            playSound(file: "eggsready", ext: "wav", playForever: true)
             alertlabel.text = presentAlert(index: 3)
         } else {
             mhDuration -= 1
@@ -94,8 +91,7 @@ extension TimerVC {
             timerHard.invalidate()
             hardTimerLbl.shake()
             setDoneBtnUI(btn: hardDoneBtn)
-            player?.stopPlaying()
-            player?.playSound(file: "eggsready", ext: "wav", playForever: true)
+            playSound(file: "eggsready", ext: "wav", playForever: true)
             alertlabel.text = presentAlert(index: 4)
         } else {
             hardDuration -= 1
@@ -121,4 +117,5 @@ extension TimerVC {
     private func runHardTimer() {
         timerHard = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateHardTimer), userInfo: nil, repeats: true)
     }
+
 }
