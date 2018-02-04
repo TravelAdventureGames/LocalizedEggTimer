@@ -38,6 +38,7 @@ class AlertTextLabel: UILabel {
         self.numberOfLines = 0
         self.backgroundColor = UIColor.projectBlueWith(alpha: 0.8)
         self.layer.masksToBounds = true
+        self.textColor = .white
 
     }
 }

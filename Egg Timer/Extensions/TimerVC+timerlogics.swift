@@ -14,15 +14,25 @@ extension TimerVC {
             if egg.amount != 0 {
                 switch egg.desiredEggType {
                 case .Soft:
-                    runZachtTimer()
+                    if !zachtTimerExpired {
+                        runZachtTimer()
+                    }
                 case .SoftMedium:
-                    runzmTimer()
+                    if !zmTimerExpired {
+                        runzmTimer()
+                    }
                 case .Medium:
-                    runMediumTimer()
+                    if !mediumTimerExpired {
+                        runMediumTimer()
+                    }
                 case .MediumHard:
-                    runmhTimer()
+                    if !mhTimerExpired {
+                        runmhTimer()
+                    }
                 case .Hard:
-                    runHardTimer()
+                    if !hardTimerExpired {
+                        runHardTimer()
+                    }
                 }
             }
         }
@@ -39,9 +49,9 @@ extension TimerVC {
             timerZacht.invalidate()
             zachtTimerLbl.shake()
             playSound(file: "eggsready", ext: "wav", playForever: true)
-            setDoneBtnUI(btn: zachtDoneBtn)
+            zachtDoneBtn.alpha = 1
+            zachtTimerExpired = true
             presentAlertInStackview(label: zeerZachtAlertLabel, index: 0)
-            //alertlabel.text = presentAlert(index: 0)
         } else {
             zachtDuration -= 1
             zachtTimerLbl.text = timeString(time: TimeInterval(zachtDuration))
@@ -53,8 +63,8 @@ extension TimerVC {
             timerzm.invalidate()
             zmTimerLbl.shake()
             playSound(file: "eggsready", ext: "wav", playForever: true)
-            setDoneBtnUI(btn: zmDoneButton)
-            //alertlabel.text = presentAlert(index: 1)
+            zmDoneButton.alpha = 1
+            zmTimerExpired = true
             presentAlertInStackview(label: zachtAlertLabel, index: 1)
         } else {
             zmDuration -= 1
@@ -66,9 +76,9 @@ extension TimerVC {
         if mediumDuration < 1 {
             timermedium.invalidate()
             mediumTimerLbl.shake()
-            setDoneBtnUI(btn: mediumDoneBtn)
+            mediumDoneBtn.alpha = 1
+            mediumTimerExpired = true
             playSound(file: "eggsready", ext: "wav", playForever: true)
-            //alertlabel.text = presentAlert(index: 2)
             presentAlertInStackview(label: mediumAlertLabel, index: 2)
         } else {
             mediumDuration -= 1
@@ -80,9 +90,9 @@ extension TimerVC {
         if mhDuration < 1 {
             timermh.invalidate()
             mhTimerLbl.shake()
-            setDoneBtnUI(btn: mhDoneBtn)
+            mhDoneBtn.alpha = 1
             playSound(file: "eggsready", ext: "wav", playForever: true)
-            //alertlabel.text = presentAlert(index: 3)
+            mhTimerExpired = true
             presentAlertInStackview(label: mediumHardAlertLabel, index: 3)
         } else {
             mhDuration -= 1
@@ -94,10 +104,9 @@ extension TimerVC {
         if hardDuration < 1 {
             timerHard.invalidate()
             hardTimerLbl.shake()
-            setDoneBtnUI(btn: hardDoneBtn)
+            hardDoneBtn.alpha = 1
             playSound(file: "eggsready", ext: "wav", playForever: true)
-            //removealert
-            //alertlabel.text = presentAlert(index: 4)
+            hardTimerExpired = true
             presentAlertInStackview(label: hardAlertLabel, index: 4)
         } else {
             hardDuration -= 1

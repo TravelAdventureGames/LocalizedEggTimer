@@ -33,11 +33,11 @@ class TimerVC: UIViewController {
     @IBOutlet var mhLbl: UILabel!
     @IBOutlet var hardLbl: UILabel!
 
-    @IBOutlet var zachtDoneBtn: UIButton!
-    @IBOutlet var zmDoneButton: UIButton!
-    @IBOutlet var mediumDoneBtn: UIButton!
-    @IBOutlet var mhDoneBtn: UIButton!
-    @IBOutlet var hardDoneBtn: UIButton!
+    @IBOutlet var zachtDoneBtn: StopButton!
+    @IBOutlet var zmDoneButton: StopButton!
+    @IBOutlet var mediumDoneBtn: StopButton!
+    @IBOutlet var mhDoneBtn: StopButton!
+    @IBOutlet var hardDoneBtn: StopButton!
 
     @IBOutlet var zeerZachtAlertLabel: AlertTextLabel!
     @IBOutlet var zachtAlertLabel: AlertTextLabel!
@@ -51,6 +51,12 @@ class TimerVC: UIViewController {
     var timermh = Timer()
     var timerHard = Timer()
     var upTimer = Timer()
+
+    var zachtTimerExpired = false
+    var zmTimerExpired = false
+    var mediumTimerExpired = false
+    var mhTimerExpired = false
+    var hardTimerExpired = false
 
     var zachtDuration = 0
     var zmDuration = 0
@@ -77,26 +83,20 @@ class TimerVC: UIViewController {
         startTimerBtn.addTarget(self, action: #selector(startTimers), for: .touchUpInside)
         calculateBoilingTimesAndLongestDuration()
         SetBeginUI()
+        sessionIsactive = false
+
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         addTimers()
         setBorders(labels: [zachtLbl,zmLbl,mediumLbl,mhLbl,hardLbl])
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
         runUpTimer()
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        // MARK:- whole session is canceled after timers did start
-        NotificationManager.shared.cancelAllPendingNotifications()
-        invalidateAllTimers(timers: [timerZacht, timerzm, timermedium, timermh, timerHard])
-        player?.stop()
-        player = nil
     }
 
     private func setupNotificationOnEnteringBackground() {
@@ -116,9 +116,11 @@ class TimerVC: UIViewController {
     }
     @objc func appMovesToForeground() {
         if sessionIsactive {
+            //MARK:- App comes back from background. Timers must be set to new values. Old timers must be invalidated
             timestampOnReenteringApp = NSDate().timeIntervalSince1970
             getExpiredTimeInBackgroundModus()
             updateTimerDurations()
+            invalidateAllTimers()
             startAvailableTimers()
         }
     }
@@ -176,14 +178,12 @@ class TimerVC: UIViewController {
             label.layer.borderWidth = 0.5
         }
     }
-    func setDoneBtnUI(btn: UIButton) {
-        btn.layer.cornerRadius = btn.bounds.width / 2
-        btn.layer.borderColor = projectblue.cgColor
-        btn.layer.borderWidth = 1
-        btn.layer.backgroundColor = UIColor.white.withAlphaComponent(0.65).cgColor
-        btn.setTitleColor(projectblue, for: .normal)
-        btn.setTitle("Stop", for: .normal)
-        btn.isEnabled = true
+    private func hideDoneButtons() {
+        zachtDoneBtn.alpha = 0
+        zmDoneButton.alpha = 0
+        mediumDoneBtn.alpha = 0
+        mhDoneBtn.alpha = 0
+        hardDoneBtn.alpha = 0
     }
 
     private func SetBeginUI() {
@@ -199,6 +199,7 @@ class TimerVC: UIViewController {
         startTimerBtn.alpha = 0
         cancelButton.isEnabled = false
         infoLabel.alpha = 0.0
+        hideDoneButtons()
     }
 
     private func calculateBoilingTimesAndLongestDuration() {
@@ -373,11 +374,12 @@ class TimerVC: UIViewController {
             player?.stop()
             player = nil
             NotificationManager.shared.cancelAllPendingNotifications()
-            invalidateAllTimers(timers: [timerZacht, timerzm, timermedium, timermh, timerHard])
+            invalidateAllTimers()
         }
     }
 
     @objc func startTimers() {
+
         sessionIsactive = true
         setupNotificationOnEnteringBackground()
         setupNotificationOnEnteringForeground()
@@ -388,12 +390,6 @@ class TimerVC: UIViewController {
         cancelButton.isEnabled = true
         infoLabel.text = ""
         infoLabel.isHidden = true
-    }
-
-    private func invalidateAllTimers(timers: [Timer]) {
-        for timer in timers {
-            timer.invalidate()
-        }
     }
 
     func playSound(file: String, ext: String, playForever: Bool) {
@@ -424,33 +420,41 @@ class TimerVC: UIViewController {
         }
     }
 
-    
     @IBAction func cancelButtonPressed(_ sender: Any) {
-
+        player?.stop()
+        player = nil
+        invalidateAllTimers()
+        NotificationManager.shared.cancelAllPendingNotifications()
+        self.navigationController?.popToViewController(navigationController?.viewControllers[1] as! SettingsVC, animated: true)
     }
-    
+
+    //MARK: - Fuctions to kill timer
     @IBAction func zachtDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: zachtLbl, timerLbl: zachtTimerLbl, btn: zachtDoneBtn, index: 0)
         timerZacht.invalidate()
         player?.stop()
+        player = nil
         removeAlertInStackview(label: zeerZachtAlertLabel)
     }
     @IBAction func zmDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: zmLbl, timerLbl: zmTimerLbl, btn: zmDoneButton, index: 1)
         timerzm.invalidate()
         player?.stop()
+        player = nil
         removeAlertInStackview(label: zachtAlertLabel)
     }
     @IBAction func mediumDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: mediumLbl, timerLbl: mediumTimerLbl, btn: mediumDoneBtn, index: 2)
         timermedium.invalidate()
         player?.stop()
+        player = nil
         removeAlertInStackview(label: mediumAlertLabel)
     }
     @IBAction func mhDoneBtnPressed(_ sender: Any) {
         setViewsOnStoptimer(lbl: mhLbl, timerLbl: mhTimerLbl, btn: mhDoneBtn, index: 3)
         timermh.invalidate()
         player?.stop()
+        player = nil
         removeAlertInStackview(label: mediumHardAlertLabel)
 
     }
@@ -458,15 +462,7 @@ class TimerVC: UIViewController {
         setViewsOnStoptimer(lbl: hardLbl, timerLbl: hardTimerLbl, btn: hardDoneBtn, index: 4)
         timerHard.invalidate()
         player?.stop()
+        player = nil
         removeAlertInStackview(label: hardAlertLabel)
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "cancelSegue" {
-            player?.stop()
-            player = nil
-        }
-    }
-    
-
 }

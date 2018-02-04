@@ -101,50 +101,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Je bevindt je nu op 500 meter hoogte" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu9-aI-DPg">
-                                <rect key="frame" x="20" y="50" width="335" height="20.5"/>
+                                <rect key="frame" x="20" y="94" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Op hoogte wordt het kookpunt van water lager. Eieren hebben dan wat langer nodig om te garen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfP-tH-wkc">
-                                <rect key="frame" x="20" y="78.5" width="335" height="61"/>
+                                <rect key="frame" x="20" y="122.5" width="335" height="61"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Komen je eieren uit de koelkast?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aso-Kr-fiR">
-                                <rect key="frame" x="20" y="199.5" width="335" height="20.5"/>
+                                <rect key="frame" x="20" y="243.5" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cX6-hV-lLu">
-                                <rect key="frame" x="163" y="228" width="51" height="31"/>
+                                <rect key="frame" x="163" y="272" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.32156863810000003" blue="0.62352943419999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="isFromFridge:" destination="BYZ-38-t0r" eventType="valueChanged" id="ERf-hk-hS1"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ja" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-1b-Wk0">
-                                <rect key="frame" x="30" y="235.5" width="125" height="17"/>
+                                <rect key="frame" x="30" y="279.5" width="125" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MR-AY-Uc2">
-                                <rect key="frame" x="220" y="235.5" width="125" height="17"/>
+                                <rect key="frame" x="220" y="279.5" width="125" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoe groot zijn jouw eieren?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWq-7v-pCQ">
-                                <rect key="frame" x="20" y="319" width="335" height="20.5"/>
+                                <rect key="frame" x="20" y="363" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-6l-BM1">
-                                <rect key="frame" x="66.5" y="354.5" width="243.5" height="89"/>
+                                <rect key="frame" x="66.5" y="398.5" width="243.5" height="89"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-1Z-Lsf">
                                         <rect key="frame" x="0.0" y="0.0" width="243.5" height="71"/>
@@ -285,7 +285,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nS-mx-GXA">
-                                <rect key="frame" x="30" y="30" width="315" height="21"/>
+                                <rect key="frame" x="30" y="74" width="315" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -317,7 +317,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="L2X-AS-d1h">
-                                <rect key="frame" x="81.5" y="131" width="212.5" height="185"/>
+                                <rect key="frame" x="81.5" y="175" width="212.5" height="185"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C1n-yH-mXp">
                                         <rect key="frame" x="0.0" y="0.0" width="105.5" height="185"/>
@@ -408,7 +408,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geef aan hoeveel eieren je van iedere garing gekookt wilt hebben." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ba-5U-EuF">
-                                <rect key="frame" x="20" y="50" width="335" height="41"/>
+                                <rect key="frame" x="20" y="94" width="335" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -714,7 +714,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRj-Fx-WdB" customClass="InfoLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                <rect key="frame" x="30" y="22" width="315" height="0.0"/>
+                                <rect key="frame" x="30" y="66" width="315" height="0.0"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -722,7 +722,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3nD-FW-qK5">
                                 <rect key="frame" x="187.5" y="553.5" width="0.0" height="0.0"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTH-oN-POG">
+                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTH-oN-POG" customClass="StopButton" customModule="Egg_Timer" customModuleProvider="target">
                                         <rect key="frame" x="-187.5" y="-553.5" width="63.5" height="63.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="oTH-oN-POG" secondAttribute="height" multiplier="1:1" id="UFd-LB-71t"/>
@@ -731,25 +731,25 @@
                                             <action selector="zachtDoneBtnPressed:" destination="kbr-MD-FRb" eventType="touchUpInside" id="u1O-bt-h32"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkK-83-vr6">
+                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkK-83-vr6" customClass="StopButton" customModule="Egg_Timer" customModuleProvider="target">
                                         <rect key="frame" x="-187.5" y="-553.5" width="63.5" height="63.5"/>
                                         <connections>
                                             <action selector="zmDoneBtnPressed:" destination="kbr-MD-FRb" eventType="touchUpInside" id="1DV-KS-a6A"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3L-14-tsX">
+                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3L-14-tsX" customClass="StopButton" customModule="Egg_Timer" customModuleProvider="target">
                                         <rect key="frame" x="-187.5" y="-553.5" width="63.5" height="63.5"/>
                                         <connections>
                                             <action selector="mediumDoneBtnPressed:" destination="kbr-MD-FRb" eventType="touchUpInside" id="glz-8e-ffp"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvD-U1-CQ5">
+                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvD-U1-CQ5" customClass="StopButton" customModule="Egg_Timer" customModuleProvider="target">
                                         <rect key="frame" x="-187.5" y="-553.5" width="63.5" height="63.5"/>
                                         <connections>
                                             <action selector="mhDoneBtnPressed:" destination="kbr-MD-FRb" eventType="touchUpInside" id="43f-iw-U7d"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DG-c9-ClQ">
+                                    <button hidden="YES" opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DG-c9-ClQ" customClass="StopButton" customModule="Egg_Timer" customModuleProvider="target">
                                         <rect key="frame" x="-187.5" y="-553.5" width="63.5" height="63.5"/>
                                         <connections>
                                             <action selector="hardDoneBtnPressed:" destination="kbr-MD-FRb" eventType="touchUpInside" id="lUW-TJ-nSW"/>
@@ -763,35 +763,35 @@
                                     <constraint firstItem="oTH-oN-POG" firstAttribute="width" secondItem="bkK-83-vr6" secondAttribute="width" id="o8m-nn-m8T"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2xm-v1-l2y">
-                                <rect key="frame" x="20" y="42" width="335" height="0.0"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2xm-v1-l2y">
+                                <rect key="frame" x="20" y="86" width="335" height="0.0"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uii-B0-hgE" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-42" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUd-CZ-Myg" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-42" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYN-u0-HST" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-42" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3K-g7-tAP" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-42" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-9I-cJM" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-42" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -829,7 +829,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="E4M-4K-4cx">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="kbr-MD-FRb" id="yve-IZ-Yml"/>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="cancelSegue" id="5n7-xf-CE1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -896,7 +895,4 @@
         <image name="eggfilledsmall" width="418" height="417"/>
         <image name="egglarge" width="418" height="418"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="5n7-xf-CE1"/>
-    </inferredMetricsTieBreakers>
 </document>
