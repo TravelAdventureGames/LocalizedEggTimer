@@ -17,11 +17,11 @@ class BoilingtimeCalculator {
     private func c2(egg: Egg) -> Double {
         switch egg.size {
         case .Small:
-            return pow((8.5 / .pi), 2) //13.5
+            return pow((13.5 / .pi), 2)
         case .Medium:
-            return pow((9.5 / .pi), 2) //14.5
+            return pow((14.5 / .pi), 2)
         case .Large:
-            return pow((10.5 / .pi), 2) //15.5
+            return pow((15.5 / .pi), 2)
         }
     }
 
@@ -44,15 +44,15 @@ class BoilingtimeCalculator {
     private func TYolk(egg: Egg) -> Double {
         switch egg.desiredEggType {
         case .Soft:
-            return 20.0 //60
+            return 60
         case .SoftMedium:
-            return 24//66.4
+            return 66.4
         case .Medium:
-            return 28//72.0
+            return 72.0
         case .MediumHard:
-            return 32//76.2
+            return 76.2
         case .Hard:
-            return 36//84.2
+            return 84.2
         }
     }
 

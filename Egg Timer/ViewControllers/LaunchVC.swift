@@ -26,11 +26,16 @@ class LaunchVC: UIViewController {
         animation()
 
     }
-    @IBAction func didTapLaunchScreen(_ sender: Any) {
+
+    private func moveToSettingsVC() {
         performSegue(withIdentifier: "toSettingsVC", sender: self)
     }
+
+    @IBAction func didTapLaunchScreen(_ sender: Any) {
+        moveToSettingsVC()
+    }
     @IBAction func didTapSkipButton(_ sender: Any) {
-        performSegue(withIdentifier: "toSettingsVC", sender: self)
+        moveToSettingsVC()
     }
 
     private func setBackgroundLayer() {
@@ -82,7 +87,7 @@ class LaunchVC: UIViewController {
             }, completion: { (finished) in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
                     if UserdefaultManager.secondLaunch {
-                        self.performSegue(withIdentifier: "toSettingsVC", sender: self)
+                        self.moveToSettingsVC()
                     }
                 })
             })
