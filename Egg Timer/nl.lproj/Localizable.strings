@@ -40,17 +40,19 @@
 "lanchvc.button.skip" = "Skip";
 
 //NotificationManager
-"notification.body.zacht" = "Je zeer zacht gekookte eieren zijn klaar!";
-"notification.body.zachtmedium" = "Je zacht gekookte eieren zijn klaar!";
-"notification.body.medium" = "Je medium gekookte eieren zijn klaar!";
-"notification.body.mediumhard" = "Je medium / hard gekookte eieren zijn klaar!";
-"notification.body.hard" = "Je hard gekookte eieren zijn klaar!";
+"notification.body.zacht" = "zeer zacht gekookt(e) ei(eren) uit de pan!";
+"notification.body.zachtmedium" = "zacht gekookt(e) ei(eren) uit de pan!";
+"notification.body.medium" = "medium gekookt(e) ei(eren) uit de pan!";
+"notification.body.mediumhard" = "medium / hard gekookt(e) ei(eren) uit de pan!";
+"notification.body.hard" = "hard gekookt(e) ei(eren) uit de pan!";
 
-"notification.title.zacht" = "Let op!";
-"notification.title.zachtmedium" = "Let op!";
-"notification.title.medium" = "Let op!";
-"notification.title.mediumhard" = "Let op!";
-"notification.title.hard" = "Let op!";
+"notification.body.first" = "Haal";
+
+"notification.title.zacht" = "Klaar!!";
+"notification.title.zachtmedium" = "Klaar!!";
+"notification.title.medium" = "Klaar!!";
+"notification.title.mediumhard" = "Klaar!!";
+"notification.title.hard" = "Klaar!!";
 
 "infolabel.label.infotext" = "Kookinstructies<br><br><ul><li>Plaats de eieren pas in de pan (voorzichtig) <u>nadat het water kookt</u>!</li><li>Zorg ervoor dat de eieren <u>ruim onder water</u> staan (2,5 cm extra water boven de eieren in één laag in de pan.</li><li>Gebruik een lepel om de eieren voorzichtig in de pan te laten zakken en ze er weer uit te halen</li><li>Je kunt evt. een gaatje  aan de bovenkant van het ei maken et een punaise of naald om scheuren in de pan te voorkomen</li><li>Voeg een scheutje azijn aan het water toe om ze beter pelbaar te maken.</li><li>Als een timer afloopt, koel de eieren dan direct terug het liefst in ijswater.</li></ul><br><br>";
 

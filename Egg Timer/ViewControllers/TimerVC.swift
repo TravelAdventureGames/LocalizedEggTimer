@@ -150,15 +150,15 @@ class TimerVC: UIViewController {
             if egg.amount > 0 {
                 switch egg.desiredEggType {
                 case .Soft:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .Zacht, firedate: TimeInterval(zachtDuration), identifier: "soft_notification")
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Zacht, firedate: TimeInterval(zachtDuration), identifier: "soft_notification", eggAmount: egg.amount)
                 case .SoftMedium:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .ZachtMedium, firedate: TimeInterval(zmDuration), identifier: "softmedium_notification")
+                    NotificationManager.shared.scheduleNotification(notificationCase: .ZachtMedium, firedate: TimeInterval(zmDuration), identifier: "softmedium_notification", eggAmount: egg.amount)
                 case .Medium:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .Medium, firedate: TimeInterval(mediumDuration), identifier: "medium_notification")
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Medium, firedate: TimeInterval(mediumDuration), identifier: "medium_notification", eggAmount: egg.amount)
                 case .MediumHard:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .MediumHard, firedate: TimeInterval(mhDuration), identifier: "mediumhard_notification")
+                    NotificationManager.shared.scheduleNotification(notificationCase: .MediumHard, firedate: TimeInterval(mhDuration), identifier: "mediumhard_notification", eggAmount: egg.amount)
                 case .Hard:
-                    NotificationManager.shared.scheduleNotification(notificationCase: .Hard, firedate: TimeInterval(hardDuration), identifier: "hard_notification")
+                    NotificationManager.shared.scheduleNotification(notificationCase: .Hard, firedate: TimeInterval(hardDuration), identifier: "hard_notification", eggAmount: egg.amount)
                 }
             }
         }

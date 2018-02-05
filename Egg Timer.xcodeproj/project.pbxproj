@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		68100CE920236CCA00E2B84F /* InfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68100CE820236CC900E2B84F /* InfoLabel.swift */; };
+		68100CEB2025DC5300E2B84F /* AlertTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68100CEA2025DC5300E2B84F /* AlertTextLabel.swift */; };
+		68100CED2027889400E2B84F /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68100CEC2027889400E2B84F /* StopButton.swift */; };
 		683739002013BA5E002953B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683738FF2013BA5E002953B7 /* AppDelegate.swift */; };
 		683739052013BA5E002953B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683739032013BA5E002953B7 /* Main.storyboard */; };
 		683739072013BA5E002953B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683739062013BA5E002953B7 /* Assets.xcassets */; };
@@ -15,14 +17,12 @@
 		683739142013BABC002953B7 /* Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683739132013BABC002953B7 /* Egg.swift */; };
 		683739162013BDEE002953B7 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683739152013BDEE002953B7 /* SettingsVC.swift */; };
 		683739182013D6FA002953B7 /* plusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683739172013D6FA002953B7 /* plusMinusButton.swift */; };
-		6837391E2014917B002953B7 /* UIView+dropshadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837391D2014917B002953B7 /* UIView+dropshadow.swift */; };
 		68373920201491A5002953B7 /* UILabel+textshadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837391F201491A5002953B7 /* UILabel+textshadow.swift */; };
 		68373922201491DC002953B7 /* UIImage+Tintcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68373921201491DC002953B7 /* UIImage+Tintcolor.swift */; };
 		6837392720149348002953B7 /* UIViewcontroller+backgroundimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837392620149348002953B7 /* UIViewcontroller+backgroundimage.swift */; };
 		683739292014A4E3002953B7 /* AmountEggsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683739282014A4E3002953B7 /* AmountEggsVC.swift */; };
 		6837392B2014F4DD002953B7 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837392A2014F4DD002953B7 /* TimerVC.swift */; };
 		6837392D201525A3002953B7 /* UIView+cirkel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837392C201525A3002953B7 /* UIView+cirkel.swift */; };
-		6837393020153543002953B7 /* Audioplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837392F20153543002953B7 /* Audioplayer.swift */; };
 		68373935201680D5002953B7 /* TimerVC+timerlogics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68373934201680D5002953B7 /* TimerVC+timerlogics.swift */; };
 		6837393820168576002953B7 /* BolingtimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837393720168576002953B7 /* BolingtimeCalculator.swift */; };
 		6837393B20168996002953B7 /* Unused code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837393A20168996002953B7 /* Unused code.swift */; };
@@ -34,7 +34,6 @@
 		6850A75A201BE42200BB7538 /* Attributedstring+html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850A759201BE42200BB7538 /* Attributedstring+html.swift */; };
 		6850A75C201BEB5200BB7538 /* CGFloat+multipliers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850A75B201BEB5200BB7538 /* CGFloat+multipliers.swift */; };
 		689004722018E2B0006B9E3A /* String+getNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689004712018E2B0006B9E3A /* String+getNumber.swift */; };
-		68904BD7201FB122006623EB /* GradientImageview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904BD6201FB122006623EB /* GradientImageview.swift */; };
 		68904BD92021D483006623EB /* UserdefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904BD82021D483006623EB /* UserdefaultsManager.swift */; };
 		6899FA1C20232D11006A95C1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899FA1B20232D11006A95C1 /* NotificationManager.swift */; };
 		68DE58D4201E625200327B29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68DE58D2201E625200327B29 /* Localizable.strings */; };
@@ -45,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		68100CE820236CC900E2B84F /* InfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabel.swift; sourceTree = "<group>"; };
+		68100CEA2025DC5300E2B84F /* AlertTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTextLabel.swift; sourceTree = "<group>"; };
+		68100CEC2027889400E2B84F /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		683738FC2013BA5E002953B7 /* Egg Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Egg Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		683738FF2013BA5E002953B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		683739042013BA5E002953B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,14 +55,12 @@
 		683739132013BABC002953B7 /* Egg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Egg.swift; sourceTree = "<group>"; };
 		683739152013BDEE002953B7 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		683739172013D6FA002953B7 /* plusMinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plusMinusButton.swift; sourceTree = "<group>"; };
-		6837391D2014917B002953B7 /* UIView+dropshadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+dropshadow.swift"; sourceTree = "<group>"; };
 		6837391F201491A5002953B7 /* UILabel+textshadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+textshadow.swift"; sourceTree = "<group>"; };
 		68373921201491DC002953B7 /* UIImage+Tintcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Tintcolor.swift"; sourceTree = "<group>"; };
 		6837392620149348002953B7 /* UIViewcontroller+backgroundimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+backgroundimage.swift"; sourceTree = "<group>"; };
 		683739282014A4E3002953B7 /* AmountEggsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountEggsVC.swift; sourceTree = "<group>"; };
 		6837392A2014F4DD002953B7 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		6837392C201525A3002953B7 /* UIView+cirkel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+cirkel.swift"; sourceTree = "<group>"; };
-		6837392F20153543002953B7 /* Audioplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audioplayer.swift; sourceTree = "<group>"; };
 		68373934201680D5002953B7 /* TimerVC+timerlogics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerVC+timerlogics.swift"; sourceTree = "<group>"; };
 		6837393720168576002953B7 /* BolingtimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BolingtimeCalculator.swift; sourceTree = "<group>"; };
 		6837393A20168996002953B7 /* Unused code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Unused code.swift"; sourceTree = "<group>"; };
@@ -73,7 +72,6 @@
 		6850A759201BE42200BB7538 /* Attributedstring+html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Attributedstring+html.swift"; sourceTree = "<group>"; };
 		6850A75B201BEB5200BB7538 /* CGFloat+multipliers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+multipliers.swift"; sourceTree = "<group>"; };
 		689004712018E2B0006B9E3A /* String+getNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+getNumber.swift"; sourceTree = "<group>"; };
-		68904BD6201FB122006623EB /* GradientImageview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientImageview.swift; sourceTree = "<group>"; };
 		68904BD82021D483006623EB /* UserdefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserdefaultsManager.swift; sourceTree = "<group>"; };
 		6899FA1B20232D11006A95C1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		68DE58CF201CD5ED00327B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		6837391B20149142002953B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6837391D2014917B002953B7 /* UIView+dropshadow.swift */,
 				6837391F201491A5002953B7 /* UILabel+textshadow.swift */,
 				68373921201491DC002953B7 /* UIImage+Tintcolor.swift */,
 				6837392620149348002953B7 /* UIViewcontroller+backgroundimage.swift */,
@@ -171,6 +168,8 @@
 			children = (
 				683739172013D6FA002953B7 /* plusMinusButton.swift */,
 				68100CE820236CC900E2B84F /* InfoLabel.swift */,
+				68100CEA2025DC5300E2B84F /* AlertTextLabel.swift */,
+				68100CEC2027889400E2B84F /* StopButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,8 +185,6 @@
 		6837392E2015352F002953B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6837392F20153543002953B7 /* Audioplayer.swift */,
-				68904BD6201FB122006623EB /* GradientImageview.swift */,
 				68904BD82021D483006623EB /* UserdefaultsManager.swift */,
 			);
 			path = Common;
@@ -318,14 +315,15 @@
 				684372CA2017419A00034DB5 /* View+hakeAnimation.swift in Sources */,
 				6850A758201BDEB400BB7538 /* ExtrainfoViewController.swift in Sources */,
 				6837392D201525A3002953B7 /* UIView+cirkel.swift in Sources */,
+				68100CED2027889400E2B84F /* StopButton.swift in Sources */,
 				68DE58DE201F1DD900327B29 /* UIColor+projectcolors.swift in Sources */,
 				6850A75C201BEB5200BB7538 /* CGFloat+multipliers.swift in Sources */,
-				6837391E2014917B002953B7 /* UIView+dropshadow.swift in Sources */,
 				68100CE920236CCA00E2B84F /* InfoLabel.swift in Sources */,
 				683739142013BABC002953B7 /* Egg.swift in Sources */,
 				689004722018E2B0006B9E3A /* String+getNumber.swift in Sources */,
 				6899FA1C20232D11006A95C1 /* NotificationManager.swift in Sources */,
 				683739002013BA5E002953B7 /* AppDelegate.swift in Sources */,
+				68100CEB2025DC5300E2B84F /* AlertTextLabel.swift in Sources */,
 				68DE58DA201F15BB00327B29 /* LaunchVC.swift in Sources */,
 				6837392720149348002953B7 /* UIViewcontroller+backgroundimage.swift in Sources */,
 				68373922201491DC002953B7 /* UIImage+Tintcolor.swift in Sources */,
@@ -336,8 +334,6 @@
 				68373920201491A5002953B7 /* UILabel+textshadow.swift in Sources */,
 				6837393820168576002953B7 /* BolingtimeCalculator.swift in Sources */,
 				68373935201680D5002953B7 /* TimerVC+timerlogics.swift in Sources */,
-				68904BD7201FB122006623EB /* GradientImageview.swift in Sources */,
-				6837393020153543002953B7 /* Audioplayer.swift in Sources */,
 				684372CC2017CA6600034DB5 /* UILabel+padding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SJ668L4Y9;
 				INFOPLIST_FILE = "Egg Timer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.traveladventuregames.Egg-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SJ668L4Y9;
 				INFOPLIST_FILE = "Egg Timer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.traveladventuregames.Egg-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";

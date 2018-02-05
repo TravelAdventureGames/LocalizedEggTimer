@@ -61,7 +61,7 @@ final class NotificationManager: NSObject {
         }
     }
 
-    func scheduleNotification(notificationCase: LocalNotification, firedate: TimeInterval, identifier: String) {
+    func scheduleNotification(notificationCase: LocalNotification, firedate: TimeInterval, identifier: String, eggAmount: Int) {
         UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
             switch notificationSettings.authorizationStatus {
 
@@ -69,11 +69,11 @@ final class NotificationManager: NSObject {
                 self.requestAuthorization(completionHandler: { (success) in
                     guard success else { return }
 
-                    self.scheduleLocalNotification(notificationCase: notificationCase, firedate: firedate, identifier: identifier)
+                    self.scheduleLocalNotification(notificationCase: notificationCase, firedate: firedate, identifier: identifier, eggAmount: eggAmount)
                 })
             case .authorized:
 
-                self.scheduleLocalNotification(notificationCase: notificationCase, firedate: firedate, identifier: identifier)
+                self.scheduleLocalNotification(notificationCase: notificationCase, firedate: firedate, identifier: identifier, eggAmount: eggAmount)
 
             case .denied:
                 print("Application Not Allowed to Display Notifications")
@@ -86,10 +86,13 @@ final class NotificationManager: NSObject {
     }
 
     // Schedules the next notification with a title, subtitle, body and sound
-    private func scheduleLocalNotification(notificationCase: LocalNotification, firedate: TimeInterval, identifier: String) {
+    private func scheduleLocalNotification(notificationCase: LocalNotification, firedate: TimeInterval, identifier: String, eggAmount: Int) {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = notificationCase.title
-        notificationContent.body = notificationCase.body
+        let bodyTextFirst = "notification.body.first".localized
+        let bodyTextSecond = notificationCase.body
+        let BodyText = "\(bodyTextFirst) \(eggAmount) \(bodyTextSecond)"
+        notificationContent.body = BodyText//notificationCase.body
         notificationContent.sound = UNNotificationSound(named: "eggsready.wav")
 
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: firedate, repeats: false)
