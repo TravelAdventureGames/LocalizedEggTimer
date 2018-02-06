@@ -46,6 +46,7 @@
 		68100CE820236CC900E2B84F /* InfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabel.swift; sourceTree = "<group>"; };
 		68100CEA2025DC5300E2B84F /* AlertTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTextLabel.swift; sourceTree = "<group>"; };
 		68100CEC2027889400E2B84F /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
+		68100CF12028656700E2B84F /* Egg Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Egg Timer.entitlements"; sourceTree = "<group>"; };
 		683738FC2013BA5E002953B7 /* Egg Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Egg Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		683738FF2013BA5E002953B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		683739042013BA5E002953B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,11 +96,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68100CEE2028653700E2B84F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		683738F32013BA5E002953B7 = {
 			isa = PBXGroup;
 			children = (
 				683738FE2013BA5E002953B7 /* Egg Timer */,
 				683738FD2013BA5E002953B7 /* Products */,
+				68100CEE2028653700E2B84F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +123,7 @@
 		683738FE2013BA5E002953B7 /* Egg Timer */ = {
 			isa = PBXGroup;
 			children = (
+				68100CF12028656700E2B84F /* Egg Timer.entitlements */,
 				683738FF2013BA5E002953B7 /* AppDelegate.swift */,
 				683739032013BA5E002953B7 /* Main.storyboard */,
 				6837393920168975002953B7 /* Unused code */,
@@ -265,6 +275,14 @@
 					683738FB2013BA5E002953B7 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

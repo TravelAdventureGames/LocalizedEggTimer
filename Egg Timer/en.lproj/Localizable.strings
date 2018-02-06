@@ -7,20 +7,20 @@
 */
 
 "setingsvc.title.overeieren" = "ABOUT YOUR EGGS";
-"Settingsvc.alituted.labelJebevindt" = "You're currently situated at";
+"Settingsvc.alituted.labelJebevindt" = "You're currently at an altitude of";
 "Settingsvc.alituted.labelMeterHoog" = "meters heigh";
 
 "amountvc.title.hoeveleieren" = "HOW MANY EGGS";
 "amountvc.alert.tile" = "Attention!";
-"amountvc.alert.text" = "Check our tips before you start cooking. If not, at least beware you place the eggs in the pan not before the water is boiling. When done in another way, the timersettings will not be correct!";
+"amountvc.alert.text" = "Check our tips before you start cooking. If not, at least beware you place the eggs in the pot not before the water is boiling. When done in another way, the timersettings will not be correct!";
 "amountvc.alert.left" = "OK, got it";
 "amountvc.alert.right" = "To tips";
 
-"extrainfovc.label.text" = "You probably can't wait to start cooking. Take some time however to go through the tips stated below!<br><br><ul><li>The egg calculator algorithm assumes you first <u>bring the water to boiling temperature</u> and  <u>after that</u> carefully place the eggs in the pan.</li><li>When one of the timers expires, take the right amount of eggs out of the water and cool them down as soon as possible, f.e. in a bowl of icewater. Your cooling water needs to be really cold, otherwise you will not achieve your desired doneness.</li><li>Take multiple cooling bowls (one for soft boiled, one for hard boiled, ect.) In that way you can tell which egg was which afterwards.</li><li>In order to make the peeling of the egg much easier, add some vinegar to the water.</li></ul>";
+"extrainfovc.label.text" = "You probably can't wait to start cooking. Take some time however to go through the tips stated below!<br><br><ul><li>The egg calculator algorithm assumes you first <u>bring the water to boiling temperature</u> and  <u>after that</u> carefully place the eggs in the pot.</li><li>When one of the timers expires, take the right amount of eggs out of the water and cool them down as soon as possible, f.e. in a bowl of icewater. Your cooling water needs to be really cold, otherwise you will not achieve your desired doneness.</li><li>Take multiple cooling bowls (one for soft boiled, one for hard boiled, ect.) In that way you can tell which egg was which afterwards.</li><li>In order to make the peeling of the egg much easier, add some vinegar to the water.</li></ul>";
 
 "timervc.title.text" = "START TIMERS";
 "timervc.label.haal" = "Take";
-"timervc.label.uitdepan" = "from the pan.";
+"timervc.label.uitdepan" = "from the pot.";
 
 //model
 "model.druiperige.eieren" = "runny eggs";
@@ -40,18 +40,18 @@
 "lanchvc.button.skip" = "Skip";
 
 //NotificationManager
-"notification.body.zacht" = "zeer zacht gekookt(e) ei(eren) uit de pan!";
-"notification.body.zachtmedium" = "zacht gekookt(e) ei(eren) uit de pan!";
-"notification.body.medium" = "medium gekookt(e) ei(eren) uit de pan!";
-"notification.body.mediumhard" = "medium / hard gekookt(e) ei(eren) uit de pan!";
-"notification.body.hard" = "hard gekookt(e) ei(eren) uit de pan!";
+"notification.body.zacht" = "runny boiled egg(s) from the pot!";
+"notification.body.zachtmedium" = "soft boiled egg(s) from the pot.";
+"notification.body.medium" = "firm boiled egg(s) from the pot.";
+"notification.body.mediumhard" = "hard boiled egg(s) from the pot.";
+"notification.body.hard" = "solid boiled egg(s) from the pot.";
 
-"notification.body.first" = "Haal";
+"notification.body.first" = "Take";
 
-"notification.title.zacht" = "Klaar!!";
-"notification.title.zachtmedium" = "Klaar!!";
-"notification.title.medium" = "Klaar!!";
-"notification.title.mediumhard" = "Klaar!!";
-"notification.title.hard" = "Klaar!!";
+"notification.title.zacht" = "Ready!";
+"notification.title.zachtmedium" = "Ready!";
+"notification.title.medium" = "Ready!";
+"notification.title.mediumhard" = "Ready!";
+"notification.title.hard" = "Ready!";
 
-"infolabel.label.infotext" = "Kookinstructies<br><br><ul><li>Plaats de eieren pas in de pan (voorzichtig) <u>nadat het water kookt</u>!</li><li>Zorg ervoor dat de eieren <u>ruim onder water</u> staan (2,5 cm extra water boven de eieren in één laag in de pan.</li><li>Gebruik een lepel om de eieren voorzichtig in de pan te laten zakken en ze er weer uit te halen</li><li>Je kunt evt. een gaatje  aan de bovenkant van het ei maken et een punaise of naald om scheuren in de pan te voorkomen</li><li>Voeg een scheutje azijn aan het water toe om ze beter pelbaar te maken.</li><li>Als een timer afloopt, koel de eieren dan direct terug het liefst in ijswater.</li></ul><br><br>";
+"infolabel.label.infotext" = "Cooking instructions<br><br><ul><li>Place the eggs (carefully) in the pot only <u>when the water is boiling.</u>!</li><li>Make sure your eggs are covered at least by <u>1 inch (2.5 cm) of water</u> and are placed in 1 layer in the pot.</li><li>Use a large spoon to place and remove the eggs from the pot to prevent it from cracking.</li><li>Possibly you can make a small crack at the bottom (fat) side of the egg before cooking. This eases the peeling afterwards. It <u>must not rupture the membrane though!</u>. Another method would be to add a spoon of vinegar.</li><li>If a timer expires, cool down the eggs as soon as possible, preferably in a bowl of crushed ice.</li></ul><br><br>";
