@@ -40,11 +40,17 @@
 "lanchvc.button.skip" = "Skip";
 
 //NotificationManager
-"notification.body.zacht" = "zeer zacht gekookt(e) ei(eren) uit de pan!";
-"notification.body.zachtmedium" = "zacht gekookt(e) ei(eren) uit de pan!";
-"notification.body.medium" = "medium gekookt(e) ei(eren) uit de pan!";
-"notification.body.mediumhard" = "medium / hard gekookt(e) ei(eren) uit de pan!";
-"notification.body.hard" = "hard gekookt(e) ei(eren) uit de pan!";
+"notification.body.zacht" = "zeer zacht gekookte eieren uit de pan!";
+"notification.body.zachtmedium" = "zacht gekookte eieren uit de pan!";
+"notification.body.medium" = "medium gekookte eieren uit de pan!";
+"notification.body.mediumhard" = "medium / hard gekookte eieren uit de pan!";
+"notification.body.hard" = "hard gekookte eieren uit de pan!";
+
+"notification.body.zachtSingle" = "zeer zacht gekookt ei uit de pan!";
+"notification.body.zachtmediumSingle" = "zacht gekookt ei uit de pan!";
+"notification.body.mediumSingle" = "medium gekookt ei uit de pan!";
+"notification.body.mediumhardSingle" = "medium / hard gekookt ei uit de pan!";
+"notification.body.hardSingle" = "hard gekookt ei uit de pan!";
 
 "notification.body.first" = "Haal";
 

@@ -97,6 +97,16 @@ class TimerVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
         runUpTimer()
+        addTapgestureToFadeOutInfolabel()
+    }
+
+    private func addTapgestureToFadeOutInfolabel() {
+        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(fadeOutInfoLabelAddTap))
+        view.addGestureRecognizer(tapgesture)
+    }
+
+    @objc func fadeOutInfoLabelAddTap() {
+        infoLabel.alpha = 0
     }
 
     private func setupNotificationOnEnteringBackground() {
