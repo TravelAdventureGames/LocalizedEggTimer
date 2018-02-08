@@ -41,11 +41,17 @@
 "lanchvc.button.skip" = "Skip";
 
 //NotificationManager
-"notification.body.zacht" = "zeer zacht gekookt(e) ei(eren) uit de pan!";
-"notification.body.zachtmedium" = "zacht gekookt(e) ei(eren) uit de pan!";
-"notification.body.medium" = "medium gekookt(e) ei(eren) uit de pan!";
-"notification.body.mediumhard" = "medium / hard gekookt(e) ei(eren) uit de pan!";
-"notification.body.hard" = "hard gekookt(e) ei(eren) uit de pan!";
+"notification.body.zacht" = "zeer zacht gekookte eieren uit de pan!";
+"notification.body.zachtmedium" = "zacht gekookte eieren uit de pan!";
+"notification.body.medium" = "medium gekookte eieren uit de pan!";
+"notification.body.mediumhard" = "medium / hard gekookte eieren uit de pan!";
+"notification.body.hard" = "hard gekookte eieren uit de pan!";
+
+"notification.body.zachtSingle" = "zeer zacht gekookt ei uit de pan!";
+"notification.body.zachtmediumSingle" = "zacht gekookt ei uit de pan!";
+"notification.body.mediumSingle" = "medium gekookt ei uit de pan!";
+"notification.body.mediumhardSingle" = "medium / hard gekookt ei uit de pan!";
+"notification.body.hardSingle" = "hard gekookt ei uit de pan!";
 
 "notification.body.first" = "Haal";
 
@@ -55,7 +61,7 @@
 "notification.title.mediumhard" = "Klaar!!";
 "notification.title.hard" = "Klaar!!";
 
-"infolabel.label.infotext" = "Kookinstructies<br><br><ul><li>Plaats de eieren pas in de pan (voorzichtig) <u>nadat het water kookt</u>!</li><li>Zorg ervoor dat de eieren <u>ruim onder water</u> staan (2,5 cm extra water boven de eieren in één laag in de pan.</li><li>Gebruik een lepel om de eieren voorzichtig in de pan te laten zakken en ze er weer uit te halen</li><li>Je kunt evt. een gaatje  aan de bovenkant van het ei maken et een punaise of naald om scheuren in de pan te voorkomen</li><li>Voeg een scheutje azijn aan het water toe om ze beter pelbaar te maken.</li><li>Als een timer afloopt, koel de eieren dan direct terug het liefst in ijswater.</li></ul><br><br>";
+"infolabel.label.infotext" = "Kookinstructies<br><br><ul><li>Plaats de eieren pas in de pan (voorzichtig) <u>nadat het water kookt</u>!</li><li>Zorg ervoor dat de eieren <u>ruim onder water</u> staan (2,5 cm extra water boven de eieren in één laag in de pan.</li><li>Gebruik een lepel om de eieren voorzichtig in de pan te laten zakken en ze er weer uit te halen</li><li>Je kunt evt. een gaatje  aan de bovenkant van het ei maken met een punaise of naald om scheuren in de pan te voorkomen</li><li>Voeg een scheutje azijn aan het water toe om ze beter pelbaar te maken.</li><li>Als een timer afloopt, koel de eieren dan direct terug het liefst in ijswater.</li></ul><br><br>";
 
 
 

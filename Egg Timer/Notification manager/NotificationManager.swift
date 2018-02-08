@@ -31,7 +31,7 @@ enum LocalNotification {
         }
     }
 
-    var body: String {
+    var bodyMultiple: String {
         switch self {
         case .Zacht:
             return "notification.body.zacht".localized
@@ -45,6 +45,23 @@ enum LocalNotification {
             return "notification.body.hard".localized
         }
     }
+
+    var bodySingle: String {
+        switch self {
+        case .Zacht:
+            return "notification.body.zachtSingle".localized
+        case .ZachtMedium:
+            return "notification.body.zachtmediumSingle".localized
+        case .Medium:
+            return "notification.body.mediumSingle".localized
+        case .MediumHard:
+            return "notification.body.mediumhardSingle".localized
+        case .Hard:
+            return "notification.body.hardSingle".localized
+        }
+    }
+
+
 }
 
 final class NotificationManager: NSObject {
@@ -90,7 +107,12 @@ final class NotificationManager: NSObject {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = notificationCase.title
         let bodyTextFirst = "notification.body.first".localized
-        let bodyTextSecond = notificationCase.body
+        var bodyTextSecond: String
+        if eggAmount == 1 {
+            bodyTextSecond = notificationCase.bodySingle
+        } else {
+            bodyTextSecond = notificationCase.bodyMultiple
+        }
         let BodyText = "\(bodyTextFirst) \(eggAmount) \(bodyTextSecond)"
         notificationContent.body = BodyText//notificationCase.body
         notificationContent.sound = UNNotificationSound(named: "eggsready.wav")
