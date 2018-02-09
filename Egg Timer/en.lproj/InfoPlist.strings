@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Egg Timer
+
+  Created by Martijn van Gogh on 09-02-18.
+  Copyright © 2018 Martijn van Gogh. All rights reserved.
+*/
+
+"NSLocationWhenInUseUsageDescription" = "Can we use your location in order to determine your current altitude?";
