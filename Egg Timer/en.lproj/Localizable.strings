@@ -10,6 +10,11 @@
 "Settingsvc.alituted.labelJebevindt" = "You're currently at an altitude of";
 "Settingsvc.alituted.labelMeterHoog" = "meters heigh";
 
+"settingsvc.label.klein" = "S";
+"settingsvc.label.medium" = "M";
+"settingsvc.label.groot" = "L";
+"settingsvc.label.xl" = "XL/J";
+
 "amountvc.title.hoeveleieren" = "HOW MANY EGGS";
 "amountvc.alert.tile" = "Attention!";
 "amountvc.alert.text" = "Check our tips before you start cooking. If not, at least beware you place the eggs in the pot not before the water is boiling. When done in another way, the timersettings will not be correct!";

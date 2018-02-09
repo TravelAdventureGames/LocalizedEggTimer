@@ -14,16 +14,31 @@ class BoilingtimeCalculator {
     static let shared = BoilingtimeCalculator()
 
     //Meet omtrek vh ei
-    private func c2(egg: Egg) -> Double {
-        switch egg.size {
-        case .Small:
-            return pow((13.5 / .pi), 2)
-        case .Medium:
-            return pow((14.5 / .pi), 2)
-        case .Large:
+    func c2(egg: Egg) -> Double {
+        switch (egg.size, egg.currentCountry) {
+        case (.Small, .ElseWhere):
+            return pow((14.9 / .pi), 2)
+        case (.Medium, .ElseWhere):
+            return pow((15.3 / .pi), 2)
+        case (.Large, .ElseWhere):
+            return pow((15.7 / .pi), 2)
+        case (.XLJumbo, .ElseWhere):
+            return pow((16.0 / .pi), 2)
+
+        case (.Small, .US):
+            return pow((14.7 / .pi), 2)
+        case (.Medium, .US):
+            return pow((15.1 / .pi), 2)
+        case (.Large, .US):
             return pow((15.5 / .pi), 2)
+        case (.XLJumbo, .US):
+            return pow((15.7 / .pi), 2)
         }
     }
+
+    //USA: Jumbo: 70.9, XL: 63.8, L: 56.7, M: 49.6, S: 42.5
+    //Canada: Jumbo: 70, XL: 63, L: 56, M: 49, S: 42
+    //EU: XL: 73, L: 63, M: 53, S: < 53
 
     private func Tegg(egg: Egg) -> Double {
         switch egg.roomTemp {

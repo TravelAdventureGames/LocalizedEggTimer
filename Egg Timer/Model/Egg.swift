@@ -8,10 +8,16 @@
 
 import Foundation
 
+enum CurrentCountry: String {
+    case US
+    case ElseWhere
+}
+
 enum EggSize {
     case Small
     case Medium
     case Large
+    case XLJumbo
 }
 
 enum EggType {
@@ -72,4 +78,5 @@ struct Egg {
     let desiredEggType: EggType
     let amount: Int
     let altitude: Int
+    let currentCountry: CurrentCountry
 }

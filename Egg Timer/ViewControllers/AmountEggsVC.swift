@@ -13,6 +13,7 @@ class AmountEggsVC: UIViewController {
     var kamerTemp = false
     var altitude = 0
     var eggSize: EggSize = .Small
+    var currentCountry: CurrentCountry = .ElseWhere
 
     @IBOutlet var amountZachtLbl: UILabel!
     @IBOutlet var amountZachtmediumLbl: UILabel!
@@ -79,11 +80,11 @@ class AmountEggsVC: UIViewController {
 
     private func makeEggs() -> [Egg] {
         let eggs: [Egg] = [
-            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .Soft, amount: Int(zachtStepper.value), altitude: altitude),
-            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .SoftMedium, amount: Int(zmStepper.value), altitude: altitude),
-            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .Medium, amount: Int(mediumStepper.value), altitude: altitude),
-            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .MediumHard, amount: Int(mhStepper.value), altitude: altitude),
-            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .Hard, amount: Int(hardStepper.value), altitude: altitude)
+            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .Soft, amount: Int(zachtStepper.value), altitude: altitude, currentCountry: currentCountry),
+            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .SoftMedium, amount: Int(zmStepper.value), altitude: altitude, currentCountry: currentCountry),
+            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .Medium, amount: Int(mediumStepper.value), altitude: altitude, currentCountry: currentCountry),
+            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .MediumHard, amount: Int(mhStepper.value), altitude: altitude, currentCountry: currentCountry),
+            Egg(roomTemp: kamerTemp, size: eggSize, desiredEggType: .Hard, amount: Int(hardStepper.value), altitude: altitude, currentCountry: currentCountry)
                            ]
         return eggs
     }

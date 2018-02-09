@@ -31,7 +31,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egglarge" translatesAutoresizingMaskIntoConstraints="NO" id="9ZL-YT-2DY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggLFilled" translatesAutoresizingMaskIntoConstraints="NO" id="9ZL-YT-2DY">
                                 <rect key="frame" x="150.5" y="205.5" width="75" height="93.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9ZL-YT-2DY" secondAttribute="height" multiplier="4:5" id="Fy8-94-SnT"/>
@@ -144,61 +144,75 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-6l-BM1">
-                                <rect key="frame" x="66.5" y="398.5" width="243.5" height="89"/>
+                                <rect key="frame" x="66.5" y="398.5" width="243.5" height="67.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-1Z-Lsf">
-                                        <rect key="frame" x="0.0" y="0.0" width="243.5" height="71"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="243.5" height="49.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp5-Rb-Ng8">
-                                                <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
-                                                <state key="normal" title="Button" image="eggfilledsmall"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="49.5"/>
+                                                <state key="normal" title="Button" image="eggSEmpty"/>
                                                 <connections>
                                                     <action selector="smallEggSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyT-je-fbZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p82-il-yxF">
-                                                <rect key="frame" x="86" y="0.0" width="71.5" height="71"/>
+                                                <rect key="frame" x="64.5" y="0.0" width="50" height="49.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="p82-il-yxF" secondAttribute="height" multiplier="1:1" id="HiU-Bg-IHp"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="eggfilledmedium"/>
+                                                <state key="normal" title="Button" image="eggMEmpty"/>
                                                 <connections>
                                                     <action selector="mediumEggSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wGs-E8-TsN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-C5-GRo">
-                                                <rect key="frame" x="172.5" y="0.0" width="71" height="71"/>
+                                                <rect key="frame" x="129.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button" image="eggfilledlarge"/>
+                                                <state key="normal" title="Button" image="eggLEmpty"/>
                                                 <connections>
                                                     <action selector="largeEggSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BVd-ts-Wtt"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywB-EV-lWz">
+                                                <rect key="frame" x="194" y="0.0" width="49.5" height="49.5"/>
+                                                <state key="normal" image="eggXLEmpty"/>
+                                                <connections>
+                                                    <action selector="xlButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9g-uI-wXH"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="ywB-EV-lWz" firstAttribute="height" secondItem="p82-il-yxF" secondAttribute="height" id="1TD-j2-Tkh"/>
                                             <constraint firstItem="vp5-Rb-Ng8" firstAttribute="height" secondItem="p82-il-yxF" secondAttribute="height" id="RVj-33-OjP"/>
                                             <constraint firstItem="5rd-C5-GRo" firstAttribute="height" secondItem="p82-il-yxF" secondAttribute="height" id="agZ-XD-GHv"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-SR-YdU">
-                                        <rect key="frame" x="0.0" y="71" width="243.5" height="18"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="243.5" height="18"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="neI-6g-XgD">
-                                                <rect key="frame" x="0.0" y="0.0" width="71" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="B5U-TH-bwy">
-                                                <rect key="frame" x="86" y="0.0" width="71.5" height="18"/>
+                                                <rect key="frame" x="64.5" y="0.0" width="50" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z5t-9t-mvZ">
-                                                <rect key="frame" x="172.5" y="0.0" width="71" height="18"/>
+                                                <rect key="frame" x="129.5" y="0.0" width="49.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRT-eU-b5h">
+                                                <rect key="frame" x="194" y="0.0" width="49.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -270,6 +284,8 @@
                         <outlet property="sizeLabel" destination="KWq-7v-pCQ" id="MKU-rr-F8j"/>
                         <outlet property="uitleAltitudeLabel" destination="kfP-tH-wkc" id="4Y1-Rn-FwW"/>
                         <outlet property="verderButton" destination="7JT-vC-M53" id="KKR-QF-jcc"/>
+                        <outlet property="xlButton" destination="ywB-EV-lWz" id="LEH-1I-7HR"/>
+                        <outlet property="xlLabel" destination="bRT-eU-b5h" id="tT2-hm-Poo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -886,13 +902,14 @@
     </scenes>
     <resources>
         <image name="eggHard" width="280" height="211"/>
+        <image name="eggLEmpty" width="417" height="417"/>
+        <image name="eggLFilled" width="417" height="418"/>
+        <image name="eggMEmpty" width="418" height="417"/>
         <image name="eggMedium" width="254" height="208"/>
         <image name="eggMediumHard" width="287" height="202"/>
+        <image name="eggSEmpty" width="417" height="417"/>
+        <image name="eggXLEmpty" width="418" height="417"/>
         <image name="eggZacht" width="230" height="230"/>
         <image name="eggZachtMedium" width="250" height="250"/>
-        <image name="eggfilledlarge" width="418" height="417"/>
-        <image name="eggfilledmedium" width="417" height="417"/>
-        <image name="eggfilledsmall" width="418" height="417"/>
-        <image name="egglarge" width="418" height="418"/>
     </resources>
 </document>

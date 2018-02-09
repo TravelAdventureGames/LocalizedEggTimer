@@ -84,7 +84,6 @@ class TimerVC: UIViewController {
         calculateBoilingTimesAndLongestDuration()
         SetBeginUI()
         sessionIsactive = false
-
     }
 
     override func viewDidLayoutSubviews() {

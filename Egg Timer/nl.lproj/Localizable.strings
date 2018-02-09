@@ -10,6 +10,11 @@
 "Settingsvc.alituted.labelJebevindt" = "Je bevindt je nu op";
 "Settingsvc.alituted.labelMeterHoog" = "meter hoogte";
 
+"settingsvc.label.klein" = "S";
+"settingsvc.label.medium" = "M";
+"settingsvc.label.groot" = "L";
+"settingsvc.label.xl" = "XL";
+
 "amountvc.title.hoeveleieren" = "HOEVEEL EIEREN";
 "amountvc.alert.tile" = "Let op!";
 "amountvc.alert.text" = "Bekijk de tips voor je gaat koken. Zorg er in ieder geval voor dat je de eieren pas (voorzichtig) toevoegt nadat het water kookt.";

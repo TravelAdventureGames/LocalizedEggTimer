@@ -23,25 +23,28 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var kleinLabel: UILabel!
     @IBOutlet var mediumLabel: UILabel!
     @IBOutlet var largeLabel: UILabel!
+    @IBOutlet var xlLabel: UILabel!
     @IBOutlet var verderButton: UIButton!
     @IBOutlet var mediumButton: UIButton!
     @IBOutlet var grootButton: UIButton!
     @IBOutlet var kleinButton: UIButton!
+    @IBOutlet var xlButton: UIButton!
 
-    
+
 
     let selectedColor = UIColor(red: 207/255, green: 44/255, blue: 82/255, alpha: 1)
 
     var kleinButtonIsHighlited: Bool = false {
         didSet {
             if !kleinButtonIsHighlited {
-                kleinButton.setImage(#imageLiteral(resourceName: "eggfilledsmall"), for: .normal)
+                kleinButton.setImage(#imageLiteral(resourceName: "eggSEmpty"), for: .normal)
                 kleinButtonIsHighlited = false
             } else {
-                kleinButton.setImage(#imageLiteral(resourceName: "eggsmall"), for: .normal)
+                kleinButton.setImage(#imageLiteral(resourceName: "eggSFilled"), for: .normal)
                 kleinButtonIsHighlited = true
                 grootButtonIsHighlited = false
                 mediumButtonIsHighlited = false
+                xlButtonIsHighlighted = false
             }
         }
     }
@@ -49,13 +52,14 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     var mediumButtonIsHighlited: Bool = false {
         didSet {
             if !mediumButtonIsHighlited {
-                mediumButton.setImage(#imageLiteral(resourceName: "eggfilledmedium"), for: .normal)
+                mediumButton.setImage(#imageLiteral(resourceName: "eggMEmpty"), for: .normal)
                 mediumButtonIsHighlited = false
             } else {
-                mediumButton.setImage(#imageLiteral(resourceName: "eggmedium"), for: .normal)
+                mediumButton.setImage(#imageLiteral(resourceName: "eggMFilled"), for: .normal)
                 kleinButtonIsHighlited = false
                 grootButtonIsHighlited = false
                 mediumButtonIsHighlited = true
+                xlButtonIsHighlighted = false
             }
         }
     }
@@ -63,13 +67,29 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     var grootButtonIsHighlited: Bool = false {
         didSet {
             if !grootButtonIsHighlited {
-                grootButton.setImage(#imageLiteral(resourceName: "eggfilledlarge"), for: .normal)
+                grootButton.setImage(#imageLiteral(resourceName: "eggLEmpty"), for: .normal)
                 grootButtonIsHighlited = false
             } else {
-                grootButton.setImage(#imageLiteral(resourceName: "egglarge"), for: .normal)
+                grootButton.setImage(#imageLiteral(resourceName: "eggLFilled"), for: .normal)
                 kleinButtonIsHighlited = false
                 grootButtonIsHighlited = true
                 mediumButtonIsHighlited = false
+                xlButtonIsHighlighted = false
+            }
+        }
+    }
+
+    var xlButtonIsHighlighted: Bool = false {
+        didSet {
+            if !xlButtonIsHighlighted {
+                xlButton.setImage(#imageLiteral(resourceName: "eggXLEmpty"), for: .normal)
+                xlButtonIsHighlighted = false
+            } else {
+                xlButton.setImage(#imageLiteral(resourceName: "eggXLFilled"), for: .normal)
+                kleinButtonIsHighlited = false
+                grootButtonIsHighlited = false
+                mediumButtonIsHighlited = false
+                xlButtonIsHighlighted = true
             }
         }
     }
@@ -82,6 +102,7 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     var isKamerTemp = false
     var altitude: Int = 0
     var eggSize: EggSize = .Small
+    var currentCountry: CurrentCountry = .ElseWhere
     
 
     override func viewDidLoad() {
@@ -90,20 +111,25 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         setBackgroundImage()
         setUpLocationManager()
         setShades()
-        setTitle()
+        setTitles()
         UserdefaultManager.secondLaunch = true
     }
 
     private func setBackgroundImage() {
         self.setBackgroundWith(imageName: "snowboard7")
-        kleinButton.setImage(#imageLiteral(resourceName: "eggfilledsmall"), for: .normal)
-        mediumButton.setImage(#imageLiteral(resourceName: "eggfilledmedium"), for: .normal)
-        grootButton.setImage(#imageLiteral(resourceName: "eggfilledlarge"), for: .normal)
+        kleinButton.setImage(#imageLiteral(resourceName: "eggSEmpty"), for: .normal)
+        mediumButton.setImage(#imageLiteral(resourceName: "eggMEmpty"), for: .normal)
+        grootButton.setImage(#imageLiteral(resourceName: "eggLEmpty"), for: .normal)
+        xlButton.setImage(#imageLiteral(resourceName: "eggXLEmpty"), for: .normal)
     }
 
-    private func setTitle() {
+    private func setTitles() {
         title = "setingsvc.title.overeieren".localized
         uitleAltitudeLabel.font = UIFont.systemFont(ofSize: 16*CGFloat.widthMultiplier())
+        kleinLabel.text = "settingsvc.label.klein".localized
+        mediumLabel.text = "settingsvc.label.medium".localized
+        largeLabel.text = "settingsvc.label.groot".localized
+        xlLabel.text = "settingsvc.label.xl".localized
     }
 
     private func setShades() {
@@ -136,6 +162,28 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red , range: range)
         altitudeLabel.attributedText = attributedString
         locationManager.stopUpdatingLocation()
+        getCurrentCountry(locations: locations)
+    }
+
+    private func getCurrentCountry(locations: [CLLocation]) {
+        let geocoder: CLGeocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(locations[0]) { (placemarks, error) in
+            if error != nil {
+                print("Getting location failed")
+                self.currentCountry = .ElseWhere
+            }
+            let pm = placemarks! as [CLPlacemark]
+            if pm.count > 0 {
+                let pm = placemarks![0]
+                guard let isoCountryCode = pm.isoCountryCode else { return }
+                switch isoCountryCode {
+                case "US":
+                    self.currentCountry = .US
+                default:
+                    self.currentCountry = .ElseWhere
+                }
+            }
+        }
     }
 
     @IBAction func clickedVerderButton(_ sender: Any) {
@@ -154,6 +202,12 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         grootButtonIsHighlited = !grootButtonIsHighlited
         eggSize = .Large
     }
+
+    @IBAction func xlButtonSelected(_ sender: Any) {
+        xlButtonIsHighlighted = !xlButtonIsHighlighted
+        eggSize = .XLJumbo
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to amountVC" {
@@ -161,10 +215,7 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
             aoeVC.altitude = altitude
             aoeVC.eggSize = eggSize
             aoeVC.kamerTemp = isKamerTemp
-            print(eggSize)
-            print(isKamerTemp)
-
+            aoeVC.currentCountry = currentCountry
         }
     }
-    
 }
