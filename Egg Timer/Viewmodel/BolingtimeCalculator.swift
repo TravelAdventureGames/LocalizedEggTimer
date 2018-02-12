@@ -11,6 +11,7 @@ import Darwin
 
 class BoilingtimeCalculator {
 
+
     static let shared = BoilingtimeCalculator()
 
     //Meet omtrek vh ei
