@@ -32,8 +32,6 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var moreSizeInfoBtn: UIButton!
     @IBOutlet var firstTopConstraint: NSLayoutConstraint!
     @IBOutlet var secondTopConstraint: NSLayoutConstraint!
-    
-
 
     let selectedColor = UIColor(red: 207/255, green: 44/255, blue: 82/255, alpha: 1)
 
@@ -147,10 +145,13 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         let yourAttributes : [NSAttributedStringKey: Any] = [
             NSAttributedStringKey.font : UIFont.italicSystemFont(ofSize: 15),
             NSAttributedStringKey.foregroundColor : UIColor.white,
-            NSAttributedStringKey.underlineStyle : NSUnderlineStyle.patternDashDot.rawValue]
+            ]
 
         let attributeString = NSMutableAttributedString(string: "settingsvc.info.moresizeinfo".localized, attributes: yourAttributes)
         moreSizeInfoBtn.setAttributedTitle(attributeString, for: .normal)
+        moreSizeInfoBtn.backgroundColor = UIColor.projectBlueWith(alpha: 0.3)
+        moreSizeInfoBtn.layer.cornerRadius = 7
+        moreSizeInfoBtn.layer.masksToBounds = true
     }
 
     private func setShades() {

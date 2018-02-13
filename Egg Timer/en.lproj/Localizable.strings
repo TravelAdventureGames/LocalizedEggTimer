@@ -61,3 +61,5 @@
 "notification.title.hard" = "Ready!";
 
 "infolabel.label.infotext" = "Cooking instructions<br><br><ul><li>Place the eggs (carefully) in the pot not before <u>the water is boiling.</u>!</li><li>Make sure your eggs are covered at least by <u>1 inch (2.5 cm) of water</u> and are placed in 1 layer in the pot.</li><li>Use a large spoon to place and remove the eggs from the pot to prevent them from cracking.</li><li>Possibly you can make a small crack at the bottom (fat) side of the egg before cooking. This eases the peeling afterwards. It <u>must not rupture the membrane though!</u>. Another method would be to add a spoon of vinegar.</li><li>If a timer expires, cool down the eggs as soon as possible, preferably in a bowl of crushed ice.</li></ul><br><br>";
+
+"eggmeasurevc.lable.title" = "Place your egg on your screen and determine the size";

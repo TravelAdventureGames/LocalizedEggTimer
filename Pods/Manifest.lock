@@ -1,0 +1,12 @@
+PODS:
+  - UIDeviceComplete (2.1.0)
+
+DEPENDENCIES:
+  - UIDeviceComplete (~> 2.1)
+
+SPEC CHECKSUMS:
+  UIDeviceComplete: 7495560e7f7a8e895d48337bd9aad12f7a400f7a
+
+PODFILE CHECKSUM: 2265d49c753bd363c6cf69ab84decf536f25f505
+
+COCOAPODS: 1.4.0
