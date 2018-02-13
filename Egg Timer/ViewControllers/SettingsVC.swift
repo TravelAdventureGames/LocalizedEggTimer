@@ -29,7 +29,10 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var grootButton: UIButton!
     @IBOutlet var kleinButton: UIButton!
     @IBOutlet var xlButton: UIButton!
-
+    @IBOutlet var moreSizeInfoBtn: UIButton!
+    @IBOutlet var firstTopConstraint: NSLayoutConstraint!
+    @IBOutlet var secondTopConstraint: NSLayoutConstraint!
+    
 
 
     let selectedColor = UIColor(red: 207/255, green: 44/255, blue: 82/255, alpha: 1)
@@ -108,6 +111,7 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        setConstraintsForDeviceDifferences()
         setBackgroundImage()
         setUpLocationManager()
         setShades()
@@ -123,6 +127,12 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         xlButton.setImage(#imageLiteral(resourceName: "eggXLEmpty"), for: .normal)
     }
 
+    private func setConstraintsForDeviceDifferences() {
+        let heightMultiplier = CGFloat.heightMultiplier()
+        firstTopConstraint.constant = firstTopConstraint.constant * heightMultiplier
+        secondTopConstraint.constant = secondTopConstraint.constant * heightMultiplier
+    }
+
     private func setTitles() {
         title = "setingsvc.title.overeieren".localized
         uitleAltitudeLabel.font = UIFont.systemFont(ofSize: 16*CGFloat.widthMultiplier())
@@ -130,6 +140,17 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         mediumLabel.text = "settingsvc.label.medium".localized
         largeLabel.text = "settingsvc.label.groot".localized
         xlLabel.text = "settingsvc.label.xl".localized
+        setAttributedButtonTitle()
+    }
+
+    private func setAttributedButtonTitle() {
+        let yourAttributes : [NSAttributedStringKey: Any] = [
+            NSAttributedStringKey.font : UIFont.italicSystemFont(ofSize: 15),
+            NSAttributedStringKey.foregroundColor : UIColor.white,
+            NSAttributedStringKey.underlineStyle : NSUnderlineStyle.patternDashDot.rawValue]
+
+        let attributeString = NSMutableAttributedString(string: "settingsvc.info.moresizeinfo".localized, attributes: yourAttributes)
+        moreSizeInfoBtn.setAttributedTitle(attributeString, for: .normal)
     }
 
     private func setShades() {
@@ -207,8 +228,14 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         xlButtonIsHighlighted = !xlButtonIsHighlighted
         eggSize = .XLJumbo
     }
-    
-    
+
+    @IBAction func didClickMoreInfoBtn(_ sender: Any) {
+        let measureVC = EggMeasuringVC()
+        measureVC.modalTransitionStyle = .crossDissolve
+        measureVC.modalPresentationStyle = .overCurrentContext
+        navigationController?.present(measureVC, animated: true, completion: nil)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to amountVC" {
             let aoeVC =  segue.destination as! AmountEggsVC

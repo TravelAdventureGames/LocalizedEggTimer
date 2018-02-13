@@ -11,28 +11,35 @@ import Darwin
 
 class BoilingtimeCalculator {
 
-
     static let shared = BoilingtimeCalculator()
 
     //Meet omtrek vh ei
     func c2(egg: Egg) -> Double {
         switch (egg.size, egg.currentCountry) {
         case (.Small, .ElseWhere):
+            print("small, elsewhere")
             return pow((14.9 / .pi), 2)
         case (.Medium, .ElseWhere):
+            print("medium, elsewhere")
             return pow((15.3 / .pi), 2)
         case (.Large, .ElseWhere):
+            print("large, elsewhere")
             return pow((15.7 / .pi), 2)
         case (.XLJumbo, .ElseWhere):
+            print("xl, elsewhere")
             return pow((16.0 / .pi), 2)
 
         case (.Small, .US):
+            print("small, us")
             return pow((14.7 / .pi), 2)
         case (.Medium, .US):
+            print("medium, us")
             return pow((15.1 / .pi), 2)
         case (.Large, .US):
+            print("large, us")
             return pow((15.5 / .pi), 2)
         case (.XLJumbo, .US):
+            print("xl, us")
             return pow((15.7 / .pi), 2)
         }
     }
@@ -82,7 +89,8 @@ class BoilingtimeCalculator {
 
         let t = 0.15 * c * ln
         let tsec = t*60
-        print("The cooking time is \(tsec)")
+
+        print("These are eggs with:\n\(egg.amount) eggs of \(egg.desiredEggType) softness\nWith roomtemp: \(egg.roomTemp)\nWe are currently in\(egg.currentCountry)\nOur eggs have size \(egg.size)\nThis results in a duration of\(tsec)\n")
         return Int(tsec)
     }
 }
