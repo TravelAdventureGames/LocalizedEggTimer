@@ -18,7 +18,6 @@ class TimerVC: UIViewController {
     @IBOutlet var timerLabelSTackview: UIStackView!
     
     @IBOutlet var cancelButton: UIBarButtonItem!
-    @IBOutlet var infoLabel: InfoLabel!
     @IBOutlet var startTimerBtn: UIButton!
 
     @IBOutlet var zachtTimerLbl: UILabel!
@@ -44,7 +43,8 @@ class TimerVC: UIViewController {
     @IBOutlet var mediumAlertLabel: AlertTextLabel!
     @IBOutlet var mediumHardAlertLabel: AlertTextLabel!
     @IBOutlet var hardAlertLabel: AlertTextLabel!
-
+    @IBOutlet var infoImagview: UIImageView!
+    
     var timerZacht = Timer()
     var timerzm = Timer()
     var timermedium = Timer()
@@ -80,6 +80,7 @@ class TimerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         startTimerBtn.addTarget(self, action: #selector(startTimers), for: .touchUpInside)
         calculateBoilingTimesAndLongestDuration()
         SetBeginUI()
@@ -90,22 +91,30 @@ class TimerVC: UIViewController {
         super.viewDidLayoutSubviews()
         addTimers()
         setBorders(labels: [zachtLbl,zmLbl,mediumLbl,mhLbl,hardLbl])
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
         runUpTimer()
-        addTapgestureToFadeOutInfolabel()
+        addTapgestureToFadeOutInfoImageview()
     }
 
-    private func addTapgestureToFadeOutInfolabel() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    private func addTapgestureToFadeOutInfoImageview() {
         let tapgesture = UITapGestureRecognizer(target: self, action: #selector(fadeOutInfoLabelAddTap))
         view.addGestureRecognizer(tapgesture)
     }
 
     @objc func fadeOutInfoLabelAddTap() {
-        infoLabel.alpha = 0
+        UIView.animate(withDuration: 0.4, animations: {
+            self.infoImagview.alpha = 0
+        }) { (done) in
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
     }
 
     private func setupNotificationOnEnteringBackground() {
@@ -198,6 +207,7 @@ class TimerVC: UIViewController {
     private func SetBeginUI() {
         self.setBackgroundWith(imageName: "snowboard3")
         title = "timervc.title.text".localized
+        infoImagview.image = UIImage(named: "timervc.imageview.instructions".localized)
         let fontweight = UIFont.Weight(rawValue: 300)
         let size: CGFloat = 14
         zachtTimerLbl.font = UIFont.monospacedDigitSystemFont(ofSize: size, weight: fontweight)
@@ -207,7 +217,7 @@ class TimerVC: UIViewController {
         hardTimerLbl.font = UIFont.monospacedDigitSystemFont(ofSize: size, weight: fontweight)
         startTimerBtn.alpha = 0
         cancelButton.isEnabled = false
-        infoLabel.alpha = 0.0
+        infoImagview.alpha = 0.0
         hideDoneButtons()
     }
 
@@ -329,7 +339,7 @@ class TimerVC: UIViewController {
                     hardTimerLbl.text = timeString(time: TimeInterval(hardDuration))
                     UIView.animate(withDuration: 1, animations: {
                         self.startTimerBtn.alpha = 0.7
-                        self.infoLabel.alpha = 1.0
+                        self.infoImagview.alpha = 1.0
                     })
                 }
             }
@@ -397,8 +407,7 @@ class TimerVC: UIViewController {
         startTimerBtn.alpha = 0
         self.navigationItem.hidesBackButton = true
         cancelButton.isEnabled = true
-        infoLabel.text = ""
-        infoLabel.isHidden = true
+        infoImagview.isHidden = true
     }
 
     func playSound(file: String, ext: String, playForever: Bool) {

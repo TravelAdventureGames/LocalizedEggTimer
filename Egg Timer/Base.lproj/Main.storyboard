@@ -144,7 +144,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-6l-BM1">
-                                <rect key="frame" x="37.5" y="398.5" width="300" height="72"/>
+                                <rect key="frame" x="37.5" y="398.5" width="300" height="73.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-1Z-Lsf">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="54"/>
@@ -199,35 +199,35 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-SR-YdU">
-                                        <rect key="frame" x="0.0" y="54" width="300" height="18"/>
+                                        <rect key="frame" x="0.0" y="54" width="300" height="19.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="neI-6g-XgD">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="B5U-TH-bwy">
-                                                <rect key="frame" x="61.5" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="61.5" y="0.0" width="53.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z5t-9t-mvZ">
-                                                <rect key="frame" x="123" y="0.0" width="54" height="18"/>
+                                                <rect key="frame" x="123" y="0.0" width="54" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRT-eU-b5h">
-                                                <rect key="frame" x="185" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="185" y="0.0" width="53.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgX-ee-bpB">
-                                                <rect key="frame" x="246.5" y="0.0" width="53.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <rect key="frame" x="246.5" y="0.0" width="53.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -748,12 +748,6 @@
                                     <constraint firstItem="Xr3-Pg-NiK" firstAttribute="width" secondItem="C9O-qV-tzg" secondAttribute="width" id="wIe-h5-CJ3"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRj-Fx-WdB" customClass="InfoLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                <rect key="frame" x="30" y="66" width="315" height="0.0"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3nD-FW-qK5">
                                 <rect key="frame" x="187.5" y="553.5" width="0.0" height="0.0"/>
                                 <subviews>
@@ -798,35 +792,38 @@
                                     <constraint firstItem="oTH-oN-POG" firstAttribute="width" secondItem="bkK-83-vr6" secondAttribute="width" id="o8m-nn-m8T"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLO-FJ-4tA">
+                                <rect key="frame" x="10" y="64" width="355" height="593"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2xm-v1-l2y">
-                                <rect key="frame" x="20" y="86" width="335" height="0.0"/>
+                                <rect key="frame" x="20" y="84" width="335" height="0.0"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uii-B0-hgE" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-84" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUd-CZ-Myg" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-84" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYN-u0-HST" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-84" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3K-g7-tAP" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-84" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-9I-cJM" customClass="AlertTextLabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="-20" y="-86" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="-20" y="-84" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -837,12 +834,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2xm-v1-l2y" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="1sy-SQ-ahA"/>
-                            <constraint firstItem="5xm-cq-vZE" firstAttribute="trailing" secondItem="SRj-Fx-WdB" secondAttribute="trailing" constant="30" id="3Zr-pO-dR7"/>
                             <constraint firstItem="mMt-x1-M51" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="3hi-kO-0H0"/>
                             <constraint firstItem="Xr3-Pg-NiK" firstAttribute="width" secondItem="sBu-Ni-jKi" secondAttribute="width" id="3oM-VH-raS"/>
                             <constraint firstItem="2xm-v1-l2y" firstAttribute="leading" secondItem="5xm-cq-vZE" secondAttribute="leading" constant="20" id="4Tr-Uc-72j"/>
-                            <constraint firstItem="SRj-Fx-WdB" firstAttribute="top" secondItem="5xm-cq-vZE" secondAttribute="top" constant="2" id="5Z2-08-bGz"/>
                             <constraint firstItem="U41-tX-5il" firstAttribute="top" secondItem="3nD-FW-qK5" secondAttribute="bottom" constant="10" id="Ge2-sz-Gz8"/>
+                            <constraint firstItem="2xm-v1-l2y" firstAttribute="top" secondItem="5xm-cq-vZE" secondAttribute="top" constant="20" id="NwH-CC-bjx"/>
                             <constraint firstItem="mMt-x1-M51" firstAttribute="top" secondItem="QY3-We-2iR" secondAttribute="bottom" constant="30" id="PBe-0N-8xP"/>
                             <constraint firstItem="sBu-Ni-jKi" firstAttribute="width" secondItem="tf9-BZ-eoB" secondAttribute="width" multiplier="0.17" id="QfE-It-Nee"/>
                             <constraint firstItem="5xm-cq-vZE" firstAttribute="bottom" secondItem="mMt-x1-M51" secondAttribute="bottom" constant="30" id="S4a-zp-95m"/>
@@ -850,12 +846,14 @@
                             <constraint firstItem="3nD-FW-qK5" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="T6c-3D-gfM"/>
                             <constraint firstItem="oTH-oN-POG" firstAttribute="width" secondItem="Xr3-Pg-NiK" secondAttribute="width" id="Y6B-dM-mTi"/>
                             <constraint firstItem="QY3-We-2iR" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="ZKR-0X-BIH"/>
+                            <constraint firstItem="5xm-cq-vZE" firstAttribute="bottom" secondItem="SLO-FJ-4tA" secondAttribute="bottom" constant="10" id="cU9-pi-lVN"/>
                             <constraint firstItem="5xm-cq-vZE" firstAttribute="trailing" secondItem="2xm-v1-l2y" secondAttribute="trailing" constant="20" id="dre-8j-gbF"/>
                             <constraint firstItem="U41-tX-5il" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="esN-is-vhQ"/>
                             <constraint firstItem="QY3-We-2iR" firstAttribute="top" secondItem="U41-tX-5il" secondAttribute="bottom" constant="10" id="fhl-jI-HBJ"/>
+                            <constraint firstItem="5xm-cq-vZE" firstAttribute="trailing" secondItem="SLO-FJ-4tA" secondAttribute="trailing" constant="10" id="gVl-wO-Hzx"/>
                             <constraint firstItem="mMt-x1-M51" firstAttribute="width" secondItem="tf9-BZ-eoB" secondAttribute="width" multiplier="0.4" id="gll-rz-LJD"/>
-                            <constraint firstItem="SRj-Fx-WdB" firstAttribute="leading" secondItem="5xm-cq-vZE" secondAttribute="leading" constant="30" id="iB1-Vw-iDH"/>
-                            <constraint firstItem="2xm-v1-l2y" firstAttribute="top" secondItem="SRj-Fx-WdB" secondAttribute="bottom" constant="20" id="pcP-th-8JX"/>
+                            <constraint firstItem="SLO-FJ-4tA" firstAttribute="top" secondItem="5xm-cq-vZE" secondAttribute="top" id="pTX-R8-vC5"/>
+                            <constraint firstItem="SLO-FJ-4tA" firstAttribute="leading" secondItem="5xm-cq-vZE" secondAttribute="leading" constant="10" id="rf4-Ir-sjY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5xm-cq-vZE"/>
                     </view>
@@ -874,7 +872,7 @@
                         <outlet property="hardDoneBtn" destination="8DG-c9-ClQ" id="MsB-eF-szi"/>
                         <outlet property="hardLbl" destination="485-7P-m3U" id="fu3-nL-oec"/>
                         <outlet property="hardTimerLbl" destination="8Wl-nH-ngo" id="XFp-QL-5bf"/>
-                        <outlet property="infoLabel" destination="SRj-Fx-WdB" id="yYz-vK-u1t"/>
+                        <outlet property="infoImagview" destination="SLO-FJ-4tA" id="0WG-gB-tJS"/>
                         <outlet property="mediumAlertLabel" destination="AYN-u0-HST" id="FfB-dj-gug"/>
                         <outlet property="mediumDoneBtn" destination="m3L-14-tsX" id="V5R-LA-ybP"/>
                         <outlet property="mediumHardAlertLabel" destination="x3K-g7-tAP" id="cTD-hj-kzi"/>
