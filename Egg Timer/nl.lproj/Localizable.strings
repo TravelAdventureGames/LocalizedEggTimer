@@ -14,7 +14,7 @@
 "settingsvc.label.medium" = "M";
 "settingsvc.label.groot" = "L";
 "settingsvc.label.xl" = "XL";
-"settingsvc.info.moresizeinfo" = "Ik weet niet hoe groot mijn ei is";
+"settings.mysteregg.label" = " ";
 
 "amountvc.title.hoeveleieren" = "HOEVEEL EIEREN";
 "amountvc.alert.tile" = "Let op!";

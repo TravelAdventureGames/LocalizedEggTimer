@@ -16,7 +16,7 @@ class EggMeasuringVC: UIViewController {
     
     let eggMeasureImageview: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "eggsize2_Eiergrootes")
+        iv.image = #imageLiteral(resourceName: "eggsize9_Eiergrootes")
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleToFill
         return iv
@@ -27,11 +27,6 @@ class EggMeasuringVC: UIViewController {
         setAnchorsImageview()
         titleLable.text = "eggmeasurevc.lable.title".localized
         titleLable.textColor = UIColor.projectBlueWith(alpha: 1.0)
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
     }
 
     @IBAction func didClickCancelButton(_ sender: Any) {

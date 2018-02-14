@@ -29,7 +29,7 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var grootButton: UIButton!
     @IBOutlet var kleinButton: UIButton!
     @IBOutlet var xlButton: UIButton!
-    @IBOutlet var moreSizeInfoBtn: UIButton!
+    @IBOutlet var mysterieEggLabel: UILabel!
     @IBOutlet var firstTopConstraint: NSLayoutConstraint!
     @IBOutlet var secondTopConstraint: NSLayoutConstraint!
 
@@ -138,20 +138,11 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         mediumLabel.text = "settingsvc.label.medium".localized
         largeLabel.text = "settingsvc.label.groot".localized
         xlLabel.text = "settingsvc.label.xl".localized
-        setAttributedButtonTitle()
-    }
-
-    private func setAttributedButtonTitle() {
-        let yourAttributes : [NSAttributedStringKey: Any] = [
-            NSAttributedStringKey.font : UIFont.italicSystemFont(ofSize: 15),
-            NSAttributedStringKey.foregroundColor : UIColor.white,
-            ]
-
-        let attributeString = NSMutableAttributedString(string: "settingsvc.info.moresizeinfo".localized, attributes: yourAttributes)
-        moreSizeInfoBtn.setAttributedTitle(attributeString, for: .normal)
-        moreSizeInfoBtn.backgroundColor = UIColor.projectBlueWith(alpha: 0.3)
-        moreSizeInfoBtn.layer.cornerRadius = 7
-        moreSizeInfoBtn.layer.masksToBounds = true
+        mysterieEggLabel.text = "settings.mysteregg.label".localized
+        kleinLabel.backgroundColor = UIColor.projectBlueWith(alpha: 0.5)
+        mediumLabel.backgroundColor = UIColor.projectBlueWith(alpha: 0.5)
+        largeLabel.backgroundColor = UIColor.projectBlueWith(alpha: 0.5)
+        xlLabel.backgroundColor = UIColor.projectBlueWith(alpha: 0.5)
     }
 
     private func setShades() {

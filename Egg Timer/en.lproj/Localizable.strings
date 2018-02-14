@@ -14,7 +14,7 @@
 "settingsvc.label.medium" = "M";
 "settingsvc.label.groot" = "L";
 "settingsvc.label.xl" = "XL/J";
-"settingsvc.info.moresizeinfo" = "I don't know hy egg size";
+"settings.mysteregg.label" = " ";
 
 "amountvc.title.hoeveleieren" = "HOW MANY EGGS";
 "amountvc.alert.tile" = "Attention!";
