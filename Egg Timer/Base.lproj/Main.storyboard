@@ -143,8 +143,8 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-6l-BM1">
-                                <rect key="frame" x="37.5" y="398.5" width="300" height="73.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-6l-BM1">
+                                <rect key="frame" x="37.5" y="398.5" width="300" height="78.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-1Z-Lsf">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="54"/>
@@ -199,7 +199,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-SR-YdU">
-                                        <rect key="frame" x="0.0" y="54" width="300" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="59" width="300" height="19.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="neI-6g-XgD">
                                                 <rect key="frame" x="0.0" y="0.0" width="53.5" height="19.5"/>
@@ -792,6 +792,16 @@
                                     <constraint firstItem="oTH-oN-POG" firstAttribute="width" secondItem="bkK-83-vr6" secondAttribute="width" id="o8m-nn-m8T"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpl-Oa-qxF">
+                                <rect key="frame" x="30" y="603" width="33.5" height="33.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tpl-Oa-qxF" secondAttribute="height" multiplier="1:1" id="kGV-Ul-vNx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didClickCookingInfobutton:" destination="kbr-MD-FRb" eventType="touchUpInside" id="Hi5-vN-duB"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLO-FJ-4tA">
                                 <rect key="frame" x="10" y="64" width="355" height="593"/>
                             </imageView>
@@ -844,8 +854,10 @@
                             <constraint firstItem="5xm-cq-vZE" firstAttribute="bottom" secondItem="mMt-x1-M51" secondAttribute="bottom" constant="30" id="S4a-zp-95m"/>
                             <constraint firstItem="mMt-x1-M51" firstAttribute="height" secondItem="tf9-BZ-eoB" secondAttribute="height" multiplier="0.05" id="SV7-t0-ltH"/>
                             <constraint firstItem="3nD-FW-qK5" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="T6c-3D-gfM"/>
+                            <constraint firstItem="tpl-Oa-qxF" firstAttribute="height" secondItem="mMt-x1-M51" secondAttribute="height" id="UH6-VU-FOh"/>
                             <constraint firstItem="oTH-oN-POG" firstAttribute="width" secondItem="Xr3-Pg-NiK" secondAttribute="width" id="Y6B-dM-mTi"/>
                             <constraint firstItem="QY3-We-2iR" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="ZKR-0X-BIH"/>
+                            <constraint firstItem="tpl-Oa-qxF" firstAttribute="centerY" secondItem="mMt-x1-M51" secondAttribute="centerY" id="bgt-rV-fhd"/>
                             <constraint firstItem="5xm-cq-vZE" firstAttribute="bottom" secondItem="SLO-FJ-4tA" secondAttribute="bottom" constant="10" id="cU9-pi-lVN"/>
                             <constraint firstItem="5xm-cq-vZE" firstAttribute="trailing" secondItem="2xm-v1-l2y" secondAttribute="trailing" constant="20" id="dre-8j-gbF"/>
                             <constraint firstItem="U41-tX-5il" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="esN-is-vhQ"/>
@@ -853,6 +865,7 @@
                             <constraint firstItem="5xm-cq-vZE" firstAttribute="trailing" secondItem="SLO-FJ-4tA" secondAttribute="trailing" constant="10" id="gVl-wO-Hzx"/>
                             <constraint firstItem="mMt-x1-M51" firstAttribute="width" secondItem="tf9-BZ-eoB" secondAttribute="width" multiplier="0.4" id="gll-rz-LJD"/>
                             <constraint firstItem="SLO-FJ-4tA" firstAttribute="top" secondItem="5xm-cq-vZE" secondAttribute="top" id="pTX-R8-vC5"/>
+                            <constraint firstItem="tpl-Oa-qxF" firstAttribute="leading" secondItem="5xm-cq-vZE" secondAttribute="leading" constant="30" id="rbG-R0-uQ7"/>
                             <constraint firstItem="SLO-FJ-4tA" firstAttribute="leading" secondItem="5xm-cq-vZE" secondAttribute="leading" constant="10" id="rf4-Ir-sjY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5xm-cq-vZE"/>
@@ -872,6 +885,7 @@
                         <outlet property="hardDoneBtn" destination="8DG-c9-ClQ" id="MsB-eF-szi"/>
                         <outlet property="hardLbl" destination="485-7P-m3U" id="fu3-nL-oec"/>
                         <outlet property="hardTimerLbl" destination="8Wl-nH-ngo" id="XFp-QL-5bf"/>
+                        <outlet property="infoButton" destination="tpl-Oa-qxF" id="amM-l0-GY0"/>
                         <outlet property="infoImagview" destination="SLO-FJ-4tA" id="0WG-gB-tJS"/>
                         <outlet property="mediumAlertLabel" destination="AYN-u0-HST" id="FfB-dj-gug"/>
                         <outlet property="mediumDoneBtn" destination="m3L-14-tsX" id="V5R-LA-ybP"/>

@@ -18,6 +18,11 @@ class UserdefaultManager {
         get { return UserDefaults.standard.bool(forKey: "didSeeAlert") }
         set { UserDefaults.standard.set(newValue, forKey: "didSeeAlert") }
     }
+
+    static var didSeeCookInstructions: Bool {
+        get { return UserDefaults.standard.bool(forKey: "cookinstructions") }
+        set { UserDefaults.standard.set(newValue, forKey: "cookinstructions") }
+    }
 }
 
 

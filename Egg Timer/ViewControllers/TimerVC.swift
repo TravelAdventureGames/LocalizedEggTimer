@@ -44,6 +44,8 @@ class TimerVC: UIViewController {
     @IBOutlet var mediumHardAlertLabel: AlertTextLabel!
     @IBOutlet var hardAlertLabel: AlertTextLabel!
     @IBOutlet var infoImagview: UIImageView!
+    @IBOutlet var infoButton: UIButton!
+
     
     var timerZacht = Timer()
     var timerzm = Timer()
@@ -216,8 +218,10 @@ class TimerVC: UIViewController {
         mhTimerLbl.font = UIFont.monospacedDigitSystemFont(ofSize: size, weight: fontweight)
         hardTimerLbl.font = UIFont.monospacedDigitSystemFont(ofSize: size, weight: fontweight)
         startTimerBtn.alpha = 0
+        infoButton.alpha = 0
         cancelButton.isEnabled = false
         infoImagview.alpha = 0.0
+        infoButton.setImage(#imageLiteral(resourceName: "infoIcon1").withRenderingMode(.alwaysOriginal), for: .normal)
         hideDoneButtons()
     }
 
@@ -298,7 +302,7 @@ class TimerVC: UIViewController {
                         if upTime > zachtDuration {
                             zachtTimerLbl.text = timeString(time: TimeInterval(zachtDuration))
                         } else {
-                            upTime += 4
+                            upTime += 7
                             zachtTimerLbl.text = timeString(time: TimeInterval(upTime))
                         }
                     case .SoftMedium:
@@ -312,7 +316,7 @@ class TimerVC: UIViewController {
                         if upTime > mediumDuration {
                             mediumTimerLbl.text = timeString(time: TimeInterval(mediumDuration))
                         } else {
-                            upTime += 8
+                            upTime += 9
                             mediumTimerLbl.text = timeString(time: TimeInterval(upTime))
                         }
                     case .MediumHard:
@@ -337,10 +341,19 @@ class TimerVC: UIViewController {
                     mediumTimerLbl.text = timeString(time: TimeInterval(mediumDuration))
                     mhTimerLbl.text = timeString(time: TimeInterval(mhDuration))
                     hardTimerLbl.text = timeString(time: TimeInterval(hardDuration))
-                    UIView.animate(withDuration: 1, animations: {
-                        self.startTimerBtn.alpha = 0.7
-                        self.infoImagview.alpha = 1.0
-                    })
+                    if !UserdefaultManager.didSeeCookInstructions {
+                        UIView.animate(withDuration: 1, animations: {
+                            self.startTimerBtn.alpha = 0.7
+                            self.infoButton.alpha = 0.7
+                            self.infoImagview.alpha = 1.0
+                            UserdefaultManager.didSeeCookInstructions = true
+                        })
+                    } else {
+                        UIView.animate(withDuration: 1, animations: {
+                            self.startTimerBtn.alpha = 0.7
+                            self.infoButton.alpha = 0.7
+                        })
+                    }
                 }
             }
         }
@@ -405,6 +418,7 @@ class TimerVC: UIViewController {
         startAvailableTimers()
         scheduleNotifications()
         startTimerBtn.alpha = 0
+        infoButton.alpha = 0
         self.navigationItem.hidesBackButton = true
         cancelButton.isEnabled = true
         infoImagview.isHidden = true
@@ -482,5 +496,11 @@ class TimerVC: UIViewController {
         player?.stop()
         player = nil
         removeAlertInStackview(label: hardAlertLabel)
+    }
+    
+    @IBAction func didClickCookingInfobutton(_ sender: Any) {
+        UIView.animate(withDuration: 1, animations: {
+            self.infoImagview.alpha = 1.0
+        })
     }
 }

@@ -46,11 +46,17 @@
 "lanchvc.button.skip" = "Skip";
 
 //NotificationManager
-"notification.body.zacht" = "runny boiled egg(s) from the pot!";
-"notification.body.zachtmedium" = "soft boiled egg(s) from the pot.";
-"notification.body.medium" = "firm boiled egg(s) from the pot.";
-"notification.body.mediumhard" = "hard boiled egg(s) from the pot.";
-"notification.body.hard" = "solid boiled egg(s) from the pot.";
+"notification.body.zacht" = "runny boiled eggs from the pot!";
+"notification.body.zachtmedium" = "soft boiled eggs from the pot.";
+"notification.body.medium" = "firm boiled eggs from the pot.";
+"notification.body.mediumhard" = "hard boiled eggs from the pot.";
+"notification.body.hard" = "solid boiled eggs from the pot.";
+
+"notification.body.zachtSingle" = "runny boiled egg from the pot!";
+"notification.body.zachtmediumSingle" = "soft boiled egg from the pot!";
+"notification.body.mediumSingle" = "firm boiled egg from the pot!";
+"notification.body.mediumhardSingle" = "hard boiled egg from the pot!";
+"notification.body.hardSingle" = "solid boiled egg from the pot!";
 
 "notification.body.first" = "Take";
 

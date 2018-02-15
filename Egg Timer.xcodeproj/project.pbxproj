@@ -27,7 +27,6 @@
 		6837393820168576002953B7 /* BolingtimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837393720168576002953B7 /* BolingtimeCalculator.swift */; };
 		6837393B20168996002953B7 /* Unused code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837393A20168996002953B7 /* Unused code.swift */; };
 		684372C62016BC2300034DB5 /* eggsready.wav in Resources */ = {isa = PBXBuildFile; fileRef = 684372C52016BC2300034DB5 /* eggsready.wav */; };
-		684372C82016BF8700034DB5 /* beep1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 684372C72016BF8700034DB5 /* beep1.mp3 */; };
 		684372CA2017419A00034DB5 /* View+hakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684372C92017419A00034DB5 /* View+hakeAnimation.swift */; };
 		684372CC2017CA6600034DB5 /* UILabel+padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684372CB2017CA6600034DB5 /* UILabel+padding.swift */; };
 		6850A758201BDEB400BB7538 /* ExtrainfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850A757201BDEB400BB7538 /* ExtrainfoViewController.swift */; };
@@ -71,7 +70,6 @@
 		6837393720168576002953B7 /* BolingtimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BolingtimeCalculator.swift; sourceTree = "<group>"; };
 		6837393A20168996002953B7 /* Unused code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Unused code.swift"; sourceTree = "<group>"; };
 		684372C52016BC2300034DB5 /* eggsready.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eggsready.wav; sourceTree = "<group>"; };
-		684372C72016BF8700034DB5 /* beep1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep1.mp3; sourceTree = "<group>"; };
 		684372C92017419A00034DB5 /* View+hakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+hakeAnimation.swift"; sourceTree = "<group>"; };
 		684372CB2017CA6600034DB5 /* UILabel+padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+padding.swift"; sourceTree = "<group>"; };
 		6850A757201BDEB400BB7538 /* ExtrainfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtrainfoViewController.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				68DE58D1201E621A00327B29 /* Localization */,
-				684372C72016BF8700034DB5 /* beep1.mp3 */,
 				684372C52016BC2300034DB5 /* eggsready.wav */,
 			);
 			path = Resources;
@@ -347,7 +344,6 @@
 				6888ED4B202DD29E00C83FF5 /* InfoPlist.strings in Resources */,
 				68525E1720332EE7006CE114 /* EggMeasuringVC.xib in Resources */,
 				68DE58D4201E625200327B29 /* Localizable.strings in Resources */,
-				684372C82016BF8700034DB5 /* beep1.mp3 in Resources */,
 				6837390A2013BA5E002953B7 /* LaunchScreen.storyboard in Resources */,
 				683739072013BA5E002953B7 /* Assets.xcassets in Resources */,
 				683739052013BA5E002953B7 /* Main.storyboard in Resources */,
