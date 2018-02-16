@@ -144,9 +144,10 @@ class TimerVC: UIViewController {
             startAvailableTimers()
         }
     }
+    //MARK:- We add extra second because of time it takes to reset timers and start again.
     private func getExpiredTimeInBackgroundModus() {
         let expiredTime = timestampOnReenteringApp - timestampOnLeavingApp
-        expiredTimeInBackground = Int(expiredTime)
+        expiredTimeInBackground = Int(expiredTime) + 1
     }
     private func updateTimerDurations() {
         setNewTimerValue(oldDuration: &zachtDuration)
