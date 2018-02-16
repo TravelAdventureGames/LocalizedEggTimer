@@ -77,6 +77,9 @@
 		6850A75B201BEB5200BB7538 /* CGFloat+multipliers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+multipliers.swift"; sourceTree = "<group>"; };
 		68525E1420332EE7006CE114 /* EggMeasuringVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggMeasuringVC.swift; sourceTree = "<group>"; };
 		68525E1520332EE7006CE114 /* EggMeasuringVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EggMeasuringVC.xib; sourceTree = "<group>"; };
+		68525E1A20370C4A006CE114 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		68525E1B20370C4B006CE114 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "Egg Timer/es.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		68525E1C20370C4B006CE114 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../../es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6888ED4A202DD29E00C83FF5 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "Egg Timer/nl.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6888ED4C202DD2A800C83FF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "Egg Timer/Base.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6888ED4D202DD2AD00C83FF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Egg Timer/en.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -324,6 +327,7 @@
 				Base,
 				nl,
 				en,
+				es,
 			);
 			mainGroup = 683738F32013BA5E002953B7;
 			productRefGroup = 683738FD2013BA5E002953B7 /* Products */;
@@ -450,6 +454,7 @@
 			children = (
 				683739042013BA5E002953B7 /* Base */,
 				68DE58CF201CD5ED00327B29 /* en */,
+				68525E1A20370C4A006CE114 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 				6888ED4A202DD29E00C83FF5 /* nl */,
 				6888ED4C202DD2A800C83FF5 /* Base */,
 				6888ED4D202DD2AD00C83FF5 /* en */,
+				68525E1B20370C4B006CE114 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				68DE58D3201E625200327B29 /* nl */,
 				68DE58D5201E62E800327B29 /* en */,
 				68DE58D8201E786500327B29 /* Base */,
+				68525E1C20370C4B006CE114 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

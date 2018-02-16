@@ -1,0 +1,174 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1EG-9I-cJM"; */
+"1EG-9I-cJM.text" = "Label";
+
+/* Class = "UILabel"; text = "Medium"; ObjectID = "1H0-Md-Wpu"; */
+"1H0-Md-Wpu.text" = "Medium";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2H0-Bw-rRz"; */
+"2H0-Bw-rRz.text" = "Label";
+
+/* Class = "UILabel"; text = "Zacht"; ObjectID = "2LD-06-cXV"; */
+"2LD-06-cXV.text" = "Poco";
+
+/* Class = "UILabel"; text = "Nee"; ObjectID = "2MR-AY-Uc2"; */
+"2MR-AY-Uc2.text" = "No";
+
+/* Class = "UILabel"; text = "Multiple eggs timer"; ObjectID = "3zS-cP-Fwd"; */
+"3zS-cP-Fwd.text" = "Varios huevo ​temporizador";
+
+/* Class = "UILabel"; text = "Hard"; ObjectID = "485-7P-m3U"; */
+"485-7P-m3U.text" = "Bien";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5Ou-Bl-bU4"; */
+"5Ou-Bl-bU4.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5nS-mx-GXA"; */
+"5nS-mx-GXA.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5rd-C5-GRo"; */
+"5rd-C5-GRo.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Verder"; ObjectID = "7JT-vC-M53"; */
+"7JT-vC-M53.normalTitle" = "Continuar";
+
+/* Class = "UILabel"; text = "Geef aan hoeveel eieren je van iedere garing gekookt wilt hebben."; ObjectID = "7ba-5U-EuF"; */
+"7ba-5U-EuF.text" = "Indique cuántos huevos quiere cocinar";
+
+/* Class = "UILabel"; text = "Zeer zacht"; ObjectID = "8Vh-gy-Wlj"; */
+"8Vh-gy-Wlj.text" = "Muy poco cocidos";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "8Wl-nH-ngo"; */
+"8Wl-nH-ngo.text" = "00:00";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9a3-si-SYJ"; */
+"9a3-si-SYJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AYN-u0-HST"; */
+"AYN-u0-HST.text" = "Label";
+
+/* Class = "UILabel"; text = "Medium"; ObjectID = "B5U-TH-bwy"; */
+"B5U-TH-bwy.text" = "Medium";
+
+/* Class = "UILabel"; text = "M - H"; ObjectID = "C9O-qV-tzg"; */
+"C9O-qV-tzg.text" = "Cocidos";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "E4M-4K-4cx"; */
+"E4M-4K-4cx.title" = "Cancel";
+
+/* Class = "UIBarButtonItem"; title = "Tips"; ObjectID = "G8P-Va-0xu"; */
+"G8P-Va-0xu.title" = "Tips";
+
+/* Class = "UILabel"; text = "Zacht "; ObjectID = "Ifd-fe-Fci"; */
+"Ifd-fe-Fci.text" = "Poco cocidos";
+
+/* Class = "UILabel"; text = "Hoe groot zijn jouw eieren?"; ObjectID = "KWq-7v-pCQ"; */
+"KWq-7v-pCQ.text" = "Cual es el tamaño de tus huevos?";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Kye-qA-Wj1"; */
+"Kye-qA-Wj1.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LFe-C9-uw6"; */
+"LFe-C9-uw6.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Set timers"; ObjectID = "N4c-Uw-xxM"; */
+"N4c-Uw-xxM.normalTitle" = "Configurar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NdL-5k-doL"; */
+"NdL-5k-doL.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "PkV-0J-kby"; */
+"PkV-0J-kby.title" = " ";
+
+/* Class = "UIBarButtonItem"; title = "\" \""; ObjectID = "Q6a-ky-QPW"; */
+"Q6a-ky-QPW.title" = "\" \"";
+
+/* Class = "UILabel"; text = "Medium"; ObjectID = "SPT-d0-oRH"; */
+"SPT-d0-oRH.text" = "Medium cocidos";
+
+/* Class = "UILabel"; text = "Zacht"; ObjectID = "VVw-05-mPL"; */
+"VVw-05-mPL.text" = "Poco";
+
+/* Class = "UILabel"; text = "?"; ObjectID = "WgX-ee-bpB"; */
+"WgX-ee-bpB.text" = "?";
+
+/* Class = "UILabel"; text = "Hard"; ObjectID = "Wp0-tb-QwW"; */
+"Wp0-tb-QwW.text" = "Bien cocidos";
+
+/* Class = "UILabel"; text = "Zeer zacht"; ObjectID = "Xr3-Pg-NiK"; */
+"Xr3-Pg-NiK.text" = "Muy poco";
+
+/* Class = "UILabel"; text = "Groot"; ObjectID = "Z5t-9t-mvZ"; */
+"Z5t-9t-mvZ.text" = "Grande";
+
+/* Class = "UILabel"; text = "Je bevindt je nu op 500 meter hoogte"; ObjectID = "Zu9-aI-DPg"; */
+"Zu9-aI-DPg.text" = "Je bevindt je nu op 500 meter hoogte";
+
+/* Class = "UILabel"; text = "Komen je eieren uit de koelkast?"; ObjectID = "aso-Kr-fiR"; */
+"aso-Kr-fiR.text" = "Tus huevos salen del refrigerador?";
+
+/* Class = "UILabel"; text = "XL"; ObjectID = "bRT-eU-b5h"; */
+"bRT-eU-b5h.text" = "XL";
+
+/* Class = "UILabel"; text = "Hard"; ObjectID = "cnn-9P-FDL"; */
+"cnn-9P-FDL.text" = "Bien";
+
+/* Class = "UILabel"; text = "Medium - Hard"; ObjectID = "hNY-h9-ITq"; */
+"hNY-h9-ITq.text" = "Cocidos";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "hWA-ye-MvI"; */
+"hWA-ye-MvI.title" = " ";
+
+/* Class = "UILabel"; text = "Zeer zacht"; ObjectID = "hiJ-6i-0o6"; */
+"hiJ-6i-0o6.text" = "Muy poco";
+
+/* Class = "UILabel"; text = "Op hoogte wordt het kookpunt van water lager. Eieren hebben dan wat langer nodig om te garen."; ObjectID = "kfP-tH-wkc"; */
+"kfP-tH-wkc.text" = "El punto de ebullición del agua es más bajo en altura. El tiempo de cocción se vuelve menos.";
+
+/* Class = "UILabel"; text = "Medium"; ObjectID = "mGM-GV-B4E"; */
+"mGM-GV-B4E.text" = "Medium";
+
+/* Class = "UIButton"; normalTitle = "Start timers"; ObjectID = "mMt-x1-M51"; */
+"mMt-x1-M51.normalTitle" = "Iniciar";
+
+/* Class = "UILabel"; text = "Klein"; ObjectID = "neI-6g-XgD"; */
+"neI-6g-XgD.text" = "pequeño";
+
+/* Class = "UILabel"; text = "Ja"; ObjectID = "ocb-1b-Wk0"; */
+"ocb-1b-Wk0.text" = "Si";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "p82-il-yxF"; */
+"p82-il-yxF.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "rvY-OR-m27"; */
+"rvY-OR-m27.text" = "00:00";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "sBu-Ni-jKi"; */
+"sBu-Ni-jKi.text" = "00:00";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "ssp-Xt-y7K"; */
+"ssp-Xt-y7K.text" = "00:00";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "thC-ie-WSQ"; */
+"thC-ie-WSQ.text" = "00:00";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tpl-Oa-qxF"; */
+"tpl-Oa-qxF.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uii-B0-hgE"; */
+"uii-B0-hgE.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vUd-CZ-Myg"; */
+"vUd-CZ-Myg.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vp5-Rb-Ng8"; */
+"vp5-Rb-Ng8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "x3K-g7-tAP"; */
+"x3K-g7-tAP.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xDi-t8-zcS"; */
+"xDi-t8-zcS.text" = "Label";
+
+/* Class = "UILabel"; text = "M - H"; ObjectID = "xne-Fh-BHj"; */
+"xne-Fh-BHj.text" = "Cocidos";

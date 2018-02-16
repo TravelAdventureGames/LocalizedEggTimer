@@ -1,0 +1,82 @@
+/* 
+  Localizable.strings
+  Egg Timer
+
+  Created by Martijn van Gogh on 28-01-18.
+  Copyright © 2018 Martijn van Gogh. All rights reserved.
+*/
+
+"setingsvc.title.overeieren" = "SOBRE TUS HUEVOS";
+"Settingsvc.alituted.labelJebevindt" = "Estas a​";
+"Settingsvc.alituted.labelMeterHoog" = "metros de altura​​";
+
+"settingsvc.label.klein" = "S";
+"settingsvc.label.medium" = "M";
+"settingsvc.label.groot" = "L";
+"settingsvc.label.xl" = "XL";
+"settings.mysteregg.label" = " ";
+
+"amountvc.title.hoeveleieren" = "CUANTOS HUEVOS​";
+"amountvc.alert.tile" = "Atencion!​";
+"amountvc.alert.text" = "Lee los consejos antes de cocinar. ​Asegura que mete los huevos al aqua (con cuidado) solo cuando ya esta hirviendo.​";
+"amountvc.alert.left" = "​Ok, entendido​";
+"amountvc.alert.right" = "​A los consejos​";
+
+
+"extrainfovc.label.text" = "​Seguramente quieres empezar ya. Pero toma el tiempo para leer los consejos!<br><br><ul><li>​El calculador de huevos en esta app toma por hecho que le dejes al aqua <u>​hervir primero</u> ​y que solo<u>​despues</u> ​metes los huevos (con cuidado) a la olla.</li><li>​Si uno de los temporizadores termina, saca los huevos de la oja y enfrielos lo mas rapido possible, por ejemplo en una recipiente con aqua helada. Tiene que ser aqua muy fria, si no, los huevos seguiran cociendo!</li><li>​Prepara varios recipientes para los varios huevos (​uno para sueva, uno para duro etc.). ​Asi puedes destinquirles despues</li><li>​Para facilitar el pelar, puedes anadir un poquito de vinagre al aqua.</li></ul>";
+
+"timervc.title.text" = "​INICIAR";
+"timervc.label.haal" = "​Saca​";
+"timervc.label.uitdepan" = "​de la olla";
+
+//model
+"model.druiperige.eieren" = "huevo​s​​ muy poco cocido​s​​​";
+"model.zachte.eieren" = "huevo​s​ poco cocido​s​";
+"model.medium.eieren" = "huevo​s​ medio cocido​s​";
+"model.mh.eieren" = "huevo​s​ cocido​s​";
+"model.harde.eieren" = "huevo​s​ bien cocido​s​";
+
+"model.druiperig.ei" = "huevo​ muy poco cocido​";
+"model.zacht.ei" = "huevo​ poco cocido​";
+"model.medium.ei" = "huevo​ medio cocido​​";
+"model.mh.ei" = "huevo​ cocido​";
+"model.hard.ei" = "huevo​ bien cocido​";
+
+//Launch
+"launch.title.multiegg" = "​Huevos\nMultiples\nTemporizador";
+"launch.lbel.text" = "​El unico huevo tempoizador para medir varios huevos a la vez!";
+"lanchvc.button.skip" = "Alta";
+
+//NotificationManager
+"notification.body.zacht" = "​Huevo​s​​ muy poco cocido​s​​​ ​de la olla!";
+"notification.body.zachtmedium" = "​Huevo​s​ poco cocido​s​ ​de la olla!";
+"notification.body.medium" = "​Huevo​s​ medio cocido​s​ ​​de la olla!";
+"notification.body.mediumhard" = "​Huevo​s​ cocido​s​ ​de la olla!";
+"notification.body.hard" = "​Huevo​s​ bien cocido​s​ ​de la olla!";
+
+"notification.body.zachtSingle" = "​Huevo​ muy poco cocido​ ​de la olla!";
+"notification.body.zachtmediumSingle" = "​Huevo​ poco cocido​ ​de la olla!";
+"notification.body.mediumSingle" = "​Huevo​ medio cocido​​ ​​de la olla!";
+"notification.body.mediumhardSingle" = "​Huevo​ cocido​ ​de la olla!";
+"notification.body.hardSingle" = "​Huevo​ bien cocido​ ​de la olla!";
+
+"notification.body.first" = "Saca​";
+
+"notification.title.zacht" = "Listo!!";
+"notification.title.zachtmedium" = "Listo!!";
+"notification.title.medium" = "Listo!!";
+"notification.title.mediumhard" = "Listo!!";
+"notification.title.hard" = "Listo!!";
+
+"infolabel.label.infotext" = "​Instrucciones de cocer<br><br><ul><li>​Pon los huevos en la olla (con cuidado) <u>​cuando el agua hierve</u>!</li><li>​Asegura que los huevos <u>​estan submergidos plenamente</u> ​ ​(2,5 cm ​de aqua por encima de los huevos en la olla</li><li>​Usa una cucharra para meter los huevos en la olla y para sacarlos de nuevo</li><li>​Podrias hacer un pequeno agujero en la parte superior del huevo con una aguja para prevenir que se rompa dentro de la olla </li><li>​Anade un poco de vinagre al aqua para facilitar pelar la cascara.</li><li>​Cuando suena un temporizador, enfrie los huevos de inmediato en el aqua fria.</li></ul><br><br>";
+
+"timervc.imageview.instructions" = "EScookinstructions";
+
+"eggmeasurevc.lable.title" = "Pon el huevo en pantalla y determinar el tamañano.";
+
+
+
+
+
+
+

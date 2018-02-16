@@ -53,7 +53,7 @@ class LaunchVC: UIViewController {
             .strokeColor : UIColor.white,
             .foregroundColor : UIColor.projectBlueWith(alpha: 1),
             .strokeWidth : -6.0,
-            .font : UIFont.monospacedDigitSystemFont(ofSize: 48, weight: UIFont.Weight(rawValue: UIFont.Weight.RawValue(900)))
+            .font : UIFont.monospacedDigitSystemFont(ofSize: 46 * CGFloat.widthMultiplier(), weight: UIFont.Weight(rawValue: UIFont.Weight.RawValue(900)))
         ]
 
         let text = "launch.lbel.text".localized
