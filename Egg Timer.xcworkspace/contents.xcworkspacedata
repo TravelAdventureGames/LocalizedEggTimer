@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Egg Timer.xcodeproj">
+      location = "group:/Users/martijnvangogh/Desktop/EggTimer-master/&#xa7;.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

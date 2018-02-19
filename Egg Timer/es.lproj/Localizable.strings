@@ -70,7 +70,7 @@
 
 "infolabel.label.infotext" = "​Instrucciones de cocer<br><br><ul><li>​Pon los huevos en la olla (con cuidado) <u>​cuando el agua hierve</u>!</li><li>​Asegura que los huevos <u>​estan submergidos plenamente</u> ​ ​(2,5 cm ​de aqua por encima de los huevos en la olla</li><li>​Usa una cucharra para meter los huevos en la olla y para sacarlos de nuevo</li><li>​Podrias hacer un pequeno agujero en la parte superior del huevo con una aguja para prevenir que se rompa dentro de la olla </li><li>​Anade un poco de vinagre al aqua para facilitar pelar la cascara.</li><li>​Cuando suena un temporizador, enfrie los huevos de inmediato en el aqua fria.</li></ul><br><br>";
 
-"timervc.imageview.instructions" = "EScookinstructions";
+"timervc.imageview.instructions" = "ESCookinginstruction";
 
 "eggmeasurevc.lable.title" = "Pon el huevo en pantalla y determinar el tamañano.";
 

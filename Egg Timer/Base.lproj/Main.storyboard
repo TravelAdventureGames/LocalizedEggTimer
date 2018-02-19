@@ -802,7 +802,7 @@
                                     <action selector="didClickCookingInfobutton:" destination="kbr-MD-FRb" eventType="touchUpInside" id="Hi5-vN-duB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLO-FJ-4tA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLO-FJ-4tA">
                                 <rect key="frame" x="10" y="64" width="355" height="593"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2xm-v1-l2y">
@@ -855,6 +855,7 @@
                             <constraint firstItem="mMt-x1-M51" firstAttribute="height" secondItem="tf9-BZ-eoB" secondAttribute="height" multiplier="0.05" id="SV7-t0-ltH"/>
                             <constraint firstItem="3nD-FW-qK5" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="T6c-3D-gfM"/>
                             <constraint firstItem="tpl-Oa-qxF" firstAttribute="height" secondItem="mMt-x1-M51" secondAttribute="height" id="UH6-VU-FOh"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tpl-Oa-qxF" secondAttribute="trailing" constant="20" symbolic="YES" id="Vg3-yS-yni"/>
                             <constraint firstItem="oTH-oN-POG" firstAttribute="width" secondItem="Xr3-Pg-NiK" secondAttribute="width" id="Y6B-dM-mTi"/>
                             <constraint firstItem="QY3-We-2iR" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="ZKR-0X-BIH"/>
                             <constraint firstItem="tpl-Oa-qxF" firstAttribute="centerY" secondItem="mMt-x1-M51" secondAttribute="centerY" id="bgt-rV-fhd"/>

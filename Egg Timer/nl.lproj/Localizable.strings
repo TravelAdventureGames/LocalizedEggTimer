@@ -68,7 +68,7 @@
 
 "infolabel.label.infotext" = "Kookinstructies<br><br><ul><li>Plaats de eieren pas in de pan (voorzichtig) <u>nadat het water kookt.</u>!</li><li>Zorg ervoor dat de eieren <u>ruim onder water</u> staan (2,5 cm extra water boven de eieren in één laag in de pan.</li><li>Gebruik een lepel om de eieren voorzichtig in de pan te laten zakken en ze er weer uit te halen</li><li>Je kunt evt. een gaatje aan de bovenkant van het ei maken met een punaise of naald om scheuren in het ei te voorkomen.</li><li>Voeg een scheutje azijn aan het water toe om ze beter pelbaar te maken.</li><li>Als een timer afloopt, koel de eieren dan direct terug, het liefst in ijswater.</li></ul><br><br>";
 
-"timervc.imageview.instructions" = "NLCookinstructions";
+"timervc.imageview.instructions" = "NLCookinginstructions";
 
 "eggmeasurevc.lable.title" = "Leg je ei op het scherm en bepaal de grootte";
 

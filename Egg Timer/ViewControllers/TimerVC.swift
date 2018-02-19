@@ -45,7 +45,6 @@ class TimerVC: UIViewController {
     @IBOutlet var hardAlertLabel: AlertTextLabel!
     @IBOutlet var infoImagview: UIImageView!
     @IBOutlet var infoButton: UIButton!
-
     
     var timerZacht = Timer()
     var timerzm = Timer()
@@ -82,7 +81,6 @@ class TimerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         startTimerBtn.addTarget(self, action: #selector(startTimers), for: .touchUpInside)
         calculateBoilingTimesAndLongestDuration()
         SetBeginUI()
@@ -104,6 +102,13 @@ class TimerVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    private func setBackgroundImage() {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = #imageLiteral(resourceName: "snowboard3")
+        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
     }
 
     private func addTapgestureToFadeOutInfoImageview() {
@@ -208,7 +213,8 @@ class TimerVC: UIViewController {
     }
 
     private func SetBeginUI() {
-        self.setBackgroundWith(imageName: "snowboard3")
+        //self.setBackgroundWith(imageName: "snowboard3")
+        setBackgroundImage()
         title = "timervc.title.text".localized
         infoImagview.image = UIImage(named: "timervc.imageview.instructions".localized)
         let fontweight = UIFont.Weight(rawValue: 300)

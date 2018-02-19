@@ -319,7 +319,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 683738F72013BA5E002953B7 /* Build configuration list for PBXProject "Egg Timer" */;
+			buildConfigurationList = 683738F72013BA5E002953B7 /* Build configuration list for PBXProject "§" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = nl;
 			hasScannedForEncodings = 0;
@@ -643,7 +643,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		683738F72013BA5E002953B7 /* Build configuration list for PBXProject "Egg Timer" */ = {
+		683738F72013BA5E002953B7 /* Build configuration list for PBXProject "§" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6837390C2013BA5E002953B7 /* Debug */,

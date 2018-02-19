@@ -35,15 +35,9 @@ class EggMeasuringVC: UIViewController {
 
     private func getSizeUIImageView() -> CGSize {
         let ppi = getPPI()
-        print(ppi)
-        print(getIncheFrom(mm: 47))
-        print(getIncheFrom(mm: 60.5))
         let pixelsPerPoint = UIScreen.main.nativeBounds.width / UIScreen.main.bounds.width
-        print(pixelsPerPoint)
         let width: CGFloat = getIncheFrom(mm: 47) * ppi / pixelsPerPoint
-        print(width)
         let height: CGFloat = getIncheFrom(mm: 60.5) * ppi / pixelsPerPoint
-        print(height)
         return CGSize(width: width, height: height)
     }
 
