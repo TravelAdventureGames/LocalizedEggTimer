@@ -49,8 +49,7 @@ class TimerVC: UIViewController {
     @IBOutlet var frinedsOfView: UIView!
     @IBOutlet var friendsOfLabel: Paddinglabel!
     @IBOutlet var friendsOfImageview: UIImageView!
-    
-    
+
     
     var timerZacht = Timer()
     var timerzm = Timer()
@@ -229,6 +228,7 @@ class TimerVC: UIViewController {
         infoImagview.alpha = 0.0
         infoButton.setImage(#imageLiteral(resourceName: "infoIcon1").withRenderingMode(.alwaysOriginal), for: .normal)
         hideDoneButtons()
+        presentFriendsOfLabel()
     }
 
     private func calculateBoilingTimesAndLongestDuration() {
@@ -422,6 +422,9 @@ class TimerVC: UIViewController {
     private func presentFriendsOfLabel() {
         friendsOfLabel.text = "timervc.friends.labeltext".localized
         friendsOfImageview.image = UIImage(named: "timervc.friends.imageName".localized)
+        friendsOfImageview.layer.cornerRadius = friendsOfImageview.bounds.width / 2
+        friendsOfImageview.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+        friendsOfImageview.layer.borderWidth = 14
         friendsOfLabel.textColor = UIColor.projectBlueWith(alpha: 1)
         friendsOfLabel.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         friendsOfLabel.font = UIFont.italicSystemFont(ofSize: 17)
@@ -429,6 +432,7 @@ class TimerVC: UIViewController {
         friendsOfLabel.layer.cornerRadius = 9
         friendsOfLabel.layer.masksToBounds = true
         frinedsOfView.isHidden = false
+
     }
 
     @objc func startTimers() {

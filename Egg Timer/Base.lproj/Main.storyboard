@@ -841,25 +841,25 @@
                                 </subviews>
                             </stackView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vao-IJ-M5f">
-                                <rect key="frame" x="28" y="254.5" width="318.5" height="157.5"/>
+                                <rect key="frame" x="28" y="251.5" width="318.5" height="164"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="gmn-Bh-AM7">
-                                        <rect key="frame" x="114.5" y="10" width="90" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="gmn-Bh-AM7" secondAttribute="height" multiplier="1:1" id="3LG-1N-Nra"/>
-                                            <constraint firstAttribute="width" constant="90" id="bjF-SY-2Ij"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUf-OP-8n0" customClass="Paddinglabel" customModule="Egg_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="112" width="298.5" height="20.5"/>
+                                        <rect key="frame" x="10" y="118" width="298.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="gmn-Bh-AM7">
+                                        <rect key="frame" x="99.5" y="10" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gmn-Bh-AM7" secondAttribute="height" multiplier="1:1" id="3LG-1N-Nra"/>
+                                            <constraint firstAttribute="width" constant="120" id="bjF-SY-2Ij"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="wUf-OP-8n0" secondAttribute="bottom" constant="25" id="1rD-9G-dze"/>
-                                    <constraint firstItem="wUf-OP-8n0" firstAttribute="top" secondItem="gmn-Bh-AM7" secondAttribute="bottom" constant="12" id="60V-HR-XtK"/>
+                                    <constraint firstItem="wUf-OP-8n0" firstAttribute="top" secondItem="gmn-Bh-AM7" secondAttribute="bottom" constant="-12" id="60V-HR-XtK"/>
                                     <constraint firstAttribute="trailing" secondItem="wUf-OP-8n0" secondAttribute="trailing" constant="10" id="AJF-JN-XVC"/>
                                     <constraint firstItem="gmn-Bh-AM7" firstAttribute="top" secondItem="Vao-IJ-M5f" secondAttribute="top" constant="10" id="VLI-17-G0v"/>
                                     <constraint firstItem="gmn-Bh-AM7" firstAttribute="centerX" secondItem="Vao-IJ-M5f" secondAttribute="centerX" id="ZcE-tO-Gkp"/>
