@@ -23,6 +23,11 @@ class UserdefaultManager {
         get { return UserDefaults.standard.bool(forKey: "cookinstructions") }
         set { UserDefaults.standard.set(newValue, forKey: "cookinstructions") }
     }
+
+    static var currentCountryLocation: String {
+        get { return UserDefaults.standard.string(forKey: "currentCountryLocation") ?? "ELSEWHERE" }
+        set { UserDefaults.standard.set(newValue, forKey: "currentCountryLocation") }
+    }
 }
 
 

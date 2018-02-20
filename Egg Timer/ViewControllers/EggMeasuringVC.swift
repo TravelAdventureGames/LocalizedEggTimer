@@ -33,11 +33,25 @@ class EggMeasuringVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    private func getSizeFromCyrrentCountry() -> CGSize {
+        switch UserdefaultManager.currentCountryLocation {
+        case "ELSEWHERE":
+            return CGSize(width: 47, height: 60.5)
+        case "US":
+            return CGSize(width: 42, height: 55.5)
+        default:
+            return CGSize(width: 47, height: 60.5)
+        }
+    }
+
     private func getSizeUIImageView() -> CGSize {
         let ppi = getPPI()
         let pixelsPerPoint = UIScreen.main.nativeBounds.width / UIScreen.main.bounds.width
-        let width: CGFloat = getIncheFrom(mm: 47) * ppi / pixelsPerPoint
-        let height: CGFloat = getIncheFrom(mm: 60.5) * ppi / pixelsPerPoint
+        let realWidth = getSizeFromCyrrentCountry().width
+        let realHeight = getSizeFromCyrrentCountry().height
+        let width: CGFloat = getIncheFrom(mm: realWidth) * ppi / pixelsPerPoint
+        let height: CGFloat = getIncheFrom(mm: realHeight) * ppi / pixelsPerPoint
+        print(realWidth, realHeight)
         return CGSize(width: width, height: height)
     }
 

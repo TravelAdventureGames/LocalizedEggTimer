@@ -104,13 +104,6 @@ class TimerVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
-    private func setBackgroundImage() {
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = #imageLiteral(resourceName: "snowboard3")
-        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
-    }
-
     private func addTapgestureToFadeOutInfoImageview() {
         let tapgesture = UITapGestureRecognizer(target: self, action: #selector(fadeOutInfoLabelAddTap))
         view.addGestureRecognizer(tapgesture)
@@ -196,6 +189,7 @@ class TimerVC: UIViewController {
         timermedium.invalidate()
         timermh.invalidate()
         timerHard.invalidate()
+        upTimer.invalidate()
     }
 
     private func setBorders(labels: [UILabel]) {
@@ -213,8 +207,7 @@ class TimerVC: UIViewController {
     }
 
     private func SetBeginUI() {
-        //self.setBackgroundWith(imageName: "snowboard3")
-        setBackgroundImage()
+        self.setBackgroundWith(imageName: "snowboard3")
         title = "timervc.title.text".localized
         infoImagview.image = UIImage(named: "timervc.imageview.instructions".localized)
         let fontweight = UIFont.Weight(rawValue: 300)
@@ -506,6 +499,7 @@ class TimerVC: UIViewController {
     }
     
     @IBAction func didClickCookingInfobutton(_ sender: Any) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         UIView.animate(withDuration: 1, animations: {
             self.infoImagview.alpha = 1.0
         })

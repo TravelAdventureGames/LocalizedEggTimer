@@ -192,8 +192,10 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
                 switch isoCountryCode {
                 case "US":
                     self.currentCountry = .US
+                    UserdefaultManager.currentCountryLocation = "US"
                 default:
                     self.currentCountry = .ElseWhere
+                    UserdefaultManager.currentCountryLocation = "ELSEWHERE"
                 }
             }
         }
