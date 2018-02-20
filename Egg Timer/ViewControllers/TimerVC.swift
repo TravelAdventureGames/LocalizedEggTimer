@@ -228,7 +228,6 @@ class TimerVC: UIViewController {
         infoImagview.alpha = 0.0
         infoButton.setImage(#imageLiteral(resourceName: "infoIcon1").withRenderingMode(.alwaysOriginal), for: .normal)
         hideDoneButtons()
-        presentFriendsOfLabel()
     }
 
     private func calculateBoilingTimesAndLongestDuration() {
@@ -436,7 +435,6 @@ class TimerVC: UIViewController {
     }
 
     @objc func startTimers() {
-
         sessionIsactive = true
         setupNotificationOnEnteringBackground()
         setupNotificationOnEnteringForeground()
