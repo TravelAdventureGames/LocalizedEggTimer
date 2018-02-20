@@ -34,6 +34,10 @@
 		6850A75C201BEB5200BB7538 /* CGFloat+multipliers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850A75B201BEB5200BB7538 /* CGFloat+multipliers.swift */; };
 		68525E1620332EE7006CE114 /* EggMeasuringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68525E1420332EE7006CE114 /* EggMeasuringVC.swift */; };
 		68525E1720332EE7006CE114 /* EggMeasuringVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68525E1520332EE7006CE114 /* EggMeasuringVC.xib */; };
+		685408D5203C203F00390D17 /* FriendsOfLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685408D4203C203F00390D17 /* FriendsOfLabel.swift */; };
+		685408D7203C23DF00390D17 /* Label+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685408D6203C23DF00390D17 /* Label+Image.swift */; };
+		685408D9203C45D400390D17 /* SponsorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685408D8203C45D400390D17 /* SponsorManager.swift */; };
+		685408DB203C547A00390D17 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685408DA203C547A00390D17 /* PaddingLabel.swift */; };
 		6888ED4B202DD29E00C83FF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6888ED49202DD29E00C83FF5 /* InfoPlist.strings */; };
 		689004722018E2B0006B9E3A /* String+getNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689004712018E2B0006B9E3A /* String+getNumber.swift */; };
 		68904BD92021D483006623EB /* UserdefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904BD82021D483006623EB /* UserdefaultsManager.swift */; };
@@ -80,6 +84,10 @@
 		68525E1A20370C4A006CE114 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		68525E1B20370C4B006CE114 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "Egg Timer/es.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		68525E1C20370C4B006CE114 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../../es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		685408D4203C203F00390D17 /* FriendsOfLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsOfLabel.swift; sourceTree = "<group>"; };
+		685408D6203C23DF00390D17 /* Label+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Image.swift"; sourceTree = "<group>"; };
+		685408D8203C45D400390D17 /* SponsorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorManager.swift; sourceTree = "<group>"; };
+		685408DA203C547A00390D17 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		6888ED4A202DD29E00C83FF5 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "Egg Timer/nl.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6888ED4C202DD2A800C83FF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "Egg Timer/Base.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6888ED4D202DD2AD00C83FF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Egg Timer/en.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -183,6 +191,7 @@
 				6850A75B201BEB5200BB7538 /* CGFloat+multipliers.swift */,
 				68DE58D6201E63BB00327B29 /* String+localized.swift */,
 				68DE58DD201F1DD900327B29 /* UIColor+projectcolors.swift */,
+				685408D6203C23DF00390D17 /* Label+Image.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +217,8 @@
 				68100CE820236CC900E2B84F /* InfoLabel.swift */,
 				68100CEA2025DC5300E2B84F /* AlertTextLabel.swift */,
 				68100CEC2027889400E2B84F /* StopButton.swift */,
+				685408D4203C203F00390D17 /* FriendsOfLabel.swift */,
+				685408DA203C547A00390D17 /* PaddingLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				6899FA1B20232D11006A95C1 /* NotificationManager.swift */,
+				685408D8203C45D400390D17 /* SponsorManager.swift */,
 			);
 			path = "Notification manager";
 			sourceTree = "<group>";
@@ -415,17 +427,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685408D7203C23DF00390D17 /* Label+Image.swift in Sources */,
 				683739182013D6FA002953B7 /* plusMinusButton.swift in Sources */,
 				6837393B20168996002953B7 /* Unused code.swift in Sources */,
 				68525E1620332EE7006CE114 /* EggMeasuringVC.swift in Sources */,
+				685408DB203C547A00390D17 /* PaddingLabel.swift in Sources */,
 				68904BD92021D483006623EB /* UserdefaultsManager.swift in Sources */,
 				68DE58D7201E63BB00327B29 /* String+localized.swift in Sources */,
 				684372CA2017419A00034DB5 /* View+hakeAnimation.swift in Sources */,
 				6850A758201BDEB400BB7538 /* ExtrainfoViewController.swift in Sources */,
+				685408D9203C45D400390D17 /* SponsorManager.swift in Sources */,
 				6837392D201525A3002953B7 /* UIView+cirkel.swift in Sources */,
 				68100CED2027889400E2B84F /* StopButton.swift in Sources */,
 				68DE58DE201F1DD900327B29 /* UIColor+projectcolors.swift in Sources */,
 				6850A75C201BEB5200BB7538 /* CGFloat+multipliers.swift in Sources */,
+				685408D5203C203F00390D17 /* FriendsOfLabel.swift in Sources */,
 				68100CE920236CCA00E2B84F /* InfoLabel.swift in Sources */,
 				683739142013BABC002953B7 /* Egg.swift in Sources */,
 				689004722018E2B0006B9E3A /* String+getNumber.swift in Sources */,

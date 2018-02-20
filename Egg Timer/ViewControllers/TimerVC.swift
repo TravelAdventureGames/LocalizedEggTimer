@@ -45,6 +45,12 @@ class TimerVC: UIViewController {
     @IBOutlet var hardAlertLabel: AlertTextLabel!
     @IBOutlet var infoImagview: UIImageView!
     @IBOutlet var infoButton: UIButton!
+
+    @IBOutlet var frinedsOfView: UIView!
+    @IBOutlet var friendsOfLabel: Paddinglabel!
+    @IBOutlet var friendsOfImageview: UIImageView!
+    
+    
     
     var timerZacht = Timer()
     var timerzm = Timer()
@@ -407,7 +413,22 @@ class TimerVC: UIViewController {
             player = nil
             NotificationManager.shared.cancelAllPendingNotifications()
             invalidateAllTimers()
+            if SponsorManager.shared.isSponsored() {
+                presentFriendsOfLabel()
+            }
         }
+    }
+
+    private func presentFriendsOfLabel() {
+        friendsOfLabel.text = "timervc.friends.labeltext".localized
+        friendsOfImageview.image = UIImage(named: "timervc.friends.imageName".localized)
+        friendsOfLabel.textColor = UIColor.projectBlueWith(alpha: 1)
+        friendsOfLabel.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        friendsOfLabel.font = UIFont.italicSystemFont(ofSize: 17)
+        friendsOfLabel.adjustsFontSizeToFitWidth = true
+        friendsOfLabel.layer.cornerRadius = 9
+        friendsOfLabel.layer.masksToBounds = true
+        frinedsOfView.isHidden = false
     }
 
     @objc func startTimers() {
@@ -456,6 +477,7 @@ class TimerVC: UIViewController {
         player?.stop()
         player = nil
         invalidateAllTimers()
+        frinedsOfView.isHidden = true
         NotificationManager.shared.cancelAllPendingNotifications()
         self.navigationController?.popToViewController(navigationController?.viewControllers[1] as! SettingsVC, animated: true)
     }

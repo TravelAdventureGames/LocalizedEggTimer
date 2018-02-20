@@ -840,6 +840,32 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vao-IJ-M5f">
+                                <rect key="frame" x="28" y="254.5" width="318.5" height="157.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="gmn-Bh-AM7">
+                                        <rect key="frame" x="114.5" y="10" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gmn-Bh-AM7" secondAttribute="height" multiplier="1:1" id="3LG-1N-Nra"/>
+                                            <constraint firstAttribute="width" constant="90" id="bjF-SY-2Ij"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUf-OP-8n0" customClass="Paddinglabel" customModule="Egg_Timer" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="112" width="298.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wUf-OP-8n0" secondAttribute="bottom" constant="25" id="1rD-9G-dze"/>
+                                    <constraint firstItem="wUf-OP-8n0" firstAttribute="top" secondItem="gmn-Bh-AM7" secondAttribute="bottom" constant="12" id="60V-HR-XtK"/>
+                                    <constraint firstAttribute="trailing" secondItem="wUf-OP-8n0" secondAttribute="trailing" constant="10" id="AJF-JN-XVC"/>
+                                    <constraint firstItem="gmn-Bh-AM7" firstAttribute="top" secondItem="Vao-IJ-M5f" secondAttribute="top" constant="10" id="VLI-17-G0v"/>
+                                    <constraint firstItem="gmn-Bh-AM7" firstAttribute="centerX" secondItem="Vao-IJ-M5f" secondAttribute="centerX" id="ZcE-tO-Gkp"/>
+                                    <constraint firstItem="wUf-OP-8n0" firstAttribute="leading" secondItem="Vao-IJ-M5f" secondAttribute="leading" constant="10" id="fzQ-bq-0vO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -847,7 +873,9 @@
                             <constraint firstItem="mMt-x1-M51" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="3hi-kO-0H0"/>
                             <constraint firstItem="Xr3-Pg-NiK" firstAttribute="width" secondItem="sBu-Ni-jKi" secondAttribute="width" id="3oM-VH-raS"/>
                             <constraint firstItem="2xm-v1-l2y" firstAttribute="leading" secondItem="5xm-cq-vZE" secondAttribute="leading" constant="20" id="4Tr-Uc-72j"/>
+                            <constraint firstItem="Vao-IJ-M5f" firstAttribute="centerX" secondItem="tf9-BZ-eoB" secondAttribute="centerX" id="BlM-KA-K7I"/>
                             <constraint firstItem="U41-tX-5il" firstAttribute="top" secondItem="3nD-FW-qK5" secondAttribute="bottom" constant="10" id="Ge2-sz-Gz8"/>
+                            <constraint firstItem="Vao-IJ-M5f" firstAttribute="centerY" secondItem="tf9-BZ-eoB" secondAttribute="centerY" id="Hag-eD-OTG"/>
                             <constraint firstItem="2xm-v1-l2y" firstAttribute="top" secondItem="5xm-cq-vZE" secondAttribute="top" constant="20" id="NwH-CC-bjx"/>
                             <constraint firstItem="mMt-x1-M51" firstAttribute="top" secondItem="QY3-We-2iR" secondAttribute="bottom" constant="30" id="PBe-0N-8xP"/>
                             <constraint firstItem="sBu-Ni-jKi" firstAttribute="width" secondItem="tf9-BZ-eoB" secondAttribute="width" multiplier="0.17" id="QfE-It-Nee"/>
@@ -865,6 +893,7 @@
                             <constraint firstItem="QY3-We-2iR" firstAttribute="top" secondItem="U41-tX-5il" secondAttribute="bottom" constant="10" id="fhl-jI-HBJ"/>
                             <constraint firstItem="5xm-cq-vZE" firstAttribute="trailing" secondItem="SLO-FJ-4tA" secondAttribute="trailing" constant="10" id="gVl-wO-Hzx"/>
                             <constraint firstItem="mMt-x1-M51" firstAttribute="width" secondItem="tf9-BZ-eoB" secondAttribute="width" multiplier="0.4" id="gll-rz-LJD"/>
+                            <constraint firstItem="Vao-IJ-M5f" firstAttribute="width" secondItem="tf9-BZ-eoB" secondAttribute="width" multiplier="0.85" id="mV9-rM-wLd"/>
                             <constraint firstItem="SLO-FJ-4tA" firstAttribute="top" secondItem="5xm-cq-vZE" secondAttribute="top" id="pTX-R8-vC5"/>
                             <constraint firstItem="tpl-Oa-qxF" firstAttribute="leading" secondItem="5xm-cq-vZE" secondAttribute="leading" constant="30" id="rbG-R0-uQ7"/>
                             <constraint firstItem="SLO-FJ-4tA" firstAttribute="leading" secondItem="5xm-cq-vZE" secondAttribute="leading" constant="10" id="rf4-Ir-sjY"/>
@@ -882,6 +911,9 @@
                     <connections>
                         <outlet property="cancelButton" destination="E4M-4K-4cx" id="iCe-lY-6zw"/>
                         <outlet property="doneStackview" destination="3nD-FW-qK5" id="dXK-oX-n2j"/>
+                        <outlet property="friendsOfImageview" destination="gmn-Bh-AM7" id="1tm-ZQ-D4n"/>
+                        <outlet property="friendsOfLabel" destination="wUf-OP-8n0" id="Kuz-9V-BwG"/>
+                        <outlet property="frinedsOfView" destination="Vao-IJ-M5f" id="Z8r-bg-ZMh"/>
                         <outlet property="hardAlertLabel" destination="1EG-9I-cJM" id="wR0-mj-7fC"/>
                         <outlet property="hardDoneBtn" destination="8DG-c9-ClQ" id="MsB-eF-szi"/>
                         <outlet property="hardLbl" destination="485-7P-m3U" id="fu3-nL-oec"/>
@@ -911,7 +943,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yL-al-c7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="34"/>
+            <point key="canvasLocation" x="2605.5999999999999" y="33.733133433283363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ekf-2R-FPx">
@@ -933,6 +965,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chicken" width="126" height="126"/>
         <image name="eggHard" width="280" height="211"/>
         <image name="eggLEmpty" width="417" height="417"/>
         <image name="eggLFilled" width="417" height="418"/>
