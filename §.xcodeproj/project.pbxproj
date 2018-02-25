@@ -88,6 +88,10 @@
 		685408D6203C23DF00390D17 /* Label+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Image.swift"; sourceTree = "<group>"; };
 		685408D8203C45D400390D17 /* SponsorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorManager.swift; sourceTree = "<group>"; };
 		685408DA203C547A00390D17 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		6854094D2043269600390D17 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		6854094E2043269600390D17 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6854094F2043269600390D17 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "Egg Timer/de.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		685409502043269600390D17 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = ../../de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6888ED4A202DD29E00C83FF5 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "Egg Timer/nl.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6888ED4C202DD2A800C83FF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "Egg Timer/Base.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6888ED4D202DD2AD00C83FF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Egg Timer/en.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 				nl,
 				en,
 				es,
+				de,
 			);
 			mainGroup = 683738F32013BA5E002953B7;
 			productRefGroup = 683738FD2013BA5E002953B7 /* Products */;
@@ -471,6 +476,7 @@
 				683739042013BA5E002953B7 /* Base */,
 				68DE58CF201CD5ED00327B29 /* en */,
 				68525E1A20370C4A006CE114 /* es */,
+				6854094D2043269600390D17 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 			children = (
 				683739092013BA5E002953B7 /* Base */,
 				68DE58D0201CD5ED00327B29 /* en */,
+				6854094E2043269600390D17 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -491,6 +498,7 @@
 				6888ED4C202DD2A800C83FF5 /* Base */,
 				6888ED4D202DD2AD00C83FF5 /* en */,
 				68525E1B20370C4B006CE114 /* es */,
+				6854094F2043269600390D17 /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -502,6 +510,7 @@
 				68DE58D5201E62E800327B29 /* en */,
 				68DE58D8201E786500327B29 /* Base */,
 				68525E1C20370C4B006CE114 /* es */,
+				685409502043269600390D17 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

@@ -1,0 +1,83 @@
+/* 
+  Localizable.strings
+  Egg Timer
+
+  Created by Martijn van Gogh on 28-01-18.
+  Copyright © 2018 Martijn van Gogh. All rights reserved.
+*/
+
+"setingsvc.title.overeieren" = "INFORMATION" ;
+"Settingsvc.alituted.labelJebevindt" = "Du befindest dich auf";
+"Settingsvc.alituted.labelMeterHoog" = "Metern über Null";
+
+"settingsvc.label.klein" = "S";
+"settingsvc.label.medium" = "M";
+"settingsvc.label.groot" = "L";
+"settingsvc.label.xl" = "XL";
+"settings.mysteregg.label" = " ";
+
+"amountvc.title.hoeveleieren" = "ANZAHL DER EIER";
+"amountvc.alert.tile" = "Achtung!";
+"amountvc.alert.text" = "Sieh dir die Tips an, bevor du mit dem Kochen beginnst. Füge die Eier in jedem Fall erst zu wenn das Wasser kocht.";
+"amountvc.alert.left" = "Alles klar";
+"amountvc.alert.right" = "Zu den Tips";
+
+"extrainfovc.label.text" = "Du kannst es wahrscheinlich nicht abwarten zu beginnen. Nimm dir trotzdem die Zeit um die Tips durchzulesen! <br><br><ul><li>Der Eierberechner in dieser App geht davon aus dass du das Wasser <u>erst zum kochen bringst </u> und du  <u>dann erst</u> die Eier (vorsichtig) in den Topf legst.</li><li>Wenn einer der Timer abgelaufen ist, hole die Eier aus dem Topf und schrecke sie so schnell möglich ab, zum Beispiel in einer Schüssel mit Eiswasser. Das Abschrecken ist wichtig, sonst garen die Eier nach!</li><li>Benutze verschiedene Schüsseln mit Eiswasser für verscheidene Garstufen der Eier (eine für weiche, eine für harte usw.), so kannst du die Eier hinterher noch auseinander halten.</li><li>Um das Pellen der Eier einfacher zu machen kannst du ein bisschen Essig in das Wasser geben.</li></ul>";
+
+"timervc.title.text" = "STARTE DIE TIMER";
+"timervc.label.haal" = "Hole";
+"timervc.label.uitdepan" = "aus dem Topf";
+
+//model
+"model.druiperige.eieren" = "sehr weich gekochte Eier";
+"model.zachte.eieren" = "weich gekochtes Eier";
+"model.medium.eieren" = "wachsweich gekochte Eier";
+"model.mh.eieren" = "mittelhart gekochte Eier”";
+"model.harde.eieren" = "hart gekochte Eier";
+
+"model.druiperig.ei" = "sehr weich gekochtes Ei";
+"model.zacht.ei" = "weich gekochtes Ei";
+"model.medium.ei" = "wachsweich gekochtes Ei";
+"model.mh.ei" = "mittelhart gekochtes Ei";
+"model.hard.ei" = "hart gekochtes Ei";
+
+"launch.title.multiegg" = "Multiple\nEggs Timer";
+"launch.lbel.text" = "Der einziger Eiertimer mit dem Eier mit unterschiedlichen Garzeiten gekocht werden können!";
+"lanchvc.button.skip" = "Skip";
+
+//NotificationManager
+"notification.body.zacht" = "sehr weich gekochte Eier aus dem Topf!";
+"notification.body.zachtmedium" = "weich gekochte Eier aus dem Topf!";
+"notification.body.medium" = "wachsweich gekochte Eier aus dem Topf!";
+"notification.body.mediumhard" = "mittelhart gekochte Eier aus dem Topf!";
+"notification.body.hard" = "hart gekochte Eier aus dem Topf!";
+
+
+"notification.body.zachtSingle" = "sehr weich gekochtes Ei aus dem Topf!";
+"notification.body.zachtmediumSingle" = "weich gekochtes Ei aus dem Topf!";
+"notification.body.mediumSingle" = "wachsweich gekochtes Ei aus dem Topf!";
+"notification.body.mediumhardSingle" = "Mittlhart gekochtes Ei aus dem Topf!";
+"notification.body.hardSingle" = "Hart gekochtes Ei aus dem Topf!";
+
+
+"notification.body.first" = "Hole";
+
+"notification.title.zacht" = "Fertig!!";
+"notification.title.zachtmedium" = "Fertig!!";
+"notification.title.medium" = "Fertig!!";
+"notification.title.mediumhard" = "Fertig!!";
+"notification.title.hard" = "Fertig!!";
+
+"infolabel.label.infotext" = "Kookinstructies<br><br><ul><li>Plaats de eieren pas in de pan (voorzichtig) <u>nadat het water kookt.</u>!</li><li>Zorg ervoor dat de eieren <u>ruim onder water</u> staan (2,5 cm extra water boven de eieren in één laag in de pan.</li><li>Gebruik een lepel om de eieren voorzichtig in de pan te laten zakken en ze er weer uit te halen</li><li>Je kunt evt. een gaatje aan de bovenkant van het ei maken met een punaise of naald om scheuren in het ei te voorkomen.</li><li>Voeg een scheutje azijn aan het water toe om ze beter pelbaar te maken.</li><li>Als een timer afloopt, koel de eieren dan direct terug, het liefst in ijswater.</li></ul><br><br>";
+
+"timervc.imageview.instructions" = "DECookinginstructions";
+
+"eggmeasurevc.lable.title" = "Lege dein Ei auf das Iphone-Display um die Größe zu bestimmen.";
+
+"timervc.friends.labeltext" = "Hühner müssen auch gut leben können. KKaufen Sie Bio-Eier öfter!";
+"timervc.friends.imageName" = "chicken";
+
+
+
+
+
