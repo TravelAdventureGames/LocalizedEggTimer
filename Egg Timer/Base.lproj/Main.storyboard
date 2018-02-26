@@ -504,29 +504,29 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ehp-4L-cur">
                                 <rect key="frame" x="187.5" y="568.5" width="0.0" height="0.0"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggZacht" translatesAutoresizingMaskIntoConstraints="NO" id="TpX-Sf-AX5">
+                                    <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggZacht" translatesAutoresizingMaskIntoConstraints="NO" id="TpX-Sf-AX5">
                                         <rect key="frame" x="-187.5" y="-568.5" width="64" height="63.5"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="TpX-Sf-AX5" secondAttribute="height" multiplier="1:1" id="XzJ-Cv-lEl"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggZachtMedium" translatesAutoresizingMaskIntoConstraints="NO" id="w8t-Rk-4Ys">
+                                    <imageView hidden="YES" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggZachtMedium" translatesAutoresizingMaskIntoConstraints="NO" id="w8t-Rk-4Ys">
                                         <rect key="frame" x="-187.5" y="-568.5" width="63.5" height="63.5"/>
                                         <gestureRecognizers/>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMedium" translatesAutoresizingMaskIntoConstraints="NO" id="Wna-a3-oCj">
+                                    <imageView hidden="YES" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMedium" translatesAutoresizingMaskIntoConstraints="NO" id="Wna-a3-oCj">
                                         <rect key="frame" x="-187.5" y="-568.5" width="64" height="63.5"/>
                                         <gestureRecognizers/>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMediumHard" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-zK-oGx">
+                                    <imageView hidden="YES" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMediumHard" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-zK-oGx">
                                         <rect key="frame" x="-187.5" y="-568.5" width="63.5" height="63.5"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="m7g-zK-oGx" secondAttribute="height" multiplier="1:1" id="ovm-Xd-fxQ"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggHard" translatesAutoresizingMaskIntoConstraints="NO" id="bhC-ok-NtK">
+                                    <imageView hidden="YES" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggHard" translatesAutoresizingMaskIntoConstraints="NO" id="bhC-ok-NtK">
                                         <rect key="frame" x="-187.5" y="-568.5" width="64" height="63.5"/>
                                         <gestureRecognizers/>
                                         <constraints>

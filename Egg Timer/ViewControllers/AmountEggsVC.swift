@@ -15,6 +15,17 @@ class AmountEggsVC: UIViewController {
     var eggSize: EggSize = .Small
     var currentCountry: CurrentCountry = .ElseWhere
 
+    let eggImageView: UIImageView = {
+        let eiv = UIImageView()
+        eiv.contentMode = .scaleToFill
+        eiv.translatesAutoresizingMaskIntoConstraints = false
+        eiv.isHidden = true
+        eiv.layer.masksToBounds = true
+        eiv.isUserInteractionEnabled = true
+        eiv.alpha = 0
+        return eiv
+    }()
+
     @IBOutlet var amountZachtLbl: UILabel!
     @IBOutlet var amountZachtmediumLbl: UILabel!
     @IBOutlet var amountMediumLbl: UILabel!
@@ -49,6 +60,8 @@ class AmountEggsVC: UIViewController {
     private func setUpUI() {
         self.setBackgroundWith(imageName: "snowboard2")
         title = "amountvc.title.hoeveleieren".localized
+        addTapgestures()
+        addEggImageview()
     }
 
     override func viewDidLayoutSubviews() {
@@ -60,6 +73,7 @@ class AmountEggsVC: UIViewController {
         mediumImg.makeCirculair(borderColor: color, borderWidth: border)
         mhImg.makeCirculair(borderColor: color, borderWidth: border)
         hardImg.makeCirculair(borderColor: color, borderWidth: border)
+        eggImageView.layer.cornerRadius = eggImageView.bounds.width / 2
     }
 
     private func hideAndShowEggs(sender: UIStepper, lbl: UILabel, img: UIImageView, amountLbl: UILabel) {
@@ -77,6 +91,74 @@ class AmountEggsVC: UIViewController {
                 amountLbl.text = "\(Int(sender.value)) x"
             })
         }
+    }
+
+    private func addTapgestures() {
+        let zachtGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedImage(sender:)))
+        zachtImg.addGestureRecognizer(zachtGesture)
+        let zmGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedImage(sender:)))
+        zmImg.addGestureRecognizer(zmGesture)
+        let mediumGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedImage(sender:)))
+        mediumImg.addGestureRecognizer(mediumGesture)
+        let mhGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedImage(sender:)))
+        mhImg.addGestureRecognizer(mhGesture)
+        let hardGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedImage(sender:)))
+        hardImg.addGestureRecognizer(hardGesture)
+    }
+
+    @objc func tappedImage(sender: UITapGestureRecognizer) {
+        eggImageView.alpha = 0
+        self.eggImageView.isHidden = false
+        guard let tappedImageNumber = sender.view?.tag else { return }
+        switch tappedImageNumber {
+        case 0:
+            self.addEggImageview(image: #imageLiteral(resourceName: "eggZacht"))
+            print(tappedImageNumber)
+        case 1:
+            self.addEggImageview(image: #imageLiteral(resourceName: "eggZachtMedium"))
+            print(tappedImageNumber)
+        case 2:
+            self.addEggImageview(image: #imageLiteral(resourceName: "eggMedium"))
+            print(tappedImageNumber)
+        case 3:
+            self.addEggImageview(image: #imageLiteral(resourceName: "eggMediumHard"))
+            print(tappedImageNumber)
+        case 4:
+            self.addEggImageview(image: #imageLiteral(resourceName: "eggHard"))
+            print(tappedImageNumber)
+        default:
+            print("no number")
+        }
+        UIView.animate(withDuration: 0.7, animations: {
+            self.eggImageView.alpha = 1.0
+        }) { (done) in
+
+        }
+    }
+
+    private func addEggImageview(image: UIImage) {
+        eggImageView.image = image
+    }
+
+    @objc func dismissEggImageView() {
+        UIView.animate(withDuration: 0.7, animations: {
+            self.eggImageView.alpha = 0.0
+        }) { (done) in
+            self.eggImageView.isHidden = true
+        }
+
+    }
+
+    private func addEggImageview() {
+        view.addSubview(eggImageView)
+        eggImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        eggImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        eggImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45).isActive = true
+        eggImageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45).isActive = true
+
+        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(dismissEggImageView))
+        eggImageView.addGestureRecognizer(tapgesture)
+
     }
 
     private func makeEggs() -> [Egg] {
