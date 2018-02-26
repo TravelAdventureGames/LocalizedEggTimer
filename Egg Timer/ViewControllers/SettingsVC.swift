@@ -171,8 +171,8 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         let main_string = "\(firstString) \(altitude) \(secondString)"
         let string_to_color = main_string.westernArabicNumeralsOnly
         let range = (main_string as NSString).range(of: string_to_color)
-        let attributedString = NSMutableAttributedString(string:main_string)
-        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red , range: range)
+        let attributedString = NSMutableAttributedString(string: main_string)
+        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.white , range: range)
         altitudeLabel.attributedText = attributedString
         locationManager.stopUpdatingLocation()
         getCurrentCountry(locations: locations)

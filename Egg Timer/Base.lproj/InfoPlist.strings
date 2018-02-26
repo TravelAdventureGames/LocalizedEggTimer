@@ -7,3 +7,4 @@
 */
 
 "NSLocationWhenInUseUsageDescription" = "Mogen we je locatie gebruiken om te kunnen bepalen op welke hoogte je je bevindt?";
+"CFBundleDisplayName" = "Multiple Eggs Timer";

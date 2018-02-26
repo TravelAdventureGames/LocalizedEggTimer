@@ -38,7 +38,7 @@ class EggMeasuringVC: UIViewController {
         case "ELSEWHERE":
             return CGSize(width: 47, height: 60.5)
         case "US":
-            return CGSize(width: 42, height: 55.5)
+            return CGSize(width: 33.5, height: 46.0)
         default:
             return CGSize(width: 47, height: 60.5)
         }

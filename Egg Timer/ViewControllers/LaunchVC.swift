@@ -38,7 +38,8 @@ class LaunchVC: UIViewController {
     }
 
     private func setBackgroundLayer() {
-        self.setBackgroundWith(imageName: "launchbackground")
+        self.view.backgroundColor = UIColor.projectBlueWith(alpha: 1)
+        //self.setBackgroundWith(imageName: "launchbackground")
         setTitleAndInfo()
         if UserdefaultManager.secondLaunch {
             infoLabel.isHidden = true
@@ -50,9 +51,7 @@ class LaunchVC: UIViewController {
 
         let title = "launch.title.multiegg".localized
         let strokeTextAttributes: [NSAttributedStringKey: Any] = [
-            .strokeColor : UIColor.white,
-            .foregroundColor : UIColor.projectBlueWith(alpha: 1),
-            .strokeWidth : -6.0,
+            .foregroundColor : UIColor.white,
             .font : UIFont.monospacedDigitSystemFont(ofSize: 46 * CGFloat.widthMultiplier(), weight: UIFont.Weight(rawValue: UIFont.Weight.RawValue(900)))
         ]
 

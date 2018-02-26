@@ -41,7 +41,7 @@
 "model.mh.ei" = "hard egg";
 "model.hard.ei" = "solid egg";
 
-"launch.title.multiegg" = "Multiple\nEgg Timer";
+"launch.title.multiegg" = "Multiple\nEggs Timer";
 "launch.lbel.text" = "Welcome to the only eggtimer in the world which times multiple eggs!  Based on scientific research from a Nowegian Physics Institute it also takes into account your altitude, eggsize (using standard sizes of multiple continents) and initial eggtemperature.";
 "lanchvc.button.skip" = "Skip";
 

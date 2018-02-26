@@ -7,3 +7,5 @@
 */
 
 "NSLocationWhenInUseUsageDescription" = "Mögen wir Ihren Standort verwenden, um zu bestimmen, in welcher Höhe Sie sich befinden";
+"CFBundleDisplayName" = "Multiple Eggs Timer";
+

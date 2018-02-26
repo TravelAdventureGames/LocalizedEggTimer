@@ -39,7 +39,8 @@ class AmountEggsVC: UIViewController {
     @IBOutlet var mhStepper: UIStepper!
     @IBOutlet var hardStepper: UIStepper!
     
-
+    @IBOutlet var bigEggImageview: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -129,8 +130,7 @@ class AmountEggsVC: UIViewController {
         }
     }
     
-
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTimerVC" {
             let timerVC = segue.destination as! TimerVC

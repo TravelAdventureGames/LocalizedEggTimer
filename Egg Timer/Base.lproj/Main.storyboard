@@ -506,24 +506,29 @@
                                 <subviews>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggZacht" translatesAutoresizingMaskIntoConstraints="NO" id="TpX-Sf-AX5">
                                         <rect key="frame" x="-187.5" y="-568.5" width="64" height="63.5"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="TpX-Sf-AX5" secondAttribute="height" multiplier="1:1" id="XzJ-Cv-lEl"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggZachtMedium" translatesAutoresizingMaskIntoConstraints="NO" id="w8t-Rk-4Ys">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggZachtMedium" translatesAutoresizingMaskIntoConstraints="NO" id="w8t-Rk-4Ys">
                                         <rect key="frame" x="-187.5" y="-568.5" width="63.5" height="63.5"/>
+                                        <gestureRecognizers/>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMedium" translatesAutoresizingMaskIntoConstraints="NO" id="Wna-a3-oCj">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMedium" translatesAutoresizingMaskIntoConstraints="NO" id="Wna-a3-oCj">
                                         <rect key="frame" x="-187.5" y="-568.5" width="64" height="63.5"/>
+                                        <gestureRecognizers/>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMediumHard" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-zK-oGx">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMediumHard" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-zK-oGx">
                                         <rect key="frame" x="-187.5" y="-568.5" width="63.5" height="63.5"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="m7g-zK-oGx" secondAttribute="height" multiplier="1:1" id="ovm-Xd-fxQ"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggHard" translatesAutoresizingMaskIntoConstraints="NO" id="bhC-ok-NtK">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggHard" translatesAutoresizingMaskIntoConstraints="NO" id="bhC-ok-NtK">
                                         <rect key="frame" x="-187.5" y="-568.5" width="64" height="63.5"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bhC-ok-NtK" secondAttribute="height" multiplier="1:1" id="Q7t-DA-IZ7"/>
                                         </constraints>
@@ -635,7 +640,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTO-cb-rKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="26"/>
+            <point key="canvasLocation" x="1901.5999999999999" y="25.637181409295355"/>
         </scene>
         <!--TimerVC-->
         <scene sceneID="0n6-S4-uan">
