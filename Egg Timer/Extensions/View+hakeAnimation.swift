@@ -20,4 +20,17 @@ extension UIView {
         layer.add(animation, forKey: "shake")
     }
 
+    func eggBreak(completion: @escaping () -> Void) {
+        CATransaction.begin()
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.duration = 0.6
+        animation.values = [-4.0, 4.0, -4.0, 4.0, -2.0, 2.0, -1.0, 1.0, 0.0 ]
+        animation.repeatCount = 1
+        CATransaction.setCompletionBlock {
+            completion()
+        }
+        layer.add(animation, forKey: "shakeEgg")
+        CATransaction.commit()
+    }
 }

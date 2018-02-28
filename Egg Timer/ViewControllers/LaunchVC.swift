@@ -15,6 +15,7 @@ class LaunchVC: UIViewController {
     @IBOutlet var eggImageview: UIImageView!
     @IBOutlet var infoLabel: UILabel!
     @IBOutlet var skipButton: UIButton!
+    @IBOutlet var chickenView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,13 @@ class LaunchVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         animation()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        chickenView.layer.cornerRadius = chickenView.bounds.width / 2
+        chickenView.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+        chickenView.layer.borderWidth = 5
     }
 
     private func moveToSettingsVC() {
@@ -83,7 +91,9 @@ class LaunchVC: UIViewController {
             UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.eggImageview.transform = .identity
             }, completion: { (finished) in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.eggImageview.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 9)
+                }, completion: { (done) in
                     if UserdefaultManager.secondLaunch {
                         self.moveToSettingsVC()
                     }

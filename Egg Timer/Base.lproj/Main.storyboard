@@ -25,6 +25,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="sCl-1c-9y3">
+                                <rect key="frame" x="75" y="221" width="225" height="225.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sCl-1c-9y3" secondAttribute="height" multiplier="1:1" id="rRD-bj-3j5"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple eggs timer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="3zS-cP-Fwd">
                                 <rect key="frame" x="45" y="319" width="286" height="29"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
@@ -57,9 +63,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="sCl-1c-9y3" firstAttribute="width" secondItem="7sa-e1-9Pf" secondAttribute="width" multiplier="0.6" id="53U-Td-U1Y"/>
+                            <constraint firstItem="sCl-1c-9y3" firstAttribute="centerX" secondItem="7sa-e1-9Pf" secondAttribute="centerX" id="6Sa-lm-FcY"/>
+                            <constraint firstItem="sCl-1c-9y3" firstAttribute="centerY" secondItem="7sa-e1-9Pf" secondAttribute="centerY" id="7ti-h9-Np1"/>
                             <constraint firstItem="LFe-C9-uw6" firstAttribute="width" secondItem="7sa-e1-9Pf" secondAttribute="width" multiplier="0.3" id="KaL-jw-ush"/>
                             <constraint firstItem="3zS-cP-Fwd" firstAttribute="top" secondItem="9ZL-YT-2DY" secondAttribute="bottom" constant="20" id="TsI-eD-NaI"/>
                             <constraint firstItem="3zS-cP-Fwd" firstAttribute="centerY" secondItem="7sa-e1-9Pf" secondAttribute="centerY" id="WkH-6Y-kvj"/>
+                            <constraint firstItem="sCl-1c-9y3" firstAttribute="centerX" secondItem="7sa-e1-9Pf" secondAttribute="centerX" id="X0o-XY-KO9"/>
                             <constraint firstItem="9ZL-YT-2DY" firstAttribute="centerX" secondItem="7sa-e1-9Pf" secondAttribute="centerX" id="Z5p-j2-XLz"/>
                             <constraint firstItem="9ZL-YT-2DY" firstAttribute="width" secondItem="7sa-e1-9Pf" secondAttribute="width" multiplier="0.2" id="efI-GZ-aXp"/>
                             <constraint firstItem="7D2-70-PMB" firstAttribute="trailing" secondItem="2H0-Bw-rRz" secondAttribute="trailing" constant="30" id="jKI-GZ-pjU"/>
@@ -76,6 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z1D-H1-ii9"/>
                     <connections>
+                        <outlet property="chickenView" destination="sCl-1c-9y3" id="tOZ-zl-pN2"/>
                         <outlet property="eggImageview" destination="9ZL-YT-2DY" id="Rus-2i-few"/>
                         <outlet property="infoLabel" destination="2H0-Bw-rRz" id="JkM-gR-qyF"/>
                         <outlet property="skipButton" destination="LFe-C9-uw6" id="dCn-ya-3h2"/>
@@ -100,6 +111,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wH-ry-u2d">
+                                <rect key="frame" x="15" y="89" width="345" height="99.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Je bevindt je nu op 500 meter hoogte" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu9-aI-DPg">
                                 <rect key="frame" x="20" y="94" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -112,6 +127,10 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0k-kz-Xwb">
+                                <rect key="frame" x="15" y="238.5" width="345" height="69.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Komen je eieren uit de koelkast?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aso-Kr-fiR">
                                 <rect key="frame" x="20" y="243.5" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -137,6 +156,10 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94H-ho-xy0">
+                                <rect key="frame" x="15" y="358" width="345" height="124"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoe groot zijn jouw eieren?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWq-7v-pCQ">
                                 <rect key="frame" x="20" y="363" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -256,23 +279,35 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aso-Kr-fiR" secondAttribute="trailing" constant="20" id="1fo-Mf-GTS"/>
                             <constraint firstItem="7JT-vC-M53" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Le-Fj-4Or"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zu9-aI-DPg" secondAttribute="trailing" constant="20" id="BI0-f0-Soe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9wH-ry-u2d" secondAttribute="trailing" constant="15" id="BO4-bw-Qqh"/>
                             <constraint firstItem="aso-Kr-fiR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bbs-0v-lvS"/>
                             <constraint firstItem="ocb-1b-Wk0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="BoA-zP-M0o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KWq-7v-pCQ" secondAttribute="trailing" constant="20" id="CJn-T2-myS"/>
+                            <constraint firstItem="9wH-ry-u2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="EQb-me-hBE"/>
+                            <constraint firstItem="94H-ho-xy0" firstAttribute="top" secondItem="KWq-7v-pCQ" secondAttribute="top" constant="-5" id="FMO-aW-Lu3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2MR-AY-Uc2" secondAttribute="trailing" constant="30" id="IhD-0J-maA"/>
                             <constraint firstItem="7JT-vC-M53" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="Lvo-IZ-YUG"/>
                             <constraint firstItem="KWq-7v-pCQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MaI-6R-mDj"/>
+                            <constraint firstItem="S0k-kz-Xwb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Mhs-9Y-pN4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S0k-kz-Xwb" secondAttribute="trailing" constant="15" id="RWy-az-im7"/>
+                            <constraint firstItem="94H-ho-xy0" firstAttribute="bottom" secondItem="ieo-SR-YdU" secondAttribute="bottom" constant="5" id="Rxy-wJ-VQK"/>
                             <constraint firstItem="2MR-AY-Uc2" firstAttribute="centerY" secondItem="cX6-hV-lLu" secondAttribute="centerY" id="Td0-JH-ZE9"/>
                             <constraint firstItem="KWq-7v-pCQ" firstAttribute="top" secondItem="cX6-hV-lLu" secondAttribute="bottom" constant="60" id="WAh-k8-cgq"/>
+                            <constraint firstItem="9wH-ry-u2d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="aAS-SI-sKj"/>
                             <constraint firstItem="Zu9-aI-DPg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aSC-rj-ihF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7JT-vC-M53" secondAttribute="bottom" constant="30" id="bZQ-ct-ogB"/>
+                            <constraint firstItem="9wH-ry-u2d" firstAttribute="bottom" secondItem="kfP-tH-wkc" secondAttribute="bottom" constant="5" id="f2C-Lg-Llf"/>
                             <constraint firstItem="cX6-hV-lLu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gPV-5e-m77"/>
+                            <constraint firstItem="94H-ho-xy0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="hTa-0M-Yef"/>
                             <constraint firstItem="2MR-AY-Uc2" firstAttribute="leading" secondItem="cX6-hV-lLu" secondAttribute="trailing" constant="8" symbolic="YES" id="iTc-RR-0Nf"/>
                             <constraint firstItem="kfP-tH-wkc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jNR-c0-6ga"/>
                             <constraint firstItem="cX6-hV-lLu" firstAttribute="leading" secondItem="ocb-1b-Wk0" secondAttribute="trailing" constant="8" symbolic="YES" id="kBm-U8-hlG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="94H-ho-xy0" secondAttribute="trailing" constant="15" id="kaV-DY-sIW"/>
                             <constraint firstItem="H3F-6l-BM1" firstAttribute="top" secondItem="KWq-7v-pCQ" secondAttribute="bottom" constant="15" id="moh-FV-Q2z"/>
                             <constraint firstItem="H3F-6l-BM1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o76-lq-uTC"/>
+                            <constraint firstItem="S0k-kz-Xwb" firstAttribute="top" secondItem="aso-Kr-fiR" secondAttribute="top" constant="-5" id="pZc-tg-KO8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kfP-tH-wkc" secondAttribute="trailing" constant="20" id="pzl-rS-Nhx"/>
+                            <constraint firstItem="S0k-kz-Xwb" firstAttribute="bottom" secondItem="cX6-hV-lLu" secondAttribute="bottom" constant="5" id="q7X-Uk-kuL"/>
                             <constraint firstItem="ocb-1b-Wk0" firstAttribute="centerY" secondItem="cX6-hV-lLu" secondAttribute="centerY" id="rGL-Or-8cn"/>
                             <constraint firstItem="aso-Kr-fiR" firstAttribute="top" secondItem="kfP-tH-wkc" secondAttribute="bottom" constant="60" id="sAp-Wh-Sbc"/>
                             <constraint firstItem="Zu9-aI-DPg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="v39-g3-D93"/>
@@ -288,6 +323,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="altitudeLabel" destination="Zu9-aI-DPg" id="hUS-Te-Gq0"/>
+                        <outlet property="backgroundView1" destination="9wH-ry-u2d" id="p8J-To-rZ2"/>
+                        <outlet property="backgroundView2" destination="S0k-kz-Xwb" id="O2d-Ki-drj"/>
+                        <outlet property="backgroundView3" destination="94H-ho-xy0" id="HfD-vY-uf0"/>
                         <outlet property="firstTopConstraint" destination="WAh-k8-cgq" id="bfq-vP-QKc"/>
                         <outlet property="fridgelabel" destination="2MR-AY-Uc2" id="YJN-pm-cgO"/>
                         <outlet property="grootButton" destination="5rd-C5-GRo" id="lSK-wK-MIi"/>
@@ -309,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="26"/>
+            <point key="canvasLocation" x="1189.5999999999999" y="25.637181409295355"/>
         </scene>
         <!--Extrainfo View Controller-->
         <scene sceneID="dmP-ad-0vG">

@@ -76,4 +76,13 @@ import Foundation
 //    }
 //}
 
+// Settings
+//                self.eggImageview.eggBreak {
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+//                        if UserdefaultManager.secondLaunch {
+//                            self.moveToSettingsVC()
+//                        }
+//                    })
+//                }
+
 

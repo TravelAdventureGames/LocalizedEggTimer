@@ -33,6 +33,11 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var firstTopConstraint: NSLayoutConstraint!
     @IBOutlet var secondTopConstraint: NSLayoutConstraint!
 
+    @IBOutlet var backgroundView1: UIView!
+    @IBOutlet var backgroundView2: UIView!
+    @IBOutlet var backgroundView3: UIView!
+    
+
     let selectedColor = UIColor(red: 207/255, green: 44/255, blue: 82/255, alpha: 1)
 
     var kleinButtonIsHighlited: Bool = false {
@@ -114,11 +119,13 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         setUpLocationManager()
         setShades()
         setTitles()
+        //setNavbarGradient()
+        setBackgrounds(color: UIColor.white.withAlphaComponent(0.2))
         UserdefaultManager.secondLaunch = true
     }
 
     private func setBackgroundImage() {
-        self.setBackgroundWith(imageName: "snowboard7")
+        self.setBackgroundWith(imageName: "snowboard8")
         kleinButton.setImage(#imageLiteral(resourceName: "eggSEmpty"), for: .normal)
         mediumButton.setImage(#imageLiteral(resourceName: "eggMEmpty"), for: .normal)
         grootButton.setImage(#imageLiteral(resourceName: "eggLEmpty"), for: .normal)
@@ -130,6 +137,27 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         firstTopConstraint.constant = firstTopConstraint.constant * heightMultiplier
         secondTopConstraint.constant = secondTopConstraint.constant * heightMultiplier
     }
+
+    private func setCornerRadius(views: [UIView]) {
+        for view in views {
+            view.layer.cornerRadius = 9
+            view.layer.masksToBounds = true
+        }
+    }
+
+    private func setBackgrounds(color: UIColor) {
+        backgroundView1.backgroundColor = color
+        backgroundView2.backgroundColor = color
+        backgroundView3.backgroundColor = color
+        setCornerRadius(views: [backgroundView1, backgroundView2, backgroundView3])
+    }
+
+//    private func setNavbarGradient() {
+//        var colors = [UIColor]()
+//        colors.append(UIColor.projectBlueWith(alpha: 1))
+//        colors.append(UIColor.projectBlueWith(alpha: 0.0))
+//        navigationController?.navigationBar.setGradientBackground(colors: colors)
+//    }
 
     private func setTitles() {
         title = "setingsvc.title.overeieren".localized
@@ -240,3 +268,43 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
         }
     }
 }
+
+//extension CAGradientLayer {
+//
+//    convenience init(frame: CGRect, colors: [UIColor]) {
+//        self.init()
+//        self.frame = frame
+//        self.colors = []
+//        for color in colors {
+//            self.colors?.append(color.cgColor)
+//        }
+//        startPoint = CGPoint(x: 0, y: 0)
+//        endPoint = CGPoint(x: 0, y: 1)
+//    }
+//
+//    func creatGradientImage() -> UIImage? {
+//
+//        var image: UIImage? = nil
+//        UIGraphicsBeginImageContext(bounds.size)
+//        if let context = UIGraphicsGetCurrentContext() {
+//            render(in: context)
+//            image = UIGraphicsGetImageFromCurrentImageContext()
+//        }
+//        UIGraphicsEndImageContext()
+//        return image
+//    }
+//
+//}
+//
+//extension UINavigationBar {
+//
+//    func setGradientBackground(colors: [UIColor]) {
+//
+//        var updatedFrame = bounds
+//        updatedFrame.size.height += self.frame.origin.y
+//        let gradientLayer = CAGradientLayer(frame: updatedFrame, colors: colors)
+//
+//        setBackgroundImage(gradientLayer.creatGradientImage(), for: UIBarMetrics.default)
+//    }
+//}
+
