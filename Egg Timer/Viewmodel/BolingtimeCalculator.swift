@@ -31,16 +31,16 @@ class BoilingtimeCalculator {
 
         case (.Small, .US):
             print("small, us")
-            return pow((14.7 / .pi), 2)
+            return pow((13.55 / .pi), 2)
         case (.Medium, .US):
             print("medium, us")
-            return pow((15.1 / .pi), 2)
+            return pow((13.9 / .pi), 2)
         case (.Large, .US):
             print("large, us")
-            return pow((15.5 / .pi), 2)
+            return pow((14.3 / .pi), 2)
         case (.XLJumbo, .US):
             print("xl, us")
-            return pow((15.7 / .pi), 2)
+            return pow((15.4 / .pi), 2)
         }
     }
 

@@ -7,8 +7,8 @@
 */
 
 "setingsvc.title.overeieren" = "ABOUT YOUR EGGS";
-"Settingsvc.alituted.labelJebevindt" = "You're currently at an altitude of";
-"Settingsvc.alituted.labelMeterHoog" = "meters heigh";
+"Settingsvc.alituted.labelJebevindt" = "You're currently situated at";
+"Settingsvc.alituted.labelMeterHoog" = "meters above sea level";
 
 "settingsvc.label.klein" = "S";
 "settingsvc.label.medium" = "M";
@@ -18,15 +18,15 @@
 
 "amountvc.title.hoeveleieren" = "HOW MANY EGGS";
 "amountvc.alert.tile" = "Attention!";
-"amountvc.alert.text" = "Check our tips before you start cooking. If not, at least beware you place the eggs in the pot not before the water is boiling. When done in another way, the timersettings will not be correct!";
+"amountvc.alert.text" = "Check our tips before you start cooking. If not, at least make sure you place the eggs in the pan after the water is boiling. Otherwise, the timersettings will not be correct!";
 "amountvc.alert.left" = "OK, got it";
 "amountvc.alert.right" = "To tips";
 
-"extrainfovc.label.text" = "You probably can't wait to start cooking. Take some time however to go through the tips stated below!<br><br><ul><li>The egg calculator algorithm assumes you first <u>bring the water to boiling temperature</u> and  <u>after that</u> carefully place the eggs in the pot.</li><li>When one of the timers expires, take the right amount of eggs out of the water and cool them down as soon as possible, f.e. in a bowl of icewater. Your cooling water needs to be really cold, otherwise you will not achieve your desired doneness.</li><li>Take multiple cooling bowls (one for soft boiled, one for hard boiled, ect.) In that way you can tell which egg was which afterwards.</li><li>In order to make the peeling of the egg much easier, add some vinegar to the water.</li></ul>";
+"extrainfovc.label.text" = "You probably can't wait to start cooking. Take some time however to go through the tips stated below!<br><br><ul><li>The egg calculator algorithm assumes you first <u>bring the water to boiling temperature</u> and <u>then</u> carefully place the eggs in the pan.</li><li>When one of the timers expires, take the desired number of eggs out of the water and cool them down as soon as possible, i.e. in a bowl of icewater. The cooling water needs to be really cold, otherwise you will not achieve the desired doneness.</li><li>Take multiple cooling bowls (one for soft boiled, one for hard boiled, ect.) In that way you can keep track of which egg was which afterwards.</li><li>In order to make the peeling of the egg much easier, add some vinegar to the water.</li><li>In the US it's recommended to store your eggs in the fridge. Due to a different production process than in Europe, the risk of salmonella poisoning when storing eggs outside the fridge, is higher in the US.</ul>";
 
 "timervc.title.text" = "START TIMERS";
 "timervc.label.haal" = "Take";
-"timervc.label.uitdepan" = "from the pot.";
+"timervc.label.uitdepan" = "from the pan.";
 
 //model
 "model.druiperige.eieren" = "runny eggs";
@@ -42,21 +42,21 @@
 "model.hard.ei" = "solid egg";
 
 "launch.title.multiegg" = "Multiple\nEggs Timer";
-"launch.lbel.text" = "Welcome to the only eggtimer in the world which times multiple eggs!  Based on scientific research from a Nowegian Physics Institute it also takes into account your altitude, eggsize (using standard sizes of multiple continents) and initial eggtemperature.";
+"launch.lbel.text" = "Welcome to the only eggtimer in the world that measures all the different types of doneness your group or family desires!  Based on scientific research from the  Nowegian Physics Institute, it takes into account your altitude, egg size and initial egg temperature. Works like a charm!";;
 "lanchvc.button.skip" = "Skip";
 
 //NotificationManager
-"notification.body.zacht" = "runny boiled eggs from the pot!";
-"notification.body.zachtmedium" = "soft boiled eggs from the pot.";
-"notification.body.medium" = "firm boiled eggs from the pot.";
-"notification.body.mediumhard" = "hard boiled eggs from the pot.";
-"notification.body.hard" = "solid boiled eggs from the pot.";
+"notification.body.zacht" = "runny boiled eggs from the pan!";
+"notification.body.zachtmedium" = "soft boiled eggs from the pan.";
+"notification.body.medium" = "firm boiled eggs from the pan.";
+"notification.body.mediumhard" = "hard boiled eggs from the pan.";
+"notification.body.hard" = "solid boiled eggs from the pan.";
 
-"notification.body.zachtSingle" = "runny boiled egg from the pot!";
-"notification.body.zachtmediumSingle" = "soft boiled egg from the pot!";
-"notification.body.mediumSingle" = "firm boiled egg from the pot!";
-"notification.body.mediumhardSingle" = "hard boiled egg from the pot!";
-"notification.body.hardSingle" = "solid boiled egg from the pot!";
+"notification.body.zachtSingle" = "runny boiled egg from the pan!";
+"notification.body.zachtmediumSingle" = "soft boiled egg from the pan!";
+"notification.body.mediumSingle" = "firm boiled egg from the pan!";
+"notification.body.mediumhardSingle" = "hard boiled egg from the popant!";
+"notification.body.hardSingle" = "solid boiled egg from the pan!";
 
 "notification.body.first" = "Take";
 
@@ -66,7 +66,7 @@
 "notification.title.mediumhard" = "Ready!";
 "notification.title.hard" = "Ready!";
 
-"infolabel.label.infotext" = "Cooking instructions<br><br><ul><li>Place the eggs (carefully) in the pot not before <u>the water is boiling.</u>!</li><li>Make sure your eggs are covered at least by <u>1 inch (2.5 cm) of water</u> and are placed in 1 layer in the pot.</li><li>Use a large spoon to place and remove the eggs from the pot to prevent them from cracking.</li><li>Possibly you can make a small crack at the bottom (fat) side of the egg before cooking. This eases the peeling afterwards. It <u>must not rupture the membrane though!</u>. Another method would be to add a spoon of vinegar.</li><li>If a timer expires, cool down the eggs as soon as possible, preferably in a bowl of crushed ice.</li></ul><br><br>";
+"infolabel.label.infotext" = "Cooking instructions<br><br><ul><li>Place the eggs (carefully) in the pan not before <u>the water is boiling.</u>!</li><li>Make sure your eggs are covered at least by <u>1 inch (2.5 cm) of water</u> and are placed in 1 layer in the pan.</li><li>Use a large spoon to place and remove the eggs from the pan to prevent them from cracking.</li><li>Possibly you can make a small crack at the bottom (fat) side of the egg before cooking. This eases the peeling afterwards. It <u>must not rupture the membrane though!</u>. Another method would be to add a spoon of vinegar.</li><li>If a timer expires, cool down the eggs as soon as possible, preferably in a bowl of crushed ice.</li></ul><br><br>";
 
 "timervc.imageview.instructions" = "ENCookinginstructions";
 

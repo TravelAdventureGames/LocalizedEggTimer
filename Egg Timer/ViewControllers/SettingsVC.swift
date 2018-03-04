@@ -221,6 +221,9 @@ class SettingsVC: UIViewController, CLLocationManagerDelegate {
                 case "US":
                     self.currentCountry = .US
                     UserdefaultManager.currentCountryLocation = "US"
+                case "CA":
+                    self.currentCountry = .US
+                    UserdefaultManager.currentCountryLocation = "US"
                 default:
                     self.currentCountry = .ElseWhere
                     UserdefaultManager.currentCountryLocation = "ELSEWHERE"
