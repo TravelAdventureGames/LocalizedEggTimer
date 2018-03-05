@@ -102,7 +102,7 @@
 "Z5t-9t-mvZ.text" = "Grande";
 
 /* Class = "UILabel"; text = "Je bevindt je nu op 500 meter hoogte"; ObjectID = "Zu9-aI-DPg"; */
-"Zu9-aI-DPg.text" = "Je bevindt je nu op 500 meter hoogte";
+"Zu9-aI-DPg.text" = "Su altitud no puede ser determinada actualmente";
 
 /* Class = "UILabel"; text = "Komen je eieren uit de koelkast?"; ObjectID = "aso-Kr-fiR"; */
 "aso-Kr-fiR.text" = "Tus huevos salen del refrigerador?";

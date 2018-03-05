@@ -92,7 +92,7 @@ class LaunchVC: UIViewController {
                 self.eggImageview.transform = .identity
             }, completion: { (finished) in
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.eggImageview.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 9)
+                    self.eggImageview.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 16)
                 }, completion: { (done) in
                     if UserdefaultManager.secondLaunch {
                         self.moveToSettingsVC()

@@ -42,7 +42,7 @@
 "model.hard.ei" = "solid egg";
 
 "launch.title.multiegg" = "Multiple\nEggs Timer";
-"launch.lbel.text" = "Welcome to the only eggtimer in the world that measures all the different types of doneness your group or family desires!  Based on scientific research from the  Nowegian Physics Institute, it takes into account your altitude, egg size and initial egg temperature. Works like a charm!";;
+"launch.lbel.text" = "Welcome to the only eggtimer in the world that measures all the different types of doneness your group or family desires! Works like a charm!";
 "lanchvc.button.skip" = "Skip";
 
 //NotificationManager
