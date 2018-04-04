@@ -55,7 +55,7 @@
 "notification.body.zachtSingle" = "runny boiled egg from the pan!";
 "notification.body.zachtmediumSingle" = "soft boiled egg from the pan!";
 "notification.body.mediumSingle" = "firm boiled egg from the pan!";
-"notification.body.mediumhardSingle" = "hard boiled egg from the popant!";
+"notification.body.mediumhardSingle" = "hard boiled egg from the pan!";
 "notification.body.hardSingle" = "solid boiled egg from the pan!";
 
 "notification.body.first" = "Take";
@@ -72,5 +72,5 @@
 
 "eggmeasurevc.lable.title" = "Place your egg on your screen and determine the size";
 
-"timervc.friends.labeltext" = "Kippen moet ook lekker kunnen leven. Koop eens wat vaker biologische eieren. Wij zijn bijvoorbeeld fan van Kipster!";
+"timervc.friends.labeltext" = "Kippen moet ook lekker kunnen leven. Koop eens wat vaker diervriendelijke eieren. Wij zijn bijvoorbeeld fan van Kipster, de beste voor dier en milieu!";
 "timervc.friends.imageName" = "chicken";
